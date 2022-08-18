@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/admintable.css') }}" rel="stylesheet">
+
+    {% if userAction == null %}
+        <p>Aucune action n'a été effectuée par cet utilisateur</p>
+    {% else %}
+
+    <div class="content-container">
+    <div class="content-info">
+        <h3> Rechercher dans les saisies de {{ user.username }} </h3>
+       
+        <div class="totalDiv">
+            <div class="select-container">
+                <label>Années :</label>
+                <select class="selectYear" id="selectYear"></select>
+            </div>
+            <div class="select-container">
+                <label>Mois :</label>
+                <select class="selectMonth" id="selectMonth"></select>
+            </div>
+            <input type="submit" class="btn-submit" value="rechercher">
+        </div>
+        {# <p class="flex-start"> Vous avez fait {{ actions.getTotalItemCount }} saisies </p> #}
+         <p class="totalH1 flex-start"></p>
+
+        <div class="sum-js">
+            <p class="alert-message"></p>
+            <p class="total-paragraphe">Total de toutes les saisies :</p>
+            <div class="main-container">
+                <div class="total-container">
+                    <p class="total-heure"></p>
+                    <p class="total-payer"></p>
+                </div>
+                <div class="total-container">
+                    <p class="total-don"></p>
+                    <p class="total-valorisees"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        {# {{dump(userAction)}} #}
+         <table class="sortable table">
+            <thead>
+                <tr class="tr-first">
+                    <th data-column="association" data-order="desc" class="no-sort column" >Association</th>
+                    <th data-column="date" data-order="desc" class="column">Date</th>
+                    <th>Ville de départ</th>
+                    <th>Ville d'arrivée</th>    
+                    <th>Km</th>
+                    <th>Raisons</th>
+                    <th>Heure de départ</th>
+                    <th>Heure d'arrivée</th>
+                    <th>Durée</th>
+                    <th>Frais</th>
+                    <th>Don</th>
+                    <th>A payer</th>
+                    <th>Heures valorisées</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+                <tbody class="ajaxDivContent">
+                    {% include "admin/action_user.html.twig" %} 
+                </tbody>
+
+            </div>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  {{ encore_entry_script_tags('admin') }}
+
+{% endblock %}

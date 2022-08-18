@@ -1,0 +1,67 @@
+AVANT DE PASSER A UI UX : 
+    mailer pour changer mot de passe marche pas mailHOG
+
+
+                        FAIT : 
+                            total : 
+                            heure : fait / heure :: FAIT
+                            dons / e  :: FAIT 
+                            a payer / e :: FAIT
+                            heures valorisées/ e  :: FAIT 
+
+                            MANQUE A APPEND LE TOUT EN HTML !! 
+
+?? 
+pdf : tableau pareil que recap avec totaux 
+
+
+
+saisie : encadré gris avec pourcentage du groupe choisi
+
+FAIT: 
+enlever contour saisie et mettre border radius 5px 
+don : beug négatif a faire !! nb apres virgule important
+
+
+enregister une assoc : 
+    -input discipline puis rechercher dans la page toute les assoc 
+    -input region et departement
+
+
+    accueil euro pas dollar
+
+
+
+New 
+
+message erreur meme pseudo inscription
+
+    
+    
+*/
+Page d'accueil sans ancien logos changer ca-----------------------------------------------FAIT
+association changer de logo dans la page administration-----------------------------------FAIT MANQUE CSS
+css cassé admin
+super admin donner admin a quelqu'un
+Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
+Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 
+mois sans année donc toutes les annees que les mois 
+Nous contacter ne fonctionne pas
+message alerte quitter aller dans associations
+recap beug--------------------------------------------------------------------------------FAIT MANQUE JUSTE CHERCHE MOIS 
+hover sur les recap,
+revoir les css saisie
+fautes orthographe dans message alerte saisie---------------------------------------------FAIT
+event keyup down changement bareme au lieu de focus---------------------------------------FAIT
+eneleve pas chiffre apres virgules dans a paye
+demande de remboursement total pas bon input rouge
+don bloquer les decimales a 2
+frais message d'erreur si décimale
+pb chiffre virgules fin 
+pdf marche pas en ligne 
+logo pdf plutot que cliquer sur la ligne
+suprimer saisie marche pas----------------------------------------------------------------FAIT 
+certaines image pour assoc ne marchent pas
+handle error 404
+cdos21.org pas securisé
+*/

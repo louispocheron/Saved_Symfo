@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AssociationController!{% endblock %}
+
+{% block body %}
+
+    <link href="{{ asset('css/association.css') }}" rel="stylesheet">
+
+    <div class="association-container">
+        <div class="input-pagination">
+            <input type="text" id="search" class="search-bar-input" placeholder="Rechercher une association">
+            <div class="pagination-container">
+                {{ knp_pagination_render(associations) }}
+            </div>
+        </div>
+
+        {% if associations == null %}
+            <h4>Aucune association</h4>
+        {% else %}
+            <div class="count mt-4 total-count">
+                <h4> il y a {{associations.getTotalItemCount}} associations différentes</h4>
+            </div> 
+        {% endif %}
+        <div class="ajaxAssocContent">
+            {% include "association/ajax_view.html.twig" %}
+        </div>
+    </div>
+    <div class="pagination-container mobile-pagination">
+        {{ knp_pagination_render(associations) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('search') }}
+{% endblock %}
+

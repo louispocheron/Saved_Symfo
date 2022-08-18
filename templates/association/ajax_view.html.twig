@@ -1,0 +1,15 @@
+    <ul class="associations">
+        {% for association in associations %}
+            <li class="assoc-li">
+                <a class="getAssocId uniqueAssoc" href=" {{path('unique_association', {'id': association.id})}} " id="{{association.id}}">
+                    <h3 class="assoc-name">{{association.name}}</h3>
+                    {% if association.logo != null %}
+                        <img src="{{ asset('/build/logo_directory/' ~ association.logo) }}" class="assoc-img-first"></img>
+                    {% else %}
+                        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+

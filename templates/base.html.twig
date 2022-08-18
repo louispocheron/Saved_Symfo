@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Saved{% endblock %}</title>
+        <link href='{{ asset("assets/favicon.png")}}' rel='shortcut icon' type='image/x-icon'/>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {{ encore_entry_link_tags('app') }}
+
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+
+        {% block stylesheets %}
+        {% endblock %}
+
+
+    </head>
+    <body>
+        {# SIDE BAR POUR LE DESKTOP SEULEMENT #}
+        <div class="sidebar">
+            <a href="{{ path('home') }}"><img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-main-site">
+            <ul class="navbar-ul">
+                    <li class="nav-item">
+                        <a href="{{ path('home') }}" class="nav-links">
+                            <i class="fas fa-home nav-svg"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('saisie') }}" class="nav-links">
+                            <i class="fas fa-pencil nav-svg"></i>
+                            <span>Saisie</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('recapitulatif') }}" class="nav-links">
+                            <i class="fas fa-list nav-svg"></i>
+                            <span>Recapitulatif</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('home') }}" class="nav-links">
+                            <i class="fa-solid fa-paper-plane nav-svg"></i>
+                            <span>Nous contacter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('association') }}" class="nav-links">
+                            <i class="fa-solid fa-book nav-svg"></i>
+                            <span>Liste des associations</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('register_association') }}" class="nav-links">
+                            <i class="fa-solid fa-circle-plus nav-svg"></i>
+                            <span>Enregistrer une association</span>
+                        </a>
+                    </li>
+                <li class="nav-item">
+                    <div>
+                        <a href="{{ path('mon_compte') }}" class="nav-links">
+                            <i class="fas fa-user nav-svg"></i>
+                            <span>Mon compte</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ path('app_logout') }}" class="nav-links down">
+                            <i class="fas fa-sign-out-alt nav-svg"></i>
+                            <span>Déconnexion</span>
+                        </a>
+                    </div>
+                    </li>
+            </ul>
+        </div>
+        {# HEADER POUR LE DESKTOP #}
+        <div class="header-desktop">
+        {# {{dump(Assoc.lastAssoc(app.user))}} #}
+
+            <div class="main-assoc">
+                {% if Assoc.lastAssoc(app.user) != false %}
+                <h1 class="h1-assoc">{{ Assoc.lastAssoc(app.user).name }}</h1>
+                <img src="{{asset('/build/logo_directory/' ~ Assoc.lastAssoc(app.user).logo) }}" alt="" class="logo-main-assoc" />
+                {% else %}
+                    <h1 class="h1-assoc">Vous n'avez pas encore d'association</h1>
+                {% endif %}
+            </div>
+
+            <a href="{{ path('mon_compte') }}" class="user-info-a">
+                <div class="user-info">
+                    {% if app.user.profilPicture != null %}
+                        <img src="{{ asset('/build/profil_picture/' ~ app.user.profilPicture) }}" alt="" class="user-avatar" />
+                    {% else %}
+                        <img src="{{ asset('/build/profil_picture/default_profil.png') }}" alt="" class="user-avatar default" />
+                    {% endif %}
+                    <div class="user-name">
+                        <h2 class="user-username"> {{app.user.username}} </h2> 
+                        <h3 class="user-email"> {{app.user.email}} </h3>
+                        {% if Assoc.isAdminGlobal(app.user) == true %}
+                            <a href="{{ path('admin_choose') }}" class="user-email admin">Administration</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {# MENU BURGER POUR LE MOBILE #}
+        <div class="header">
+            <a href="{{ path('home') }}"><img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-main-site"></a>
+            <div class="lines">
+                <div class="line1 noAnimation"></div>
+                <div class="line2 noAnimation"></div>
+                <div class="line3 noAnimation"></div>
+            </div>
+            <div class="menu">
+                <ul class="ul-items">
+                   <li class="ham-items">
+                        <a href="{{ path('home') }}" class="ham-links">
+                            <i class="fas fa-home ham-svg"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('saisie') }}" class="ham-links">
+                            <i class="fas fa-pencil ham-svg"></i>
+                            <span>Saisie</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('recapitulatif') }}" class="ham-links">
+                            <i class="fas fa-list ham-svg"></i>
+                            <span>Recapitulatif</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('home') }}" class="ham-links">
+                            <i class="fa-solid fa-paper-plane ham-svg"></i>
+                            <span>Nous contacter</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('association') }}" class="ham-links">
+                            <i class="fa-solid fa-book ham-svg"></i>
+                            <span>Liste des associations</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('register_association') }}" class="ham-links">
+                            <i class="fa-solid fa-circle-plus ham-svg"></i>
+                            <span>Enregistrer une association</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('mon_compte') }}" class="ham-links">
+                            <i class="fas fa-user ham-svg"></i>
+                            <span>Mon compte</span>
+                        </a>
+                    </li>
+                    <li class="ham-items">
+                        <a href="{{ path('app_logout') }}" class="ham-links">
+                            <i class="fas fa-sign-out-alt ham-svg"></i>
+                            <span>Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        {# MAIN CONTENT #}
+        <main>
+            {% block body %}
+            {% endblock %}
+        </main>
+
+    </body>
+
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('main') }}
+
+
+    {% block javascripts %}
+
+
+    <script src="" defer></script>
+
+    {% endblock %}
+
+</html>

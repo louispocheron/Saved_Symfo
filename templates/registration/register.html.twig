@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <title>S'inscrire</title>
+</head>
+<body>
+
+
+    {{form_start(registrationForm)}}
+
+
+<div class="container">
+    <h1 class="h3 mb-3 font-weight-normal">S'INSCRIRE</h1>
+    <div class="row">
+        <label>Email</label>
+        {{ form_widget(registrationForm.email) }}
+    </div>
+    <div class="row">
+        <label>Nom d'utilisateur</label>
+        {{ form_widget(registrationForm.username) }}
+    </div>
+    <div class="row">
+        <label>Mot de passe</label>
+        {{ form_widget(registrationForm.plainPassword) }}
+    </div>
+    <div class="row">
+        <label>Photo de profil</label>
+        {{ form_widget(registrationForm.profilPicture) }}
+    </div>
+    <div class="row last">
+        <button type="submit" class="btn-submit">S'inscrire</button>
+    </div>
+</div>
+<div class="container aside">
+    <img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-login">
+</div>
+
+    {{form_end(registrationForm)}}
+    

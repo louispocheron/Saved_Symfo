@@ -1,0 +1,87 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.form-register-container{
+    width: 90%;
+    height: 60%;
+    min-height: 35rem;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: #2E2E2E;
+    text-decoration: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.form-register-container h1{
+    text-align: center;
+}
+
+.form-register-row{
+    margin-top: 1rem;
+}
+
+.form-register-row input{
+    display: block;
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px;
+}
+.form-register-row select{
+     display: block;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px;    
+}
+.upload input{
+    border: none;
+}
+.form-register-row input:focus{
+    border: solid 1px #152149;
+    outline: none;
+}
+.form-register-row button{
+    border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    margin: 1rem;
+    width: 15rem;
+    height: 2.7rem;
+    text-decoration: none;
+}
+.form-register-row button:hover{
+    background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media only screen and (min-width : 964px){
+    main{
+        align-items: center;
+    }
+    .form-register-container{
+        margin: 0;
+        width: 50%;
+    }
+}

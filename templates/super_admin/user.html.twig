@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+ superAdmin/user 
+{% endblock %}
+
+{% block body %}
+
+<p>Administration de {{user.username}} </p>
+    <div class="tableau">
+        
+            {% for action in actions %}
+                <div class="ligne">
+                    <a href="{{path('super_admin_action_delete',{ 'id':user.id, 'actionId': action.id })}}" target="_blank"><i class="fa-solid fa-file"></i></a>
+                                <p>{{ action.user.username }}</p>
+                                <p>{{ action.villeDepart }}</p>
+                                <p>{{ action.villeArrive }}</p>
+                                <p>{{ action.km }}</p>
+                                <p>{{ action.raisons }}</p>
+                                <p>{{ action.heureDepart|date('H:i') }}</p>
+                                <p>{{ action.heureArrivee|date('H:i') }}</p>
+                                <p class="duree" data-duree="{{ action.duree }}">durée : {{ action.duree }}</p>
+                                <p>{{ action.frais }}</p>
+                                <p class="dateAdmin" data-date="{{action.date|date('d/m/Y')}}">{{ action.date|date('d/m/Y') }}</p>
+                </div>
+            {% endfor %}
+    </div>
+{% endblock %}

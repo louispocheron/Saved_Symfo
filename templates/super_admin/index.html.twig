@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SuperAdminController!{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/supeadmin.css') }}" rel="stylesheet">
+
+
+    <div class="count mt-4">
+        <h4> il y a {{associations.getTotalItemCount}} associations différentes </h4>
+    </div>
+
+    <ul class="associations">
+        {% for association in associations %}
+            <li class="assoc-li">
+                <a class="getAssocId uniqueAssoc" href=" {{path('super_admin_assoc', {'id': association.id})}} " id="{{association.id}}">
+                    <h3 class="assoc-name">{{association.name}}</h3>
+                    {# <a href=""<i class="fa-solid fa-trash"></i></a> #}
+                    <img src="{{ asset('/build/logo_directory/' ~ association.logo) }}" class="assoc-img-first"></img>
+                    <p class="card-description">{{association.description}}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+<div class="pagination d-flex justify-content-center">
+    {{ knp_pagination_render(associations) }}
+</div>
+
+
+
+
+{% endblock %}

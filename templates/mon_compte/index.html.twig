@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MonCompte{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('css/moncompte.css') }}" rel="stylesheet">
+
+
+<div class="infoPerso">
+    <h1>Information sur mon compte</h1>
+    <div class="infoPerso-container">
+        <p>nom d'utilisateur : </p>
+        <p class="server-served">{{ user.username }}</p>
+        {% if app.user.profilPicture != null %}
+            <img src="{{ asset('/build/profil_picture/' ~ app.user.profilPicture) }}" alt="" class="user-avatar moncompte-avatar" />
+        {% else %}
+            <img src="{{ asset('/build/profil_picture/default_profil.png') }}" alt="" class="user-avatar default moncompte-avatar" />
+        {% endif %}
+    </div>
+     <div class="infoPerso-container">
+        <p> adresse email : </p>
+        <p class="server-served">{{ user.email }}</p>
+    </div>
+    <div class="infoPerso-container">
+        <p> mot de passe : </p>
+        <p class="server-served">********</p>
+    </div>
+     <div class="infoPerso-container">
+        <p> vous avez realisé {% if actions == 1 %}
+             {{actions}} saisie</p>
+        {% else %}
+             {{actions}} saisies</p>
+        {% endif %}
+             <a href="{{ path('recapitulatif') }}"><button class="btn-saisie"><i class="fa-solid fa-eye"></i></button></a>
+    </div>
+</div>
+{% endblock %}

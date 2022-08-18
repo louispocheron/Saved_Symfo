@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="form-container">
+            <form method="post" class="form-login">
+              
+                <h1 class="h3 mb-3 font-weight-normal">SE CONNECTER</h1>
+                <div class="input-container">
+                    <label for="inputUsername" class="label-input-password">Email</label>
+                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control inputlogin" autocomplete="username" required autofocus placeholder="Adresse email">
+                </div>
+                <div class="input-container">
+                    <label for="inputPassword" class="label-input-password">Mot de passe</label>
+                    {% if error %}
+                        <div class="form-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <input type="password" name="password" id="inputPassword" class="form-control inputlogin" autocomplete="current-password" required placeholder="Mot de passe">
+                    <input type="hidden" name="_csrf_token"
+                        value="{{ csrf_token('authenticate') }}"
+                    >
+                </div>
+                <div class="checkbox" class="label-checkbox">
+                    <label>
+                        <input type="checkbox" name="_remember_me" class="checkbox-input"> Se souvenir de moi
+                    </label>
+                </div> 
+            
+                <div class="btn-submit">
+                    <button class="btn-signin" type="submit">
+                        Se connecter
+                    </button>
+                </div>
+                <div class="forgot-password">
+                    <a href="/reset-password" class="href-login">mot de passe oublié ?</a>
+                    <a href='/register' class="href-login">Pas de compte ? S'inscrire</a>
+                </div>
+            </form>
+        </div>
+        <div class="form-container aside">
+            <h1>Bienvenue sur Saved !</h1>
+            <img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-login">
+            <p> Votre plateforme qui valorise vos heures de bénévolats !</p>
+        </div>
+    </div>
+</body>
+</html>

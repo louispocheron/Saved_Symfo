@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}recapitulatif{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
+
+
+
+ 
+
+
+
+{# CODE POUR LA DERNIERE SAISIE EN DATE #}
+{# <div class="latest-table">
+ ma dernière saisie en date : 
+        {% for action in latest %}
+            <table class="table">
+                <tr>
+                    <th>Association</th>
+                    <th>Date</th>
+                    <th>Ville de départ</th>
+                    <th>Ville d'arrivée</th>
+                    <th>Km</th>
+                    <th>Raisons</th>
+                    <th>Heure de départ</th>
+                    <th>Heure d'arrivée</th>
+                    <th>Durée</th>
+                    <th>Frais</th>
+                </tr>
+                <tr onclick="window.location='{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}'">
+                    <td data-label="Association">{{ action.association.name }}</td>
+                    <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
+                    <td data-label="Ville de départ">{{ action.villeDepart }}</td>
+                    <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
+                    <td data-label="Km">{{ action.km }}</td>
+                    <td data-label="Raison">{{ action.raisons }}</td>
+                    <td data-label="Heure de départ">{{ action.heureDepart|date('H:i') }}</td>
+                    <td data-label="Heure d'arrivée">{{ action.heureArrivee|date('H:i') }}</td>
+                    <td data-label="Durée">{{ action.duree }}</td>
+                    <td data-label="Frais">{{ action.frais }}</td>
+                </tr>
+            </table>
+        {% endfor %}
+</div> #}
+
+<h2>Récapitulatif de vos saisie</h2>
+{% if (actions.getTotalItemCount != 0) and (app.user == true) %}
+
+<div class="content-container">
+    <div class="content-info">
+        <h3> Rechercher dans mes saisies </h3>
+       
+        <div class="totalDiv">
+            <div class="select-container">
+                <label>Année :</label>
+                <select class="selectYear" id="selectYear"></select>
+            </div>
+            <div class="select-container">
+                <label>Mois :</label>
+                <select class="selectMonth" id="selectMonth"></select>
+            </div>
+            <input type="submit" class="btn-submit" value="rechercher">
+            {# INPUT RESET A FAIRE #}
+            {# <input type="submit" class="fa-solid fa-arrows-rotate arrowTurn" value="test"> #}
+        </div>
+        {# <p class="flex-start"> Vous avez fait {{ actions.getTotalItemCount }} saisies </p> #}
+         <p class="totalH1 flex-start"></p>
+
+        <div class="sum-js">
+            <p class="alert-message"></p>
+            <p class="total-paragraphe">Total de toutes vos saisies :</p>
+            <div class="main-container">
+                <div class="total-container">
+                    <p class="total-heure"></p>
+                    <p class="total-payer"></p>
+                </div>
+                <div class="total-container">
+                    <p class="total-don"></p>
+                    <p class="total-valorisees"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="sortable table">
+        
+        <thead>
+            <tr class="tr-first">
+                <th data-column="association" data-order="desc" class="no-sort column" >Association</th>
+                <th data-column="date" data-order="desc" class="column">Date</th>
+                <th>Ville de départ</th>
+                <th>Ville d'arrivée</th>    
+                <th>Km</th>
+                <th>Raisons</th>
+                <th>Heure de départ</th>
+                <th>Heure d'arrivée</th>
+                <th>Durée</th>
+                <th>Frais</th>
+                <th>Don</th>
+                <th>A payer</th>
+                <th>Heures valorisées</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+            <tbody class="ajaxDivContent">
+                {% include "recapitulatif/action_recap.html.twig" %}
+            </tbody>
+    </table>
+</div>  
+
+{% else %}
+    <p>Vous n'avez pas encore réalisé de saisie pour une association</p>
+    <img src="{{ asset('assets/HumanMan.png') }}" alt="human" class="img-responsive" style="margin: 0 auto;">
+{% endif %}
+
+<div class="">
+    {{ knp_pagination_render(actions) }}
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('recap') }}
+    {{ encore_entry_script_tags('sort') }}
+
+{% endblock %}
