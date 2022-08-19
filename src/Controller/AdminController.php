@@ -258,7 +258,6 @@ class AdminController extends AbstractController
             
             // DANS LE ELSE ON UNLIK DEJA LE LOGO PRESENT
         } else {
-                dd($request);
                 $fileName = md5(uniqid()).'.'.$logo->guessExtension();
                 $logo->move($this->getParameter('logo_directory'), $fileName);
                 unlink($this->getParameter('logo_directory').'/'.$hasLogo);

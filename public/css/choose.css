@@ -30,8 +30,8 @@ h2{
     align-items: center;
     flex-direction: column;
     filter: grayscale(100%);
-
 }
+
 .assoc-container:hover{
     filter: grayscale(0%);
     background-color: #152149;
@@ -49,6 +49,10 @@ h2{
     margin-top: auto;
     margin-bottom: 2rem;
 }
+.input-sbmt{
+    display: none;
+}
+
 .p-choose{
     margin: 0;
     padding: 0;
