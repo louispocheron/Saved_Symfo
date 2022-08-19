@@ -142,7 +142,8 @@ function Ajaxyear(){
 
             // CALCUL DU TOTAL A PAYER
             const payerTdAjax = document.querySelectorAll('.payerTd');
-            const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer)
+            const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer);
+            console.log(trpayer);
             let aPayerSumAjax = sumPay(trpayer);
             payerP.innerHTML = `A payer :<span style="
             color:#097969;

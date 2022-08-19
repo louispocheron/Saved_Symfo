@@ -1,11 +1,18 @@
 export function sumPay(data){
 
+    console.log(data.length)
+
     if(data.length > 1){
         
+
         // on calcul le total des euros
         let euros = data.map(el => el.split('.')[0]);
         euros = euros.map(el => parseInt(el));
-        let totalEuros = euros.reduce((a, b) => a + b);
+        // console.log(euros)
+        let totalEuros = 0;
+        if(euros != undefined){
+            totalEuros = euros.reduce((a, b) => a + b);
+        }
     
         // puis le total des centimes
 
@@ -14,7 +21,7 @@ export function sumPay(data){
         let cents = data.map(el => el.split('.')[1]);
         console.log(cents);
         let totalCents = null;
-        if(cents === undefined){
+        if(cents.includes(undefined)){
             console.log('no cents');
             totalCents = 0;
         } else {
