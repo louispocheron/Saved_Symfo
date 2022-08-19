@@ -11,7 +11,7 @@ main{
     flex-wrap: wrap;
 }
 h2{
-    text-align: center;
+    text-align: start;
 }
 .assoc-container{
     text-decoration: none;
@@ -29,7 +29,7 @@ h2{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 
 .assoc-container:hover{
@@ -70,11 +70,12 @@ h2{
     height: auto;
     border-radius: 5px;
     border: none;
-    background-color: #152149;
+    background-color: #4CAF50;
     color: white;
     font-size: 1.2rem;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    padding: 5px;
 }
 .btn-admin{
     width: auto;

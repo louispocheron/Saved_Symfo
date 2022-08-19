@@ -39,9 +39,9 @@ message erreur meme pseudo inscription
     
     
 */
-Page d'accueil sans ancien logos changer ca-----------------------------------------------FAIT
-association changer de logo dans la page administration-----------------------------------FAIT MANQUE CSS
-css cassé admin
+Page d'accueil ancien logos changer ca----------------------------------------------------FAIT
+association changer de logo dans la page administration-----------------------------------FAIT
+css cassé admin---------------------------------------------------------------------------FAIT
 super admin donner admin a quelqu'un
 Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
 Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 

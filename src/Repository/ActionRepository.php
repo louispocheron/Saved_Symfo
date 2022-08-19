@@ -147,6 +147,7 @@ public function findByUserAndYearAndMonth($user, $year, $month){
 
 
 
+
     public function findByAssociationAndUserByMonthAndYear($association, $user, $month, $year){
         return $this->createQueryBuilder('action')
             ->andWhere('action.association = :association')
@@ -163,6 +164,18 @@ public function findByUserAndYearAndMonth($user, $year, $month){
 
     //  MARCHE PAS COMME JE VEUX 
     public function findByUserAndMonth($user, $month){
+        return $this->createQueryBuilder('action')
+            ->andWhere('action.user = :user')
+            ->andWhere('action.date >= :date')
+            ->setParameter('user', $user->getId())
+            ->setParameter('date', date('Y-'.$month.'-01'))
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+
+    public function findByUserAndMonthEveryYear($user, $month){
         return $this->createQueryBuilder('action')
             ->andWhere('action.user = :user')
             ->andWhere('action.date >= :date')

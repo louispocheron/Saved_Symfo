@@ -4,7 +4,7 @@
 
 {% block body %}
     <link href="{{ asset('css/choose.css') }}" rel="stylesheet">
-    <h2>Choisissez l'association que vous voulez administer :</h2>
+    <h2 class="text-center admin-main">Administration</h2>
     <div class="container">
         {% for association in admin %}
             {# {{ dump(association)}} #}
@@ -25,7 +25,7 @@
                         <input type="hidden" name="token" value="{{ csrf_token('upload') }}" />
                         <label for="my_file-{{loop.index}}" class="input-file">Uploader</label>
                         <input type="file" id="my_file-{{loop.index}}" name="logo" class="input-sbmt" data-id="{{loop.index}}"></input>
-                        <button type="submit" class="btn-send">Send</button>
+                        <button type="submit" class="btn-send">Changer</button>
                         {# {{ dump(app.flashes('error')) }} #}
                         {% for message in app.flashes('error') %}
                             <div class="alert alert-danger">

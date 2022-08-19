@@ -7,6 +7,11 @@ main{
     flex-direction: column;
     overflow-y: scroll;
 }
+.h2-main{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #2E2E2E;
+}
 /* .table{
     width: 100%;
     border-collapse: collapse;

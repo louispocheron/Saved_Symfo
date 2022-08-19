@@ -19,6 +19,14 @@
     justify-content: center;
     align-items: center;
   }
+  .text-center{
+    text-align: center;
+  }
+  .admin-main{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #2E2E2E;
+    }
   .default-image{
     width: 6rem !important;
   }
