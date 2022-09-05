@@ -74,12 +74,16 @@
         </div>
         {# HEADER POUR LE DESKTOP #}
         <div class="header-desktop">
-        {# {{dump(Assoc.lastAssoc(app.user))}} #}
+        {# {{dump(Assoc.lastAssoc(app.user).logo)}} #}
 
             <div class="main-assoc">
                 {% if Assoc.lastAssoc(app.user) != false %}
-                <h1 class="h1-assoc">{{ Assoc.lastAssoc(app.user).name }}</h1>
-                <img src="{{asset('/build/logo_directory/' ~ Assoc.lastAssoc(app.user).logo) }}" alt="" class="logo-main-assoc" />
+                    <h1 class="h1-assoc">{{ Assoc.lastAssoc(app.user).name }}</h1>
+                    {% if Assoc.lastAssoc(app.user).logo != null %}
+                        <img src="{{asset('/build/logo_directory/' ~ Assoc.lastAssoc(app.user).logo) }}" alt="" class="logo-main-assoc" />
+                    {% else %}
+                        <img src="{{ asset('/assets/default.PNG') }}" class="logo-main-assoc" />
+                    {% endif %}
                 {% else %}
                     <h1 class="h1-assoc">Vous n'avez pas encore d'association</h1>
                 {% endif %}
