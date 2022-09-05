@@ -129,6 +129,8 @@ function Ajaxyear(){
             const contentInfo = document.querySelector('.content-info');
             let year = selectYear.options[selectYear.selectedIndex].value;
             trContainer.innerHTML = dataUser;
+            console.log(year)
+            console.log(month.value)
 
 
             // CALCUL DU TOTAL DES HEURES VALORISEES
@@ -143,7 +145,6 @@ function Ajaxyear(){
             // CALCUL DU TOTAL A PAYER
             const payerTdAjax = document.querySelectorAll('.payerTd');
             const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer);
-            console.log(trpayer);
             let aPayerSumAjax = sumPay(trpayer);
             payerP.innerHTML = `A payer :<span style="
             color:#097969;
@@ -172,28 +173,26 @@ function Ajaxyear(){
             ">${valoriseesSumAjax}€</span> `;
                 
 
-            if(month.value == ''){
-                console.log(month.value)
-                console.log(data.value)
-                totalParagraph.innerHTML = `Total pour l'année <span style="
+            if(month.value == '' && typeof year !== 'undefined'){
+            totalParagraph.innerHTML = `Total pour l'année <span style="
             color:#152149;
             font-weight: bold;
             ">${year}</span>:`
             }
-            if(month.value == "" && data.value == undefined){
+            if(month.value == "" && year == 'rien'){
                 console.log('passe par la')
                 totalParagraph.innerHTML = "Total de toutes vos saisies :";
             }
 
-            if(data.value != 'rien' && month.value != ''){
+            if(year != 'rien' && month.value != ''){
                 // console.log(data.val);
                 totalParagraph.innerHTML = `Total pour le <span style="
             color:#152149;
             font-weight: bold;
             ">${month.value}/${year}</span>:`;
             }
-
-            if(data.value == undefined && month.value != ''){
+            
+            if(year == 'rien' && month.value != ''){
                 totalParagraph.innerHTML = `Total pour tout les mois de <span style="
             color:#152149;
             font-weight: bold;

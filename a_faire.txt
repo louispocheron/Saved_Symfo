@@ -63,5 +63,5 @@ logo pdf plutot que cliquer sur la ligne
 suprimer saisie marche pas----------------------------------------------------------------FAIT 
 certaines image pour assoc ne marchent pas------------------------------------------------FAIT
 handle error 404--------------------------------------------------------------------------FAIT
-cdos21.org pas securisé
+cdos21.org pas securisé-------------------------------------------------------------------FAIT
 */
