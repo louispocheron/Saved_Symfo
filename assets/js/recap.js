@@ -170,31 +170,34 @@ function Ajaxyear(){
             color:#097969;
             font-weight: bold;
             ">${valoriseesSumAjax}€</span> `;
-
-
-
-            
-
-
-            if(data.value == "rien" && month.value == undefined){
-                   totalParagraph.innerHTML = "Total de toutes vos saisies :";
-            }
                 
 
             if(month.value == ''){
+                console.log(month.value)
+                console.log(data.value)
                 totalParagraph.innerHTML = `Total pour l'année <span style="
             color:#152149;
             font-weight: bold;
             ">${year}</span>:`
             }
-
-
+            if(month.value == "" && data.value == undefined){
+                console.log('passe par la')
+                totalParagraph.innerHTML = "Total de toutes vos saisies :";
+            }
 
             if(data.value != 'rien' && month.value != ''){
+                // console.log(data.val);
                 totalParagraph.innerHTML = `Total pour le <span style="
             color:#152149;
             font-weight: bold;
             ">${month.value}/${year}</span>:`;
+            }
+
+            if(data.value == undefined && month.value != ''){
+                totalParagraph.innerHTML = `Total pour tout les mois de <span style="
+            color:#152149;
+            font-weight: bold;
+            ">${month.text}</span>:`;
             }
 
         }

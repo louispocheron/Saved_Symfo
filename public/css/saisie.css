@@ -61,6 +61,7 @@ height: 100%;
     align-items: center;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    padding: 10px;
 }
 
 .evenement1 input {
@@ -124,7 +125,7 @@ height: 100%;
     border: 1px solid #fef9a8;
 }
 .troisieme{
-    background-color: #e7da23;
+    background-color: #cec43c;
 }
 .dropdown-toggle{
     background-color: #152149;
@@ -192,6 +193,7 @@ height: 100%;
     text-decoration: none;
     background-color: #fff;
     border-radius: 5px;
+    padding: 10px;
 }
 .row{
     flex-direction: row;
@@ -210,7 +212,12 @@ height: 100%;
 .groupe-container label{
     margin-right: 10px;
 }
-
+/* .firstC{
+    height: 100%;
+}
+.event{
+    height: 7rem;
+} */
 @media only screen and (max-width: 963px){
     .input-container{
         flex-direction: column;
@@ -225,6 +232,6 @@ height: 100%;
         width: 100%;
     }
     .h1-row{
-        height: 4rem;
+        height: 3rem;
     }
 }

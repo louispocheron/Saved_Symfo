@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Page pas trouvé !
+{% endblock %}
+
+{% block body %}
+<div class="error-page">
+    <h1>Oups !</h1>
+    <p>La page que vous recherchez n'existe pas.</p>
+    <img src="{{ asset('assets/human.png') }}" alt="404" class="img-responsive">
+    <p>
+        <a href=\"{{ path('home') }}\">Retour à l'accueil</a>
+    </p>
+</div>
+{% endblock %}

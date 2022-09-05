@@ -131,14 +131,17 @@ groupeSelect.addEventListener("change", () => {
     let baremeValue = bareme.value;
     let kmValue = kmInput.value;
     let coutValue = coutInput.value;
+
+
+    parseFloat(totalNote.value);
+
+
   
     [bareme, kmInput, coutInput, payer].forEach(evt => {
         evt.addEventListener('keyup', () => {
             coutValue = coutInput.value;
             baremeValue = bareme.value;
             kmValue = kmInput.value;
-            console.log(coutValue);
-            console.log(kmValue);
 
             fraisInput.value = (kmValue * baremeValue).toFixed(2);
 
@@ -150,23 +153,34 @@ groupeSelect.addEventListener("change", () => {
             if(isNaN(baremeValue)){
                 baremeValue = 0;
             }
-
-
-            // donsInput.value = parseFloat(fraisInput.value) + parseInt(coutValue);
-            // put donsInput.value in localStorage
             // localStorage.setItem('donsInput', donsInput.value);
             totalNote.value = parseFloat(fraisInput.value) + parseFloat(coutValue);
-            if(parseInt(payer.value) > totalNote.value){
+
+
+            if(parseFloat(payer.value) > totalNote.value){
                 payer.style = 'border: 1px solid red;';
                 // donsInput.style = 'background-color: #f2dede;';
             }
+            if(parseFloat(payer.value) < totalNote.value){
+                payer.style = 'border: 1px solid green;';
+            }
 
-            donsInput.value = totalNote.value - parseInt(payer.value);
 
+
+
+            donsInput.value = totalNote.value - parseFloat(payer.value);
+            // console.log(typeof donsInput.value);
         // prevent the NaN output
         if(isNaN(donsInput.value)){
             donsInput.value = totalNote.value;
         }       
+        // !!DONINPUT TYPEOF === STRING DONC ON PEUT PAS TO FIXED DONC ON BIDOUILLE EN DESSOUS 
+        if(donsInput.value.indexOf('.') != -1){
+            let donsInputValue = donsInput.value .split('.');
+            if(donsInputValue[1].length > 2){
+                donsInput.value = parseFloat(donsInput.value).toFixed(2);
+            }
+        }
 
         });
     });

@@ -48,20 +48,20 @@ Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies---
 mois sans année donc toutes les annees que les mois 
 Nous contacter ne fonctionne pas
 message alerte quitter aller dans associations
-recap beug--------------------------------------------------------------------------------FAIT MANQUE JUSTE CHERCHE MOIS 
+recap beug--------------------------------------------------------------------------------FAIT
 hover sur les recap,
-revoir les css saisie
+revoir les css saisie  
 fautes orthographe dans message alerte saisie---------------------------------------------FAIT
 event keyup down changement bareme au lieu de focus---------------------------------------FAIT
-eneleve pas chiffre apres virgules dans a paye
-demande de remboursement total pas bon input rouge
-don bloquer les decimales a 2
-frais message d'erreur si décimale
-pb chiffre virgules fin 
+eneleve pas chiffre apres virgules dans a paye--------------------------------------------FAIT
+demande de remboursement total pas bon input rouge----------------------------------------FAIT
+don bloquer les decimales a 2-------------------------------------------------------------FAIT
+frais message d'erreur si décimale--------------------------------------------------------FAIT
+pb chiffre virgules fin-------------------------------------------------------------------FAIT
 pdf marche pas en ligne 
 logo pdf plutot que cliquer sur la ligne
 suprimer saisie marche pas----------------------------------------------------------------FAIT 
-certaines image pour assoc ne marchent pas
-handle error 404
+certaines image pour assoc ne marchent pas------------------------------------------------FAIT
+handle error 404--------------------------------------------------------------------------FAIT
 cdos21.org pas securisé
 */
