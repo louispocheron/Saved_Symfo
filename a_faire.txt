@@ -46,11 +46,10 @@ super admin donner admin a quelqu'un
 Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
 Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 
 mois sans année donc toutes les annees que les mois 
-Nous contacter ne fonctionne pas
-message alerte quitter aller dans associations
+Nous  contacter                                                                                                                                                                                                                                                                  message alerte quitter aller dans associations
 recap beug--------------------------------------------------------------------------------FAIT
 hover sur les recap,
-revoir les css saisie  
+revoir les css saisie---------------------------------------------------------------------FAIT A MOITIE
 fautes orthographe dans message alerte saisie---------------------------------------------FAIT
 event keyup down changement bareme au lieu de focus---------------------------------------FAIT
 eneleve pas chiffre apres virgules dans a paye--------------------------------------------FAIT
@@ -59,7 +58,7 @@ don bloquer les decimales a 2---------------------------------------------------
 frais message d'erreur si décimale--------------------------------------------------------FAIT
 pb chiffre virgules fin-------------------------------------------------------------------FAIT
 pdf marche pas en ligne 
-logo pdf plutot que cliquer sur la ligne
+logo pdf plutot que cliquer sur la ligne--------------------------------------------------FAIT
 suprimer saisie marche pas----------------------------------------------------------------FAIT 
 certaines image pour assoc ne marchent pas------------------------------------------------FAIT
 handle error 404--------------------------------------------------------------------------FAIT

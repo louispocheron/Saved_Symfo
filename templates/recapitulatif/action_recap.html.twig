@@ -1,12 +1,12 @@
 {% for action in actions %}
-    <tr onclick="window.location='{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}'" class="trtest">
+    {# <tr onclick="window.location='{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}'" class="trtest"> #}
          
             {#<a href="{{ path("recapitulatif_pdf", {'id': action.id, 'userId': user.id } ) }}" target="_blank"><i class="fa-solid fa-file"></i></a>#}
         <td data-label="Association" class="td">{{ action.association.name }}</td> 
         <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
         <td data-label="Ville de départ">{{ action.villeDepart }}</td>
         <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
-        <td data-label="Km">{{ action.km }} km</td>
+        <td data-label="Km">{{ action.km }}km</td>
         <td data-label="Raison">{{ action.raisons }}</td>
         <td data-label="Heure de départ">{{ action.heureDepart|date('H:i') }}</td>
         <td data-label="Heure d'arrivée">{{ action.heureArrivee|date('H:i') }}</td>
@@ -16,6 +16,7 @@
         <td data-label="A payer" class="payerTd" data-payer="{{ action.Apayer }}">{{ action.Apayer|number_format(2) }}€</td>
         <td data-label="Heures valorisées" class="lastchild valoriseesTd" data-valorisees="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
         <td class="last-td-poubelle"><a href="{{ path("recapitulatif_remove", { 'id' : action.id } )}}" data-poubelle='{{action.id}}' class="hrefPoubelle"><i class="fa-solid fa-trash poubelle"></i></a></td>
+        <td class="last-td-poubelle"><a href="{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}" class="hrefPoubelle"><i class="fa-solid fa-file-pdf"></i></a></td>
         {# {{path("recapitulatif_remove", { 'id' : action.id } )}} #}
     </tr>
 {% endfor %}
