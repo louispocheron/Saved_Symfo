@@ -95,7 +95,8 @@ class AdminController extends AbstractController
     // $this ->denyAccessUnlessGranted('ROLE_ADMIN'.$association, null, 'Vous n\'avez pas accès à cette page');
 
     $uniqueAssociation = $repo->find($association);
-    $userAction = $actionRepo->findByUsers($uniqueUser);
+    $userAction = $actionRepo->findByAssociationAndUserAdmin($association, $userId);
+
     $year = $request->get("year");
     $month = $request->get("month");
 

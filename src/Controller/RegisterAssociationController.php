@@ -21,7 +21,6 @@ class RegisterAssociationController extends AbstractController
     #[Route('/assocRegister', name: 'register_association')]
     public function index(Request $request, EntityManagerInterface $entityManager,): Response
     {
-
         $user = $this->getUser();
         if (!$user) {
             return $this->redirectToRoute('app_login');

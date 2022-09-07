@@ -42,13 +42,13 @@ message erreur meme pseudo inscription
 Page d'accueil ancien logos changer ca----------------------------------------------------FAIT
 association changer de logo dans la page administration-----------------------------------FAIT
 css cassé admin---------------------------------------------------------------------------FAIT
-super admin donner admin a quelqu'un
+super admin donner admin a quelqu'un------------------------------------------------------ A DEMANDER A MARIO COMMENT IL VEUT CA 
 Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
 Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 
 mois sans année donc toutes les annees que les mois 
 Nous  contacter                                                                                                                                                                                                                                                                  message alerte quitter aller dans associations
 recap beug--------------------------------------------------------------------------------FAIT
-hover sur les recap,
+hover sur les recap-----------------------------------------------------------------------FAIT
 revoir les css saisie---------------------------------------------------------------------FAIT A MOITIE
 fautes orthographe dans message alerte saisie---------------------------------------------FAIT
 event keyup down changement bareme au lieu de focus---------------------------------------FAIT
@@ -57,10 +57,17 @@ demande de remboursement total pas bon input rouge------------------------------
 don bloquer les decimales a 2-------------------------------------------------------------FAIT
 frais message d'erreur si décimale--------------------------------------------------------FAIT
 pb chiffre virgules fin-------------------------------------------------------------------FAIT
-pdf marche pas en ligne 
+pdf marche pas en ligne ??? 
 logo pdf plutot que cliquer sur la ligne--------------------------------------------------FAIT
 suprimer saisie marche pas----------------------------------------------------------------FAIT 
 certaines image pour assoc ne marchent pas------------------------------------------------FAIT
 handle error 404--------------------------------------------------------------------------FAIT
 cdos21.org pas securisé-------------------------------------------------------------------FAIT
+
+
+RAJOUTE
+Admin ne peut voir que les saisies de l'utilisateur de SON association
 */
+
+
+ssh://cdosexgi-saved@ssh.cluster005.hosting.ovh.net:22/
