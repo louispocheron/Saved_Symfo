@@ -25,24 +25,35 @@
         {# <a class="btnAdherer" href="{{ path('association_adherer', {'id': association.id}) }}"> #}
             <button type="button" class="btn btn-primary btn-adherer">adherer</button>
         {# </a> #}
-        <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}">
+        {# <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}"> #}
             <button type="button" class="btn btn-primary btn-quitter">quitter</button>
-        </a>
+        {# </a> #}
     </div>
 </div>
 {# MODAL #}
 <div class="modal-adherer">
-
     <h1>Voulez vous vraiment adherer a cette association ?</h1>
     <div class='btn-container'>
-
         <a class="btnAdherer" href="{{ path('association_adherer', {'id': association.id}) }}">
             <button class="btn-yes">
                 oui 
             </button>
         </a>
-        
         <button class="btn-no">
+            non
+        </button>
+    </div>
+</div>
+
+<div class="modal-desadherer">
+    <h1>Voulez vous vraiment quitter cette association ?</h1>
+    <div class='btn-container'>
+        <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}">
+            <button class="btn-yes-quit">
+                oui 
+            </button>
+        </a>
+        <button class="btn-no-quit">
             non
         </button>
     </div>

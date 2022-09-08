@@ -10,8 +10,6 @@ AVANT DE PASSER A UI UX :
                             heures valorisées/ e  :: FAIT 
 
                             MANQUE A APPEND LE TOUT EN HTML !! 
-
-?? 
 pdf : tableau pareil que recap avec totaux 
 
 
@@ -41,12 +39,13 @@ message erreur meme pseudo inscription
 */
 Page d'accueil ancien logos changer ca----------------------------------------------------FAIT
 association changer de logo dans la page administration-----------------------------------FAIT
+comfirmation adherer/quitter association-------------------------------------------------- EN COURS MANQUE CSS
 css cassé admin---------------------------------------------------------------------------FAIT
-super admin donner admin a quelqu'un------------------------------------------------------ A DEMANDER A MARIO COMMENT IL VEUT CA 
+super admin donner admin a quelqu'un------------------------------------------------------DEMANDER A MARIO COMMENT IL VEUT CA 
 Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
 Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 
 mois sans année donc toutes les annees que les mois 
-Nous  contacter                                                                                                                                                                                                                                                                  message alerte quitter aller dans associations
+Nous  contacter                                                                                                                                                                                                                                                                message alerte quitter aller dans associations
 recap beug--------------------------------------------------------------------------------FAIT
 hover sur les recap-----------------------------------------------------------------------FAIT
 revoir les css saisie---------------------------------------------------------------------FAIT A MOITIE
@@ -66,8 +65,25 @@ cdos21.org pas securisé--------------------------------------------------------
 
 
 RAJOUTE
-Admin ne peut voir que les saisies de l'utilisateur de SON association
+Admin ne peut voir que les saisies de l'utilisateur de SON association----manque juste pour recherche
+logo par default en prod a redimensionner ?? demander / ratio 1
+mailer ne marche tjrs pas ?? 
+
+
 */
 
+
+Dans super admin dire qui est l'admin de l'assoc;
+btn -> changer, tout les utilisateur et donne le droit 
+recap vert -> valorisees a valorisation et espace entre les deux points
+
+recap vert -> don avec un S
+recap vert -> remboursement a la place de a payer
+recap vert -> bénévolat au lieu de durée
+faire passer les donnees totales a la page d'accueil
+event keyup down changement bareme au lieu de focus>  toast comme dans adherer assoc
+demander pour supprimer une saisie avec une notification; 
+superadmin peut changer valeur des groupe et bareme dans saisie
+rajouter logo saved header avec trait vertical
 
 ssh://cdosexgi-saved@ssh.cluster005.hosting.ovh.net:22/
