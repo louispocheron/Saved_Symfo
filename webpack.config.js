@@ -29,6 +29,8 @@ Encore
     .addEntry('sort', './assets/js/sort.js')
     .addEntry('recap', './assets/js/recap.js')
     .addEntry('choose', './assets/js/choose.js')
+    .addEntry('association', './assets/js/association.js')
+
 
     
 

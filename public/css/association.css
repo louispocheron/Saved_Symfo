@@ -136,6 +136,7 @@ main{
   .btn-quitter{
   border-radius: 20px;
 	border: 2px solid rgb(233, 58, 58);
+  /* border: 1px solid green; */
 	background-color: #ffff;
 	color: #2E2E2E;
 	font-size: 12px;
@@ -192,12 +193,96 @@ main{
     display: none;
   }
 
+  .modal-adherer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* border-radius: 5px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     padding: 2rem;
+    display: none;
+  }
+  .modal-adherer[data-active=true]{
+    display: block;
+  }
+  
+  .modal-adherer h1{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .btn-yes{
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background-color: #152149;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+      width: 15rem;
+      height: 2.7rem;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+  }
+  .btn-yes:hover{
+    background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-no{
+    border-radius: 20px;
+	  border: 2px solid rgb(233, 58, 58);
+  /* border: 1px solid green; */
+	  background-color: #ffff;
+	color: #2E2E2E;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    width: 15rem;
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .btn-no:hover{
+    background-color: rgb(233, 58, 58);
+    color: #ffff;
+    border: 1px solid rgb(233, 58, 58);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
   @media only screen and (max-width: 963px){
     .unique-assoc-container{
       flex-direction: column;
       padding: 1rem;
       height: auto;
       margin-top: 2rem;
+    }
+    .btn-container{
+      flex-direction: column;
     }
     .mobile-pagination{
       display: block;
