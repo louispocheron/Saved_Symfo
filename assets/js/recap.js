@@ -230,6 +230,7 @@ function Ajaxyear(){
 // CALCUL AVEC LA FONCTION QU'ON IMPORTE LIGNE 1 ET APPEND POUR LA DUREE 
 const data = Array.from(duree).map(el => el.dataset.duree);
 // console.log(data);
+// console.log(data);
 let dureeAjax = sumHours(data);
 dureeP.innerHTML = `Durée : <span style="
             color:#097969;

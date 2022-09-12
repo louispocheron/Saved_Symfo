@@ -45,6 +45,16 @@ class ActionRepository extends ServiceEntityRepository
         ;
     }
 
+       public function findByUsersForAjax($user){
+        return $this->createQueryBuilder('action')
+            ->andWhere('action.user = :user')
+            ->setParameter('user', $user->getId())
+            ->getQuery()
+            ->getArrayResult()
+        ;
+    }
+
+
 
     public function findByAssociation($association){
         return $this->createQueryBuilder('action')

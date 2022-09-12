@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HomeController extends AbstractController
 {
@@ -39,6 +40,7 @@ class HomeController extends AbstractController
             $all = $actionRepo->findByUsers($user);
         }
 
+        // dd($all);
      
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
@@ -49,6 +51,21 @@ class HomeController extends AbstractController
         ]);
         
     }
+
+#[Route('/ajax_endpoint', name: 'data_user')]
+    public function getDataFromUser(ActionRepository $actionRepo): response
+{
+    $user = $this->getUser();
+    $data = $actionRepo->findByUsersForAjax($user);
+   
+    return new JsonResponse([
+        'data' => $data
+    ]);
+
+    
+
+}
+
 
     #[Route('/', name: 'base')]
 public function isAdmin(AssociationsRepository $repo): Response
