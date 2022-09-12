@@ -1,4 +1,3 @@
-console.log('testsort')
 document.addEventListener('click', function (e) {
   try {
 

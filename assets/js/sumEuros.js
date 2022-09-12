@@ -1,7 +1,6 @@
 
 
 export function sumEuros(data){
-    console.log(data);
     if(data.length > 1){
         // on calcul le total des euros
         let euros = data.map(el => el.split('.')[0]);

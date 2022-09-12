@@ -4,8 +4,6 @@
 
 {% block body %} 
 
-
-
 <div class="home-container">
     <h1 class="h1-home"> Bienvenue sur <span>SAVED</span></h1>
     {% if latest == [] %}
@@ -33,27 +31,27 @@
                 </div>
     {% else %}
 
-    <h3>Dernière saisie :</h3>
+    <h3>Total de vos saisies :</h3>
         <div class="homeCard-container">
             {% for recent in latest   %}
                 <div class="homeCard">
                     <img src="{{asset('assets/DONS-01.svg') }}" class='svg-home'>
-                    <h2>{{ recent.dons|number_format(2) }}€</h2>
+                    <h2 class="dons-card"></h2>
                     <h3>Dons</h3>
                 </div>
                 <div class="homeCard">
                     <img src="{{asset('assets/REMBOURSEMENT-02.svg') }}" class='svg-home'>
-                    <h2>{{ recent.aPayer|number_format(2) }}€</h2>
+                    <h2 class="remboursement-card"></h2>
                     <h3>Remboursement</h3>
                 </div>
                 <div class="homeCard">
                     <i class="fa-solid fa-clock svg-homecard"></i>
-                    <h2>{{ recent.duree }}</h2>
+                    <h2 class="heure-card"></h2>
                     <h3>Heure de bénévolat</h3>
                 </div>
                 <div class="homeCard">
                     <img src="{{asset('assets/VALORISATION-01.svg') }}" class='svg-home bene'>
-                    <h2>{{ recent.heuresValorisees|number_format(2) }}€</h2>
+                    <h2 class="benevolat-card"></h2>
                     <h3>Bénévolat</h3>
                 </div>
             {% endfor %}

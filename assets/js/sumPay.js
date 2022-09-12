@@ -1,10 +1,5 @@
 export function sumPay(data){
-
-    console.log(data.length)
-
     if(data.length > 1){
-        
-
         // on calcul le total des euros
         let euros = data.map(el => el.split('.')[0]);
         euros = euros.map(el => parseInt(el));
@@ -19,13 +14,10 @@ export function sumPay(data){
         // check if there is a cent
         // check if theres a cent
         let cents = data.map(el => el.split('.')[1]);
-        console.log(cents);
         let totalCents = null;
         if(cents.includes(undefined)){
-            console.log('no cents');
             totalCents = 0;
         } else {
-            console.log('there is cents');
         // On enleve les valeurs NaN
         cents = cents.filter(el => !isNaN(el));
 
