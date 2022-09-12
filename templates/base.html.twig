@@ -98,7 +98,10 @@
                     {% endif %}
                     <div class="user-name">
                         <h2 class="user-username"> {{app.user.username}} </h2> 
-                        <h3 class="user-email"> {{app.user.email}} </h3>
+                        <h3 class="user-email"> {{app.user.email}}</h3>
+                        {% if is_granted('ROLE_SUPER_ADMIN') %}
+                            <a href="{{ path('super_admin') }}" class="user-email admin">Super administration</a>
+                        {% endif %}
                         {% if Assoc.isAdminGlobal(app.user) == true %}
                             <a href="{{ path('admin_choose') }}" class="user-email admin">Administration</a>
                         {% endif %}

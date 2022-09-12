@@ -50,7 +50,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN/ }
-        # - { path: ^/superadmin, roles: ROLE_SUPERADMIN }
+        - { path: ^/superadmin, roles: ROLE_SUPER_ADMIN }
 
 when@test:
     security:

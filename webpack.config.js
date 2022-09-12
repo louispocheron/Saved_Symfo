@@ -30,6 +30,8 @@ Encore
     .addEntry('recap', './assets/js/recap.js')
     .addEntry('choose', './assets/js/choose.js')
     .addEntry('association', './assets/js/association.js')
+    .addEntry('superAdmin', './assets/js/superAdmin.js')
+
 
 
     

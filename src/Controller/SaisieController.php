@@ -30,6 +30,7 @@ class SaisieController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager, AssociationsRepository $repo): Response
     {
 
+
         $user = $this->getUser();
         if (!$user) {
             return $this->redirectToRoute('app_login');
@@ -160,9 +161,8 @@ class SaisieController extends AbstractController
         $userAssoc = $this->getUser()->getAssociation()->getValues();
 
         $IsAssoc = $repo->findAssociationByUser($user);
-        
-        // $entityManager->persist($action);
-        // $entityManager->flush();
+       
+
 
         return $this->render('saisie/index.html.twig', [
             'controller_name' => 'SaisieController',
@@ -171,6 +171,14 @@ class SaisieController extends AbstractController
             'assocs' => $userAssoc,
             'charges' => $charge
         ]);
+    }
+
+    #[Route('endPointCharges/{values}', name: 'end_point_charges')]
+    public function superAdminEndPoint(Request $request)
+    {
+        if ($this->isGranted('ROLE_ADMIN')) {
+             dd($request->attributes->get('values'));
+        }
     }
 
 }
