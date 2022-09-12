@@ -161,20 +161,11 @@
 
     {% block javascripts %}
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-        <script src="dist/notiflix-aio-3.2.5.min.js"></script>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         {{ encore_entry_script_tags('saisie') }}
         {{ encore_entry_script_tags('sort') }}
-
-        <script>
-            const bareme = document.querySelector('.bareme');
-            bareme.addEventListener('keydown', () => {
-                alert("Attention! Veuillez à respecter le taux en vigueur afin que le remboursement sois recevable" );
-            }, {once: true});
-        
-
-        </script>
 
 
     {% endblock %}

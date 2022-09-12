@@ -7,14 +7,48 @@
 {% endblock %}
 
 {% block body %}
-    <h1> liste des utilisateurs de {{ association.name }}</h1>
 
+        <div>
+            {# <tr onclick="window.location='{{path('super_admin_user_delete', {'id': association.id, 'userID': user.id} )}}"><i class="fa-solid fa-trash"></i></tr>
+            <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id }  )}}"><p>{{ user.username }}</p></tr> #}
+        <div>
+ <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
+
+<h3 class="assoc-pres">administration de l'association :</h3>
+<div class="assoc-container">
+    <h3 class="assoc-name">{{association.name}}</h3>
+    {% if association.logo != null %}
+        <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
+    {% else %}
+        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+    {% endif %}
+    <h5 style="color:#505050">Cette association est gérée par {{association.user.username}}</h5>
+</div>
+
+<table class="table">
+        <tr>
+            <th>Utilisateur</th>
+            <th>Email</th>
+            <th>Supprimer</th>
+        </tr>
+{% if users is empty %}
+    <tr>
+        <td>Aucun utilisateur</td>
+        <td></td>
+        <td></td>
+    </tr>
+{% else %}
     {% for user in users %}
-    <div>
-        <a href=" {{path("super_admin_user_delete", {'id': association.id, 'userID': user.id} )}} "><i class="fa-solid fa-trash"></i></a>
-        <a href=" {{path('super_admin_user', {"id": association.id, "userID": user.id }  )}} "><p>{{ user.username }}</p></a>
-    <div>
-    {% endfor %}
+            <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id, } )}}'">
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td><a href="{{ path('super_admin_user_delete', {'id': association.id, 'userID': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
+            </tr>
+    {% endfor %} 
+{% endif %}
+
+</table>
 
 
 {% endblock %}

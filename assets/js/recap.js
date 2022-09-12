@@ -137,7 +137,7 @@ function Ajaxyear(){
             const tr = document.querySelectorAll('.duree');
             const trData = Array.from(tr).map(el => el.dataset.duree)
             let totalDuree = sumHours(trData);
-            dureeP.innerHTML = `Durée :<span style="
+            dureeP.innerHTML = `Bénévolat : <span style="
             color:#097969;
             font-weight: bold;
             "> ${totalDuree}</span>`;
@@ -146,7 +146,7 @@ function Ajaxyear(){
             const payerTdAjax = document.querySelectorAll('.payerTd');
             const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer);
             let aPayerSumAjax = sumPay(trpayer);
-            payerP.innerHTML = `A payer :<span style="
+            payerP.innerHTML = `Remboursement : <span style="
             color:#097969;
             font-weight: bold;
             "> ${aPayerSumAjax}€</span>`;
@@ -157,7 +157,7 @@ function Ajaxyear(){
             const donTdAjax = document.querySelectorAll('.donTd');
             const trdon = Array.from(donTdAjax).map(el => el.dataset.don)
             let donSumAjax = sumEuros(trdon);
-            donP.innerHTML = `Don :<span style="
+            donP.innerHTML = `Dons :<span style="
             color:#097969;
             font-weight: bold;
             "> ${donSumAjax}€</span>`;
@@ -167,7 +167,7 @@ function Ajaxyear(){
             const valoriseesTdAjax = document.querySelectorAll('.valoriseesTd');
             const trvalorisees = Array.from(valoriseesTdAjax).map(el => el.dataset.valorisees)
             let valoriseesSumAjax = sumEuros(trvalorisees);
-            valoriseeP.innerHTML = `Valorisees :<span style="
+            valoriseeP.innerHTML = `Valorisées : <span style="
             color:#097969;
             font-weight: bold;
             ">${valoriseesSumAjax}€</span> `;
@@ -232,7 +232,7 @@ const data = Array.from(duree).map(el => el.dataset.duree);
 // console.log(data);
 // console.log(data);
 let dureeAjax = sumHours(data);
-dureeP.innerHTML = `Durée : <span style="
+dureeP.innerHTML = `Bénévolat : <span style="
             color:#097969;
             font-weight: bold;
             ">${dureeAjax}</span>`;
@@ -240,7 +240,7 @@ dureeP.innerHTML = `Durée : <span style="
 // CALCUL AVEC LA FONCTION QU'ON IMPORTE LIGNE 3 ET APPEND POUR LE REMBOURSEMENT
 const dataPayer = Array.from(payerTd).map(el => el.dataset.payer);
 let aPayerSum = sumPay(dataPayer);
-payerP.innerHTML = `A payer :<span style="
+payerP.innerHTML = `Remboursement : <span style="
             color:#097969;
             font-weight: bold;
             ">${aPayerSum}€</span>`;
@@ -248,7 +248,7 @@ payerP.innerHTML = `A payer :<span style="
 // CALCUL AVEC LA FONCTION QU'ON IMPORTE LIGNE 2 ET APPEND POUR LE DON
 const dataDon = Array.from(donTd).map(el => el.dataset.don);
 let donSum = sumEuros(dataDon);
-donP.innerHTML = `Don :<span style="
+donP.innerHTML = `Dons :<span style="
             color:#097969;
             font-weight: bold;
             "> ${donSum}€</span>`;
@@ -256,7 +256,7 @@ donP.innerHTML = `Don :<span style="
 // CALCUL AVEC LA FONCTION QU'ON IMPORTE LIGNE 2 ET APPEND POUR LA VALORISATION
 const dataValorisees = Array.from(valoriseesTd).map(el => el.dataset.valorisees);
 let valoriseesSum = sumEuros(dataValorisees);
-valoriseeP.innerHTML = `Valorisation : <span style="
+valoriseeP.innerHTML = `Valorisées : <span style="
             color:#097969;
             font-weight: bold;
             ">${valoriseesSum}€</span>`;

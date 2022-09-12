@@ -73,15 +73,14 @@ mailer ne marche tjrs pas ??
 */
 
 
-Dans super admin dire qui est l'admin de l'assoc;
+Dans super admin dire qui est l'admin de l'assoc-------------------------------------------FAIT
 btn -> changer, tout les utilisateur et donne le droit 
-recap vert -> valorisees a valorisation et espace entre les deux points
-
-recap vert -> don avec un S
-recap vert -> remboursement a la place de a payer
-recap vert -> bénévolat au lieu de durée
-faire passer les donnees totales a la page d'accueil
-event keyup down changement bareme au lieu de focus>  toast comme dans adherer assoc
+recap vert -> valorisees a valorisation et espace entre les deux points---------------------FAIT
+recap vert -> don avec un S-----------------------------------------------------------------FAIT
+recap vert -> remboursement a la place de a payer-------------------------------------------FAIT
+recap vert -> bénévolat au lieu de durée----------------------------------------------------FAIT
+faire passer les donnees totales a la page d'accueil----------------------------------------FAIT
+event keyup down changement bareme au lieu de focus>  toast comme dans adherer assoc ?? marche pas 
 demander pour supprimer une saisie avec une notification; 
 superadmin peut changer valeur des groupe et bareme dans saisie
 rajouter logo saved header avec trait vertical

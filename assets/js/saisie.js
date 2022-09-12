@@ -1,6 +1,7 @@
 // //FLATPICKR POUR LA SAISIE DATE
 import 'flatpickr';
 import 'flatpickr/dist/l10n/fr';
+import Toastify from 'toastify-js'
 
 
 document.querySelector('.flatpickr').flatpickr({
@@ -228,6 +229,29 @@ groupeSelect.addEventListener("change", () => {
     //     maximumSelectionLength: 1,
     //     allowClear: true,   
     // });
+
+
+console.log(bareme);
+            bareme.addEventListener('keydown', (event) => {
+                event.preventDefault();
+                console.log('clické bggggg');
+                Toastify({
+                text: "Attention! Veuillez à respecter le taux en vigueur afin que le remboursement sois recevable",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                     // red as default
+                    background: "linear-gradient(315deg, #3f0d12 0%, #a71d31 74%)",
+                },
+                onClick: function(){} // Callback after click
+            }).showToast();
+            }, {once: true});
+        
+
 
         
 
