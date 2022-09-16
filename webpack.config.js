@@ -31,6 +31,8 @@ Encore
     .addEntry('choose', './assets/js/choose.js')
     .addEntry('association', './assets/js/association.js')
     .addEntry('superAdmin', './assets/js/superAdmin.js')
+    .addEntry('RemoveAction', './assets/js/removeAction.js')
+
 
 
 

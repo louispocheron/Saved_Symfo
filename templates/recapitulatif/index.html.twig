@@ -6,44 +6,6 @@
  <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
 
 
-
- 
-
-
-
-{# CODE POUR LA DERNIERE SAISIE EN DATE #}
-{# <div class="latest-table">
- ma dernière saisie en date : 
-        {% for action in latest %}
-            <table class="table">
-                <tr>
-                    <th>Association</th>
-                    <th>Date</th>
-                    <th>Ville de départ</th>
-                    <th>Ville d'arrivée</th>
-                    <th>Km</th>
-                    <th>Raisons</th>
-                    <th>Heure de départ</th>
-                    <th>Heure d'arrivée</th>
-                    <th>Durée</th>
-                    <th>Frais</th>
-                </tr>
-                <tr onclick="window.location='{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}'">
-                    <td data-label="Association">{{ action.association.name }}</td>
-                    <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
-                    <td data-label="Ville de départ">{{ action.villeDepart }}</td>
-                    <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
-                    <td data-label="Km">{{ action.km }}</td>
-                    <td data-label="Raison">{{ action.raisons }}</td>
-                    <td data-label="Heure de départ">{{ action.heureDepart|date('H:i') }}</td>
-                    <td data-label="Heure d'arrivée">{{ action.heureArrivee|date('H:i') }}</td>
-                    <td data-label="Durée">{{ action.duree }}</td>
-                    <td data-label="Frais">{{ action.frais }}</td>
-                </tr>
-            </table>
-        {% endfor %}
-</div> #}
-
 <h2 class="h2-main">Récapitulatif</h2>
 {% if (actions.getTotalItemCount != 0) and (app.user == true) %}
 
@@ -117,11 +79,28 @@
     {{ knp_pagination_render(actions) }}
 </div>
 
+
+<div class="modal-adherer">
+    <h1>Voulez vous vraiment supprimer cette saisie ?</h1>
+    <div class='btn-container'>
+        <a class="btnAdherer" href="">
+            <button class="btn-yes">
+                oui 
+            </button>
+        </a>
+        <button class="btn-no">
+            non
+        </button>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block javascripts %}
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     {{ encore_entry_script_tags('recap') }}
     {{ encore_entry_script_tags('sort') }}
+    {{ encore_entry_script_tags('RemoveAction') }}
+
 
 {% endblock %}
