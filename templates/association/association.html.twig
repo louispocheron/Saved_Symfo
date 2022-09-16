@@ -5,34 +5,40 @@
 {% block body %}
  <link href="{{ asset('css/association.css') }}" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-<div class="flex-me">
-    <div class="arrow-left">
-        <a href=" {{path('association')}} "><i class="fa-solid fa-arrow-left"></i></a>
-    </div>
-<div class="unique-assoc-container">
-    <div class="unique-assoc-title">
-        <h1 class="assoc-name">{{association.name}}</h1>
-        {% if association.logo != null %}
-            <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img"/>
-        {% else %}
-            <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
-        {% endif %}
-    </div>
-    <span class="trait"></span>
-    <div class="assoc-description">
-        {{ association.description }}
-        {# <a class="btnAdherer" href="{{ path('association_adherer', {'id': association.id}) }}"> #}
-            <button type="button" class="btn btn-primary btn-adherer">adherer</button>
-        {# </a> #}
-        {# <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}"> #}
-            <button type="button" class="btn btn-primary btn-quitter">quitter</button>
-        {# </a> #}
+    <div class="flex-me">
+        <div class="arrow-left">
+            <a href=" {{path('association')}} "><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+    <div class="unique-assoc-container">
+        <div class="unique-assoc-title">
+            <h1 class="assoc-name">{{association.name}}</h1>
+            {% if association.logo != null %}
+                <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img"/>
+            {% else %}
+                <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+            {% endif %}
+        </div>
+        <span class="trait"></span>
+        <div class="assoc-description">
+            {{ association.description }}
+            {# <a class="btnAdherer" href="{{ path('association_adherer', {'id': association.id}) }}"> #}
+                <button type="button" class="btn btn-primary btn-adherer">adherer</button>
+            {# </a> #}
+            {# <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}"> #}
+                <button type="button" class="btn btn-primary btn-quitter">quitter</button>
+            {# </a> #}
+        </div>
     </div>
 </div>
+
 {# MODAL #}
 <div class="modal-adherer">
     <h1>Voulez vous vraiment adherer a cette association ?</h1>
+    {% if association.logo != null %}
+        <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img-modal"/>
+    {% else %}
+        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+    {% endif %}
     <div class='btn-container'>
         <a class="btnAdherer" href="{{ path('association_adherer', {'id': association.id}) }}">
             <button class="btn-yes">
@@ -47,6 +53,11 @@
 
 <div class="modal-desadherer">
     <h1>Voulez vous vraiment quitter cette association ?</h1>
+    {% if association.logo != null %}
+        <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img-modal"/>
+    {% else %}
+        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-modal"></img>
+    {% endif %}
     <div class='btn-container'>
         <a class="btnQuitter" href="{{ path('association_quitter', {'id': association.id}) }}">
             <button class="btn-yes-quit">
@@ -58,7 +69,7 @@
         </button>
     </div>
 </div>
-
+</div>
 </div>
 
 {% endblock %}

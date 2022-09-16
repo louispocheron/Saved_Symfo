@@ -23,6 +23,10 @@ main{
 .search-bar-input:focus{
     border: 2px solid #152149;
 }
+.assoc-img-modal {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
 .associations {
     display: flex;
     flex-direction: row;
@@ -198,9 +202,8 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
     border-radius: 20px;
-    height: 30%;
+    height: 40%;
     width: 30%;
     position: absolute;
     top: 50%;
@@ -209,7 +212,7 @@ main{
     background-color: #fff;
     /* border-radius: 5px; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     padding: 2rem;
+     padding: 1rem;
     display: none;
   }
   .modal-desadherer{
@@ -232,10 +235,10 @@ main{
     display: none;
   }
   .modal-adherer[data-active=true]{
-    display: block;
+    display: flex;
   }
   .modal-desadherer[data-active=true]{
-    display: block;
+    display: flex;
   }
 
   .modal-adherer h1{
@@ -265,7 +268,7 @@ main{
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;  
-      width: 15rem;
+      width: 10rem;
       height: 2.7rem;
       text-decoration: none;
       transition: all 0.5s ease-in-out;
@@ -288,7 +291,7 @@ main{
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;  
-      width: 15rem;
+      width: 10rem;
       height: 2.7rem;
       text-decoration: none;
       transition: all 0.5s ease-in-out;
@@ -313,7 +316,7 @@ main{
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;  
-    width: 15rem;
+    width: 10rem;
     height: 2.7rem;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
@@ -337,7 +340,7 @@ main{
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;  
-    width: 15rem;
+    width: 10rem;
     height: 2.7rem;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
@@ -399,6 +402,14 @@ main{
     }
     .assoc-img{
       width: 100%;
+    }
+    .modal-adherer{
+      height: auto;
+      width: 80%;
+    }
+     .modal-desadherer{
+      height: auto;
+      width: 80%;
     }
     .assoc-description{
       width: 90%;

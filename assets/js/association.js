@@ -8,14 +8,20 @@ const btnYes = document.querySelector('.btn-yes');
 const btnYesQuit = document.querySelector('.btn-yes-quit');
 const btnNoQuit = document.querySelector('.btn-no-quit');
 const btnQuit = document.querySelector('.btn-quitter');
+const background = document.querySelector('.flex-me');
+console.log(background);
+
 
 
 const openModal = () => {
     modal.dataset.active = true;
+    background.style.opacity = "0.4";
 };
 
 const closeModal = () => {
     delete modal.dataset.active;
+    background.style.opacity = "1";
+
 };
 
 btnAdherer.addEventListener("click", () => {
@@ -93,14 +99,16 @@ btnYes.addEventListener('click', (event) => {
 // POUR QUITTER UNE ASSOCIATION 
 const openModalUnfollow = () => {
     modalUnfollow.dataset.active = true;
+    background.style.opacity = "0.4";
+
 }
 
 const closeModalUnfollow = () => {
     delete modalUnfollow.dataset.active
+    background.style.opacity = "1";
 }
 
 btnQuit.addEventListener('click', () => {
-    console.log('salut');
     openModalUnfollow();
 })
 
