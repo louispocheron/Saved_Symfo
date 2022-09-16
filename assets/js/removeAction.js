@@ -17,9 +17,9 @@ const openModal = () => {
 const closeModal = () => {
     delete modal.dataset.active;
 }
-// INITIE LA VARIABLE AVANT FONCTION IMPORTANT
-let index 
 
+// INITIE LA VARIABLE AVANT FONCTION IMPORTANT
+let index
 
 trash.forEach((el, idx) =>{
     el.addEventListener('click', () => {
@@ -39,9 +39,21 @@ btnYes.addEventListener('click', (event) => {
     axios.post(endPoint).then((res) => {
         console.log(res);
         const domToRemove = document.querySelector(`.tr-${id}`);
-    // console.log(domToRemove)
         domToRemove.remove();
         closeModal();
+        Toastify({
+                text: "vous avez bien adhéré",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){}
+            }).showToast();
     })
     .catch((err) => {
         console.log(err);
