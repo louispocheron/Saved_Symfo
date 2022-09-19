@@ -101,6 +101,7 @@ class SaisieController extends AbstractController
                     ])
 
                 ->add('date', DateType::class, [
+                    'required' => true,
                     'widget' => 'single_text',
                     'format' => 'dd/MM/yyyy',
                     'html5' => false,
@@ -142,12 +143,18 @@ class SaisieController extends AbstractController
 
                 ->getForm();
                 
+        // METTRE DATE DU JOUR PAR DEFAULT 
+        $issetDate = $form->get('date')->getData();
+        if($issetDate == null){
+            $form->get('date')->setData(new \DateTime());
+        }
+        
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
 
             $action = $form->getData();
-            
+            $issetDate = $form->get('date')->getData();
             $action->setUserID($user);
             
             $action->setCreatedAt(new \DateTime());

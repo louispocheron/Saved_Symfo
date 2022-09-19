@@ -243,13 +243,13 @@ main{
 
   .modal-adherer h1{
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
   .modal-desadherer h1{
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   .btn-container{
@@ -258,37 +258,16 @@ main{
     align-items: center;
     flex-direction: row;
   }
-  .btn-yes{
-    border-radius: 20px;
-    border: 2px solid #fff;
-    background-color: #152149;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;  
-      width: 10rem;
-      height: 2.7rem;
-      text-decoration: none;
-      transition: all 0.5s ease-in-out;
-  }
-  .btn-yes:hover{
-    background-color: white;
-    color: #152149;
-    border: 1px solid #152149;
-    font-weight: 600;
-    cursor: pointer;
-  }
 
   .btn-yes-quit{
-    border-radius: 20px;
+    border-radius: 5px;
     border: 2px solid #fff;
     background-color: #152149;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
+    margin-right: 5px;
     letter-spacing: 1px;
     text-transform: uppercase;  
       width: 10rem;
@@ -297,40 +276,13 @@ main{
       transition: all 0.5s ease-in-out;
   }
   .btn-yes-quit:hover{
-    background-color: white;
-    color: #152149;
+    background-color: #2c4088;
     border: 1px solid #152149;
     font-weight: 600;
     cursor: pointer;
   }
-
-  
-  .btn-no{
-    border-radius: 20px;
-	  border: 2px solid rgb(233, 58, 58);
-  /* border: 1px solid green; */
-	  background-color: #ffff;
-	color: #2E2E2E;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;  
-    width: 10rem;
-    height: 2.7rem;
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  .btn-no:hover{
-    background-color: rgb(233, 58, 58);
-    color: #ffff;
-    border: 1px solid rgb(233, 58, 58);
-    font-weight: 600;
-    cursor: pointer;
-  }
   .btn-no-quit{
-    border-radius: 20px;
+    border-radius: 5px;
 	  border: 2px solid rgb(233, 58, 58);
   /* border: 1px solid green; */
 	  background-color: #ffff;

@@ -1,8 +1,6 @@
 // //FLATPICKR POUR LA SAISIE DATE
 import 'flatpickr';
 import 'flatpickr/dist/l10n/fr';
-import Toastify from 'toastify-js'
-
 
 document.querySelector('.flatpickr').flatpickr({
     locale: 'fr',
@@ -230,14 +228,11 @@ groupeSelect.addEventListener("change", () => {
     //     allowClear: true,   
     // });
 
-
-console.log(bareme);
             bareme.addEventListener('keydown', (event) => {
                 event.preventDefault();
-                console.log('clické bggggg');
                 Toastify({
-                text: "Attention! Veuillez à respecter le taux en vigueur afin que le remboursement sois recevable",
-                duration: 3000,
+                text: "Veuillez à respecter le taux en vigueur afin que le remboursement sois recevable",
+                duration: 5000,
                 newWindow: true,
                 close: true,
                 gravity: "top", // `top` or `bottom`

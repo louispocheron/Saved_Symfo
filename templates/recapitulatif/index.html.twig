@@ -5,11 +5,10 @@
 {% block body %}
  <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
 
-
+<div class="content-container">
 <h2 class="h2-main">Récapitulatif</h2>
 {% if (actions.getTotalItemCount != 0) and (app.user == true) %}
 
-<div class="content-container">
     <div class="content-info">
         <h3> Rechercher dans mes saisies </h3>
        
@@ -81,13 +80,12 @@
 
 
 <div class="modal-adherer">
-    <h1>Voulez vous vraiment supprimer cette saisie ?</h1>
+    <h1 class="modalP">Voulez vous vraiment supprimer cette saisie ?</h1>
+    <img src="{{ asset('assets/HumanMan.png') }}" class="img-modal"/>
     <div class='btn-container'>
-        <a class="btnAdherer" href="">
             <button class="btn-yes">
                 oui 
             </button>
-        </a>
         <button class="btn-no">
             non
         </button>
@@ -97,9 +95,9 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="dist/notiflix-aio-3.2.5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     {{ encore_entry_script_tags('recap') }}
     {{ encore_entry_script_tags('sort') }}
     {{ encore_entry_script_tags('RemoveAction') }}

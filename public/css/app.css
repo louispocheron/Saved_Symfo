@@ -91,7 +91,6 @@
     height: 2.7rem;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
-
 }
 .btn-basic:hover{
     background-color: white;
@@ -100,7 +99,55 @@
     font-weight: 600;
     cursor: pointer;
 }
+  .btn-yes{
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: #152149;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+      width: 10rem;
+      height: 2.7rem;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+  }
+  .btn-yes:hover{
+    background-color: #2c4088;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+  }
 
+    .btn-no{
+    border-radius: 5px;
+	  border: 2px solid rgb(233, 58, 58);
+  /* border: 1px solid green; */
+	  background-color: #ffff;
+	color: #2E2E2E;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    width: 10rem;
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .btn-no:hover{
+    background-color: rgb(233, 58, 58);
+    color: #ffff;
+    border: 1px solid rgb(233, 58, 58);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  
   .dropbtn {
     background-color: #04AA6D;
     color: white;
@@ -185,15 +232,24 @@
     border-radius: 5px;
     color: white;
     background-color: var(--main-color);
-     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
-    transition: all 0.5s ease-in-out;
-  }
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    animation: slide 1s forwards
+  } 
   .homeCard:hover{
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
   transform: translate3d(0px, -1px, 0px);
   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
   }
+/* 
+  @keyframes slide{
+    0%{
+      transform: translateX(-1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  } */
 
   .homeCard h3{
     font-size: 20px;
@@ -207,6 +263,18 @@
   }
   .svg-home{
     width: 50px;
+  }
+
+  /* ANIMATION POUR CHAQUE CARD PAGE ACCUEIL */
+
+    .homeCard:nth-child(2){
+      transition-delay: 0ms;
+  }
+    .homeCard:nth-child(3){
+      transition-delay: 0ms;
+  }
+    .homeCard:nth-child(4){
+      transition-delay: 0ms;
   }
   .bene{
     width: 60px;
@@ -460,6 +528,15 @@
         grid-template-rows: 15% 85%;
         overflow-y: hidden;
     }
+  .homeCard:nth-child(2){
+      transition-delay: 200ms;
+  }
+    .homeCard:nth-child(3){
+      transition-delay: 400ms;
+  }
+    .homeCard:nth-child(4){
+      transition-delay: 600ms;
+  }
     .header{
       display: none;
     }

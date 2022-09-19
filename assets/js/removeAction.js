@@ -5,17 +5,22 @@ const dataId = document.querySelectorAll('.data-id');
 const trash = document.querySelectorAll('.modal-open-delete');
 const btnNo = document.querySelector('.btn-no');
 const btnYes = document.querySelector('.btn-yes');
+const main = document.querySelector('.content-container');
+
 
 
 
 
 // EVENT POUR OUVRIR LE MODAL 
 const openModal = () => {
-    modal.dataset.active = true; 
+    modal.dataset.active = true;
+    main.style.opacity = '0.4';
 }
 
 const closeModal = () => {
     delete modal.dataset.active;
+    main.style.opacity = '1';
+
 }
 
 // INITIE LA VARIABLE AVANT FONCTION IMPORTANT
@@ -42,8 +47,8 @@ btnYes.addEventListener('click', (event) => {
         domToRemove.remove();
         closeModal();
         Toastify({
-                text: "vous avez bien adhéré",
-                duration: 3000,
+                text: "Saisie bien supprimé",
+                duration: 5000,
                 newWindow: true,
                 close: true,
                 gravity: "top", // `top` or `bottom`
