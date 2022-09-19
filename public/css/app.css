@@ -565,13 +565,14 @@
     .h1-assoc{
       font-size: 1.5rem;
       font-weight: 600;
+      text-transform: uppercase;
       margin-left: 1rem;
       color: var(--text);
     }
     .logo-main-assoc{
       aspect-ratio: 1;
       margin-left: 1rem;
-      width: 5%;
+      width: 6rem;
       height: auto;
     }
     .user-info{

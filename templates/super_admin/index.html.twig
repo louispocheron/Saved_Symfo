@@ -16,7 +16,11 @@
                 <a class="getAssocId uniqueAssoc" href=" {{path('super_admin_assoc', {'id': association.id})}} " id="{{association.id}}">
                     <h3 class="assoc-name">{{association.name}}</h3>
                     {# <a href=""<i class="fa-solid fa-trash"></i></a> #}
-                    <img src="{{ asset('/build/logo_directory/' ~ association.logo) }}" class="assoc-img-first"></img>
+                    {% if association.logo != null %}
+                        <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
+                    {% else %}
+                        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+                    {% endif %}
                     <p class="card-description">{{association.description}}</p>
                 </a>
             </li>
