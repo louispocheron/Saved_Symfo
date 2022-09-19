@@ -20,7 +20,7 @@ security:
         main:
             remember_me:
                 secret:   '%kernel.secret%' # required
-                lifetime: 604800 # 1 week in seconds
+                lifetime: 604800 # 1 semaine en secondes
                 
             form_login:
                     login_path: app_login

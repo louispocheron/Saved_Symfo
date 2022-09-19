@@ -29,6 +29,7 @@
     }
   .default-image{
     width: 6rem !important;
+    margin-bottom: 1rem;
   }
   .pagination {
     display: inline-block;

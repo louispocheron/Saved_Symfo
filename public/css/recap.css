@@ -12,7 +12,12 @@ main{
   font-size: 2rem;
   color: #2E2E2E;
 }
-
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
   .modal-adherer{
     display: flex;
     justify-content: center;

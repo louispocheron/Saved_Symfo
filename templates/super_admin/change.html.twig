@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    change admin
+{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/supeadmin.css') }}" rel="stylesheet">
+
+    <h3>Administration pour {{ association[0].name }}</h3>
+        <table class="table">
+        <tr>
+            <th>Utilisateur</th>
+            <th>Email</th>
+            <th>changer</th>
+        </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            {% if user.id == association[0].user.id %}
+                <td ><img src="{{asset('assets/verified.png') }}" class="verified-img"></td>
+            {% else %}
+                <td><button class="change-admin-btn" data-id="{{ user.id }}">Changer</button></td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+   <div class="pagination-container mobile-pagination">
+        {{ knp_pagination_render(users) }}
+    </div>
+
+
+<div class="modal-adherer">
+    <h1 class="modalP">Voulez vous vraiment supprimer cette saisie ?</h1>
+    <img src="{{ asset('assets/HumanMan.png') }}" class="img-modal"/>
+    <div class='btn-container'>
+            <button class="btn-yes">
+                oui 
+            </button>
+        <button class="btn-no">
+            non
+        </button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('superAdmin') }}
+{% endblock %}

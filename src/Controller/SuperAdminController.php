@@ -17,6 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 use App\Service\PdfService;
 
+
 class SuperAdminController extends AbstractController
 {
     #[Route('/superadmin', name: 'super_admin')]
@@ -52,6 +53,7 @@ class SuperAdminController extends AbstractController
         foreach($association->getUsers() as $user){
             $users[] = $user;
         }
+
 
         return $this->render('super_admin/assoc.html.twig', [
             'association' => $association,
@@ -115,4 +117,40 @@ class SuperAdminController extends AbstractController
        $pdf->generatePdf($html);
     }
 
+    #[Route('/superadmin/{id}/change/admin', name: 'super_admin_action_change_admin')]
+    public function changeAdmin(UserRepository $repo, $id, PaginatorInterface $paginator, Request $request, AssociationsRepository $assocRepo): Response
+    {
+        $association = $assocRepo->findById($id);
+        $allUsers = $repo->findAll();
+        $users = $paginator->paginate(
+            $allUsers,
+            $request->query->getInt('page', 1),
+            20
+        );
+
+
+        return $this->render('super_admin/change.html.twig', [
+            'users' => $users,
+            'association' => $association,
+            'controller_name' => 'change admin',
+        ]);
+    }
+    #[Route('/superadmin/{id}/change/admin/{userId}/endpoint', name: 'super_admin_action_change_admin_endpoint')]
+    public function changeAdminEndpoint($id, $userId, AssociationsRepository $assocRepo, UserRepository $userRepo, EntityManagerInterface $entityManager, Request $request):Response{
+        $idNeeded = $request->attributes->get('id');
+        $association = $assocRepo->findOneById($id);
+        $user = $userRepo->findOneById($userId);
+
+        // dd(gettype($user));
+        // $user = $user[0];    
+        $association->setUser($user);
+        $entityManager->persist($association);
+        $entityManager->flush();
+        return $this->redirectToRoute('super_admin_action_change_admin', ['id' => $idNeeded]);
+
+        // return $this->json([
+        //         'code' => 200,
+        //         'message' => 'ok',
+        // ], 200);
+    }
 }
