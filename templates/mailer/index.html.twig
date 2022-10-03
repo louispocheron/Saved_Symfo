@@ -8,14 +8,12 @@
 
 <div class="form-container">
     <div class="wrapper">
-        <h1>NOUS CONTACTER</h1>
+        <h1 class="h1">NOUS CONTACTER</h1>
         {{ form_start(form) }}
-        <div class="form-input">
-            <label>Sujet</label>
+        <div class="form-input sujet">
             {{ form_widget(form.sujet) }}
         </div>
         <div class="form-input message">
-            <label>Message</label>
             {{ form_widget(form.message) }}
         </div>
         <div class="form-input save">

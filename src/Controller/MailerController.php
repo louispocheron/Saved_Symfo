@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -24,10 +26,13 @@ class MailerController extends AbstractController
         $userMail = $user->getEmail();
 
         $form = $this->createFormBuilder()
-                     ->add('sujet', textType::class, [
-                        'label' => 'Sujet'
+                     ->add('sujet', textareaType::class, [
+                        'label' => 'Sujet',
+                        'attr' => [
+                            'placeholder' => 'sujet'
+                        ]
                      ])
-                     ->add('message', textType::class, [
+                     ->add('message', textareaType::class, [
                         'label' => 'Message',
                         'attr' => [
                             'placeholder' => 'Message...'
