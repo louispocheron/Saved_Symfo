@@ -11,7 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use App\Service\PdfService;
 use Knp\Component\Pager\PaginatorInterface;
 
 
@@ -103,23 +102,23 @@ class RecapitulatifController extends AbstractController
 
 
     #[Route('/recapitulatif/pdf/{id}/{userId}', name: 'recapitulatif_pdf')]
-    public function pdfAction(ActionRepository $repo, $id, PdfService $pdfService, $userId){
+    public function pdfAction(ActionRepository $repo, $id, $userId){
 
         $user = $this->getUser();
         $userRealId = $user->getId();
-
+        $action = $repo->find($id);
         if($userId != $userRealId){
             // TU PEUX RENVOYER UNE ERREUR ICI CAR LE MEC ESSAYE DE TRICHER
             return $this->redirectToRoute('home');
         }
-        else{
-            $action = $repo->find($id);
-            $html = $this->renderView('recapitulatif/pdf.html.twig', [
-                'action' => $action,
-                'user' => $user,
-            ]);
-            $pdfService->generatePdf($html);
-        }
+        // else{
+        //    dd('salut');
+        return $this->render('pdf/test.html.twig', [
+            'action' => $action
+        ]);
+            //  return $this->redirectToRoute('pdf/test.html.twig');
+
+        
     }
 
 }

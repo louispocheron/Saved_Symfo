@@ -12,8 +12,10 @@ class GlobalVariables{
     
     public function lastAssoc($user)
     {
+        if(!$user){
+            return;
+        }
         $associations = $this->repo->findLatestAssociationByUser($user);
-        // dd($associations);
         $assoc = array_pop($associations);
         return $assoc;
     }

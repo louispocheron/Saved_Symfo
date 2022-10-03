@@ -1,20 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MailerController!{% endblock %}
+{% block title %}Nous contacter{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+ <link href="{{ asset('css/mailer.css') }}" rel="stylesheet">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/mnt/c/Users/CDOS 21/Desktop/add1/src/Controller/MailerController.php'|file_link(0) }}">src/Controller/MailerController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/mnt/c/Users/CDOS 21/Desktop/add1/templates/mailer/index.html.twig'|file_link(0) }}">templates/mailer/index.html.twig</a></code></li>
-    </ul>
+<div class="form-container">
+    <div class="wrapper">
+        <h1>NOUS CONTACTER</h1>
+        {{ form_start(form) }}
+        <div class="form-input">
+            <label>Sujet</label>
+            {{ form_widget(form.sujet) }}
+        </div>
+        <div class="form-input message">
+            <label>Message</label>
+            {{ form_widget(form.message) }}
+        </div>
+        <div class="form-input save">
+            {{ form_widget(form.enregistrer) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
 </div>
 {% endblock %}

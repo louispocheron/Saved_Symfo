@@ -16,7 +16,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use App\Service\PdfService;
 use Symfony\Component\Validator\Constraints\File;
 
 
@@ -190,25 +189,7 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('admin_user', ['idAssoc' => $association, 'id' => $userId]);
     }
-    
-    #[Route('/admin/user/{userId}/pdf/{actionId}/{idAssoc}', name: 'pdf_action')]
-    public function pdfAction(ActionRepository $actionRepo, $userId, PdfService $pdfService, $actionId, Request $request, AssociationsRepository $repo)
-    {
 
-        $user = $this->getUser();
-        // if($this->denyeAcess($request, $repo)){
-        //     // TU PEUX RENVOYER UNE ERREUR ICI CAR LE MEC ESSAYE DE TRICHER
-        //     return $this->redirectToRoute('home');
-        // }
-
-        $action = $actionRepo->find($actionId);
-        $html = $this->renderView('admin/pdf.html.twig', [
-            'action' => $action,
-            'user' => $user,
-        ]);
-        $pdfService->generatePdf($html);
-
-    }
 
     #[Route('/choose', name: 'admin_choose')]
     public function chooseAssociation(Request $request, AssociationsRepository $repo): Response

@@ -58,3 +58,14 @@ main{
 h3{
     text-align: center;
 }
+.header-pdf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.header-pdf img{
+    width: 150px;
+    height: auto;
+}

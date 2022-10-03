@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    pdf
+{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
+<div class="wrapper">
+    <div class="header-pdf">
+        <img src="{{ asset('assets/logo.SVG') }}"/>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Association</th>
+            <th>Date</th>
+            <th>Km</th>
+            <th>Durée</th>
+            <th>Frais</th>
+            <th>Don</th>
+            <th>Remboursement</th>
+            <th>Heures Valorisées</th>
+        </tr>
+        <tr>
+            <td>{{action.association.name}}</td>
+            <td>{{action.date|date('d/m/Y')}}</td>
+            <td>{{action.km}}</td>
+            <td>{{action.duree}}</td>
+            <td>{{action.frais}}</td>
+            <td>{{action.dons}}</td>
+            <td>{{action.aPayer}}</td>
+            <td>{{action.heuresValorisees}}</td>
+        </tr>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    {{ encore_entry_script_tags('pdfJs') }}
+{% endblock %}

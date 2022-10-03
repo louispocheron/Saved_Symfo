@@ -15,7 +15,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
-use App\Service\PdfService;
 
 
 class SuperAdminController extends AbstractController
@@ -107,15 +106,15 @@ class SuperAdminController extends AbstractController
         ]);
     }
 
-    #[Route('/superadmin/{id}/deleteAction/{actionId}', name: 'super_admin_action_delete')]
-    public function pdfAction(PdfService $pdf, ActionRepository $actionRepo, $actionId)
-    {
-        $action = $actionRepo->find($actionId);
-        $html = $this->renderView('super_admin/pdf.html.twig', [
-            'action' => $action,
-        ]);
-       $pdf->generatePdf($html);
-    }
+    // #[Route('/superadmin/{id}/deleteAction/{actionId}', name: 'super_admin_action_delete')]
+    // public function pdfAction(PdfService $pdf, ActionRepository $actionRepo, $actionId)
+    // {
+    //     $action = $actionRepo->find($actionId);
+    //     $html = $this->renderView('super_admin/pdf.html.twig', [
+    //         'action' => $action,
+    //     ]);
+    //    $pdf->generatePdf($html);
+    // }
 
     #[Route('/superadmin/{id}/change/admin', name: 'super_admin_action_change_admin')]
     public function changeAdmin(UserRepository $repo, $id, PaginatorInterface $paginator, Request $request, AssociationsRepository $assocRepo): Response

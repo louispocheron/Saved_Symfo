@@ -85,4 +85,4 @@ demander pour supprimer une saisie avec une notification------------------------
 superadmin peut changer valeur des groupe et bareme dans saisie
 rajouter logo saved header avec trait vertical
 
-    ssh://cdosexgi-saved@ssh.cluster005.hosting.ovh.net:22/
+ssh://cdosexgi-saved@ssh.cluster005.hosting.ovh.net:22/
