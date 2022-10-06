@@ -203,3 +203,63 @@ valoriseeP.innerHTML = `Valorisation : <span style="
             font-weight: bold;
             ">${valoriseesSum}€</span>`;
 
+// EVENT DU MODAL
+const modal = document.querySelector('.modal-adherer');
+const bg = document.querySelector(".content-container");
+const actionToDelete = document.querySelectorAll('.last-td-poubelle');
+const no = document.querySelector('.btn-no');
+const yes = document.querySelector('.btn-yes');
+
+const openModal = () => {
+    modal.dataset.active = true;
+    // bg.style.opacity = "0.4"
+} 
+
+const closeModal = () => { 
+    delete modal.dataset.active;
+    // bg.style.opacity = "1";
+}
+
+
+let idAction
+actionToDelete.forEach((el, idx) => { 
+    el.addEventListener('click', () => {
+        idAction = el.dataset.id;
+        openModal();
+    })
+})
+
+
+yes.addEventListener('click', (e) => {
+    e.preventDefault();
+    const baseHref = document.URL
+    const endPoint = `${baseHref}/remove/${idAction}`; 
+    axios.post(endPoint).then((res) => {
+        console.log(res); 
+        const domToRemove = document.querySelector(`.tr-${idAction}`);
+        domToRemove.remove();
+        closeModal();
+        Toastify({
+                text: "Saisie bien supprimé",
+                duration: 5000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){}
+            }).showToast();
+    })
+     .catch((err) => {
+        console.log(err);
+    })
+})
+
+
+// EVENT BTN NON
+no.addEventListener('click', () => {
+    closeModal();
+})

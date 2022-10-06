@@ -151,6 +151,16 @@
             </div>
         {{form_end(form)}}
 
+
+        {# MODAL #}
+        <div class="modal-saisie">
+            <h1 class="modalP">Veuillez respecter le taux</h1>
+            <img src="{{ asset('assets/HumanMan.png') }}" class="img-modal"/>
+            <button class="btn-oui">
+                Je comprends
+            </button>
+        </div>
+
     {% else %}
         <h1>devez etre connectez pour faire une saisie</h1>
     {% endif %}

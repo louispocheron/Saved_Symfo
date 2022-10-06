@@ -170,24 +170,13 @@ class AdminController extends AbstractController
         return $this->redirectToRoute('admin', ['idAssoc' => $association]);
     }
 
-
-    #[Route('/admin/{idAssoc}/user/{id}/remove/{action}', name: 'remove_action')]
-    public function removeAction(EntityManagerInterface $em, Request $request, ActionRepository $actionRepo, AssociationsRepository $repo, $action): Response
-    {
-
-        if($this->denyeAcess($request, $repo)){
-            // TU PEUX RENVOYER UNE ERREUR ICI CAR LE MEC ESSAYE DE TRICHER
-            return $this->redirectToRoute('home');
-        }
-
+    #[Route('admin/{assocId}/user/{userId}/remove/{id}', name: 'admin_remove')]
+    public function RemoveActionEndpoint(ActionRepository $repo, $id, EntityManagerInterface $entityManager, $assocId, $userId){
+        $action = $repo->find($id);
+        $entityManager->remove($action);
+        $entityManager->flush();
         
-        $association = $request->attributes->get('idAssoc');
-        $userId = $request->attributes->get('id');
-        $actionId = $actionRepo->find($action);
-        $em -> remove($actionId);
-        $em -> flush();
-
-        return $this->redirectToRoute('admin_user', ['idAssoc' => $association, 'id' => $userId]);
+        return $this->redirectToRoute('admin_user', ['idAssoc' => $assocId, 'id' => $userId]);
     }
 
 

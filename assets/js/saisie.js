@@ -219,7 +219,7 @@ groupeSelect.addEventListener("change", () => {
     });
 
 
-
+console.log('salut saisie')
 
     // const form_association = document.querySelector('#form_association');
     // form_association.select2({
@@ -228,27 +228,32 @@ groupeSelect.addEventListener("change", () => {
     //     allowClear: true,   
     // });
 
-            bareme.addEventListener('keydown', (event) => {
-                event.preventDefault();
-                Toastify({
-                text: "Veuillez à respecter le taux en vigueur afin que le remboursement sois recevable",
-                duration: 5000,
-                newWindow: true,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                     // red as default
-                    background: "linear-gradient(315deg, #3f0d12 0%, #a71d31 74%)",
-                },
-                onClick: function(){} // Callback after click
-            }).showToast();
-            }, {once: true});
-        
+    const modal = document.querySelector('.modal-saisie');
+    const formSaisie = document.querySelector('.form-saisie');
+    const btnAccecpt = document.querySelector(".btn-oui");
 
 
-        
+    const openModal = () => {
+        modal.dataset.active = true; 
+        formSaisie.style.opacity = "0.4"
+    }
+
+    const closeModal = () => {
+        delete modal.dataset.active
+        formSaisie.style.opacity = "1";
+    }
+
+    let executed = false
+    bareme.addEventListener('keydown', () => {
+        if(executed == false){
+            openModal();
+            executed = true;
+        }
+    })
+
+    btnAccecpt.addEventListener("click", () => {
+        closeModal();
+    })
 
 
 

@@ -106,15 +106,17 @@ class SuperAdminController extends AbstractController
         ]);
     }
 
-    // #[Route('/superadmin/{id}/deleteAction/{actionId}', name: 'super_admin_action_delete')]
-    // public function pdfAction(PdfService $pdf, ActionRepository $actionRepo, $actionId)
-    // {
-    //     $action = $actionRepo->find($actionId);
-    //     $html = $this->renderView('super_admin/pdf.html.twig', [
-    //         'action' => $action,
-    //     ]);
-    //    $pdf->generatePdf($html);
-    // }
+    #[Route('/superadmin/{idAssoc}/user/{userId}/delete/{id}', name: 'super_admin_action_delete')]
+    public function DeleteActionEndPoint(ActionRepository $actionRepo, $idAssoc, $userId, $id, EntityManagerInterface $entityManager): Response
+    {
+        $action = $actionRepo->find($id);
+        $entityManager->remove($action);
+        $entityManager->flush();
+        
+        return $this->redirectToRoute('super_admin_user', ['id' => $idAssoc, 'userID' => $userId]);
+    }
+
+
 
     #[Route('/superadmin/{id}/change/admin', name: 'super_admin_action_change_admin')]
     public function changeAdmin(UserRepository $repo, $id, PaginatorInterface $paginator, Request $request, AssociationsRepository $assocRepo): Response
@@ -135,7 +137,8 @@ class SuperAdminController extends AbstractController
         ]);
     }
     #[Route('/superadmin/{id}/change/admin/{userId}/endpoint', name: 'super_admin_action_change_admin_endpoint')]
-    public function changeAdminEndpoint($id, $userId, AssociationsRepository $assocRepo, UserRepository $userRepo, EntityManagerInterface $entityManager, Request $request):Response{
+    public function changeAdminEndpoint($id, $userId, AssociationsRepository $assocRepo, UserRepository $userRepo, EntityManagerInterface $entityManager, Request $request):Response
+    {
         $idNeeded = $request->attributes->get('id');
         $association = $assocRepo->findOneById($id);
         $user = $userRepo->findOneById($userId);
