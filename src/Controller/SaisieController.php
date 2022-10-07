@@ -30,13 +30,13 @@ class SaisieController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager, AssociationsRepository $repo): Response
     {
 
-
+        $isSuperAdmin = false; 
         $user = $this->getUser();
         if (!$user) {
             return $this->redirectToRoute('app_login');
         }
         $action = new Action();
-        $charge = "1.42";
+        $charge = $this->getParameter('charge');
 
         $form = $this->createFormBuilder($action)
                 ->add('villeDepart', TextType::class, [
@@ -176,7 +176,7 @@ class SaisieController extends AbstractController
             'form' => $form->createView(),
             'isAssoc' => $IsAssoc,
             'assocs' => $userAssoc,
-            'charges' => $charge
+            'charges' => $charge,
         ]);
     }
 

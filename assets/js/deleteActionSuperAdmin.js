@@ -2,7 +2,9 @@
 // EVENT POUR SUPPRIMER UN UTILISATEUR : 
 const supprAction = document.querySelectorAll('.last-td-poubelle');
 const btnYesAction = document.querySelector('.btn-yes');
-const modal = document.querySelector('.modal-adherer'); 
+const modal = document.querySelector('.modal-adherer');
+const btnNo = document.querySelector('.btn-no');
+
 
 const openModal = () => {
      modal.dataset.active = true;
@@ -43,10 +45,12 @@ btnYesAction.addEventListener('click', (event) => {
                 },
                 onClick: function(){}
             }).showToast();
-
     })
     .catch((error) => { 
         console.log(error)
     })
+}); 
 
+btnNo.addEventListener('click', () => {
+    closeModal();
 })

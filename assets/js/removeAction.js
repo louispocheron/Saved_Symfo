@@ -37,7 +37,7 @@ trash.forEach((el, idx) =>{
 btnYes.addEventListener('click', (event) => {
     event.preventDefault();
     const id = dataId[index].dataset.poubelle;
-    const baseHref = document.URL
+    const baseHref = document.URL;
     const endPoint = `${baseHref}/remove/${id}`;
 
     // APPELLE AJAX SUR L'ENDPOINT 
@@ -63,7 +63,6 @@ btnYes.addEventListener('click', (event) => {
     .catch((err) => {
         console.log(err);
     })
-
 })
 
 btnNo.addEventListener('click', () => {

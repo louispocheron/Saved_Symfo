@@ -281,4 +281,8 @@ height: 100%;
     .h1-row{
         height: 3rem;
     }
+    .modal-saisie{
+        position: fixed;
+        width: 80%;
+    }
 }

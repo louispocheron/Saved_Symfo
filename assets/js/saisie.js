@@ -22,7 +22,6 @@ document.querySelector('.flatpickr').flatpickr({
     const payer = document.querySelector('.apayerInput');
 
 
-
     //set default value to heuredepart to 00
 
     dureeInput.value = 0;
@@ -45,10 +44,6 @@ document.querySelector('.flatpickr').flatpickr({
 
             heureDepartBase = parseInt(heureDepartBase);
             minutesDepartBase = parseInt(minutesDepartBase);
-
-
-            console.log(typeof heureDepartBase);
-
 
             let dureeHeure
             if(heureDepartBase > heureArriveeBase){
@@ -73,12 +68,11 @@ document.querySelector('.flatpickr').flatpickr({
             let dureeHeureValorisee = dureeHeure + '.' + dureeMinute;
             // parseFloat(dureeHeureValorisee); 
 
-
             heureValoriseesInput.value = (groupeSelect.value * chargeData * dureeHeureValorisee).toFixed(2);
     });
 });
-
 pourcentage.value = '10.04 €/h';
+console.log(chargeData);
 
 groupeSelect.addEventListener("change", () => {
 
@@ -176,7 +170,7 @@ groupeSelect.addEventListener("change", () => {
         // !!DONINPUT TYPEOF === STRING DONC ON PEUT PAS TO FIXED DONC ON BIDOUILLE EN DESSOUS 
         if(donsInput.value.indexOf('.') != -1){
             let donsInputValue = donsInput.value .split('.');
-            if(donsInputValue[1].length > 2){
+            if(donsInputValue[1].length > 2){se
                 donsInput.value = parseFloat(donsInput.value).toFixed(2);
             }
         }

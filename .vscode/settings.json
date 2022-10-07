@@ -1,0 +1,22 @@
+{
+"background.enabled": true,
+    "background.loop": false,
+    "background.useDefault": false,
+    "background.useFront": false,
+    "background.style": {
+          "content": "''",
+          "pointer-events": "none",
+          "position": "absolute",
+          "z-index": "99999",
+          "width": "100%",
+          "height": "100%",
+          "background-size": "cover",
+          "background-repeat": "no-repeat",
+          "opacity": 0.1
+      },
+  "background.customImages": [
+    "https://images.hdqwalls.com/wallpapers/code-syntax-dark-minimal-4k-mr.jpg",
+      "https://images.hdqwalls.com/download/retro-cyberpunk-2077-neon-life-5k-v8-1920x1080.jpg",
+      "https://ih1.redbubble.net/image.810930104.5005/raf,750x1000,075,t,FFFFFF:97ab1c12de.jpg"
+  ]
+}

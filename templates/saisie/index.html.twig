@@ -20,7 +20,6 @@
             <div class="form-saisie">
                 <div class="evenement1 firstable">
                     <div class="h1-row event">ÉVÈNEMENT</div>
-                    {# <div class="rowSaisie-container"> #}
                     <div class="input-container firstC">
                         <div class="date-assoc first">
                             <div class='rowSaisie'>
@@ -82,7 +81,7 @@
                                     <input type="text" class="pourcentage-input disabled" disabled />
                                 </div>
                             </div>
-                            <div class='rowSaisie' id="chargeInputId" data-charges='{{charges}}' >
+                            <div class='rowSaisie' id="chargeInputId" data-charges='{{charges}}'>
                                 <label class="label">charges</label>
                                 {{form_widget(form.charges, {'attr': {'class': 'heure bottom-input disabled' }}) }}
                             </div>
