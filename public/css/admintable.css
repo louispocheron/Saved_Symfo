@@ -171,6 +171,7 @@ select{
 }
 
 .modal-adherer[data-active=true]{
+    z-index: 10;
     display: flex;
 }
 

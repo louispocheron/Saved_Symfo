@@ -6,7 +6,6 @@ const benevolatDom = document.querySelector('.benevolat-card');
 const remboursementDom = document.querySelector('.remboursement-card');
 const heureDom = document.querySelector(".heure-card");
 const donDom = document.querySelector('.dons-card');
-console.log('salut');
 
 let url = new URL(window.location.href);
 const href = url.pathname
