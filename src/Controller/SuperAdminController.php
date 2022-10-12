@@ -43,11 +43,12 @@ class SuperAdminController extends AbstractController
         $user = $this->getUser();
         $assocId = $request->attributes->get('id');
 
+
         $association = $repo->find($assocId);
         $actions = $actionRepo->findByAssociation($association);
         $userAction = $actionRepo->findByUsers($user);
-
-
+        // dd($association);
+        
         // get all users from $assocation
         foreach($association->getUsers() as $user){
             $users[] = $user;

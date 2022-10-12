@@ -62,14 +62,6 @@ class RecapitulatifController extends AbstractController
             // $actionYearAndMonth = "hey2";
         }
 
-
-
-        // dd($actionMonth);
-        // if($request->get('ajax2')){
-        //     return new JsonResponse("ok");
-        // }
-
-
         if($request->get("ajax")){
             return new JsonResponse([
                 'content' => $this->renderView(

@@ -227,8 +227,8 @@ h3{
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
-    height: 40%;
-    width: 30%;
+    height: auto;
+    width: 45%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -242,6 +242,10 @@ h3{
   .modal-adherer[data-active=true]{
     display: flex;
   }
+
+.modal-adherer h1{
+  text-align: center;
+}
   @media only screen and (max-width: 963px){
     .unique-assoc-container{
       flex-direction: column;

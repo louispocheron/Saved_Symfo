@@ -25,7 +25,7 @@ Encore
     .addEntry('home', './assets/js/home.js')
     .addEntry('saisie', './assets/js/saisie.js')
     .addEntry('search', './assets/js/search.js')
-    .addEntry('admin', './assets/js/admin.js')
+    .addEntry('sideBar', './assets/js/sideBar.js')
     .addEntry('sort', './assets/js/sort.js')
     .addEntry('recap', './assets/js/recap.js')
     .addEntry('choose', './assets/js/choose.js')

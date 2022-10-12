@@ -4,7 +4,7 @@ const linesContainer = document.getElementsByClassName("lines");
 const menu = document.querySelector('.menu');
 const ulItems = document.querySelector('.ul-items');
 
-
+  console.log('main js');
 function changeClass () {
   for(let i=0; i<3;i++){
       if (lines[i].classList.contains("noAnimation")){

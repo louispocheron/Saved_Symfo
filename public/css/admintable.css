@@ -173,6 +173,7 @@ select{
 .modal-adherer[data-active=true]{
     z-index: 10;
     display: flex;
+    position: fixed;
 }
 
   .modal-adherer{
@@ -188,9 +189,8 @@ select{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    /* border-radius: 5px; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     padding: 1rem;
+    padding: 1rem;
     display: none;
   }
   .btn-container{
@@ -233,7 +233,6 @@ select{
         font-weight: 600;
         font-size: 15px;
     }
-
     .lastchild::after{
         content: "";
         display: block;

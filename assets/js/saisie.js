@@ -129,6 +129,7 @@ groupeSelect.addEventListener("change", () => {
     parseFloat(totalNote.value);
 
 
+
   
     [bareme, kmInput, coutInput, payer].forEach(evt => {
         evt.addEventListener('keyup', () => {
@@ -137,7 +138,6 @@ groupeSelect.addEventListener("change", () => {
             kmValue = kmInput.value;
 
             fraisInput.value = (kmValue * baremeValue).toFixed(2);
-
             //avoid before the NaN output
             if(coutValue == ''){
                 coutValue = 0;
@@ -147,7 +147,7 @@ groupeSelect.addEventListener("change", () => {
                 baremeValue = 0;
             }
             // localStorage.setItem('donsInput', donsInput.value);
-            totalNote.value = parseFloat(fraisInput.value) + parseFloat(coutValue);
+            totalNote.value = parseFloat(fraisInput.value) + parseFloat(coutValue)
 
 
             if(parseFloat(payer.value) > totalNote.value){
@@ -161,16 +161,16 @@ groupeSelect.addEventListener("change", () => {
 
 
 
-            donsInput.value = totalNote.value - parseFloat(payer.value);
-            // console.log(typeof donsInput.value);
+         donsInput.value = parseFloat(totalNote.value) - parseFloat(payer.value);        
+                        // console.log(typeof donsInput.value);
         // prevent the NaN output
         if(isNaN(donsInput.value)){
             donsInput.value = totalNote.value;
         }       
         // !!DONINPUT TYPEOF === STRING DONC ON PEUT PAS TO FIXED DONC ON BIDOUILLE EN DESSOUS 
         if(donsInput.value.indexOf('.') != -1){
-            let donsInputValue = donsInput.value .split('.');
-            if(donsInputValue[1].length > 2){se
+            let donsInputValue = donsInput.value.split('.');
+            if(donsInputValue[1].length > 2){
                 donsInput.value = parseFloat(donsInput.value).toFixed(2);
             }
         }

@@ -569,6 +569,9 @@
       margin-left: 1rem;
       color: var(--text);
     }
+    .full{
+      display: none !important;
+    }
     .logo-main-assoc{
       aspect-ratio: 1;
       margin-left: 1rem;
@@ -624,7 +627,8 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        height: 80%;
+        height: 90%;
+        width: 100%;
 }
 .nav-item{
   width: 100%;
@@ -637,7 +641,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 5rem;
+      height: 60px;
       width: 100%;
       text-decoration: none;
       color: white;
@@ -645,10 +649,13 @@
       transition: 600ms;
     }
     .logo-main-site{
-      width: 70% !important;
-      max-width: 4rem !important;
-      height: auto;
-      padding: 1.1rem;
+      width: auto !important;
+      height: 100%;
+      margin-left: 0;
+    }
+    .secondary-logo{
+      width: auto !important;
+      height: 100%;
       margin-left: 0;
     }
     .nav-links:hover{
@@ -668,6 +675,14 @@
     .sidebar:hover{
       width: 15rem;
       z-index: 20;
+    }
+    .sidebar:hover .full{
+      display: flex !important;
+      width: 20vw !important;
+      z-index: 10;
+    }    
+    .sidebar:hover .letter{
+      display: none;
     }
     .sidebar:hover span{
       display: block;
@@ -718,7 +733,14 @@
       text-decoration: none;
       margin-left: auto;
     }
-}
+    .navbar-20{
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+} 
 @media screen and (min-width: 1600px) {
   main{
     width: 100%;

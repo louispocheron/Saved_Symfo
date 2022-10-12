@@ -22,7 +22,8 @@
     <body>
         {# SIDE BAR POUR LE DESKTOP SEULEMENT #}
         <div class="sidebar">
-            <a href="{{ path('home') }}"><img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-main-site">
+            <a class="navbar-20 letter" href="{{ path('home') }}"><img src="{{ asset('assets/logo_saved_letter.png') }}" alt="logo" class="logo-main-site"></a>
+            <a class="navbar-20 full" href="{{ path('home') }}"><img src="{{ asset('assets/logo_saved_full.png') }}" alt="logo" class="secondary-logo"></a>
             <ul class="navbar-ul">
                     <li class="nav-item">
                         <a href="{{ path('home') }}" class="nav-links">
@@ -185,6 +186,7 @@
 
     {{ encore_entry_script_tags('app') }}
     {{ encore_entry_script_tags('main') }}
+    {{ encore_entry_script_tags('sideBar') }}
 
 
     {% block javascripts %}
