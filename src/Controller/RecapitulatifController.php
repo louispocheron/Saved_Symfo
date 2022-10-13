@@ -109,8 +109,16 @@ class RecapitulatifController extends AbstractController
             'action' => $action
         ]);
             //  return $this->redirectToRoute('pdf/test.html.twig');
+    }
 
-        
+    #[Route('/recapitulatif/{id}', name: 'recapitulatif_more')]
+    public function presiseAction(ActionRepository $repo, $id){
+        $action = $repo->find($id);
+
+
+        return $this->render('recapitulatif/information.html.twig', [
+            'action' => $action, 
+        ]);
     }
 
 }

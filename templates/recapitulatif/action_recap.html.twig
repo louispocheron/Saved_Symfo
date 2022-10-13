@@ -1,7 +1,5 @@
 {% for action in actions %}
-    {# <tr onclick="window.location='{{ path("recapitulatif_pdf", {"id": action.id, "userId": user.id } ) }}'" class="trtest"> #}
     <tr class='tr-{{action.id}}'>
-            {#<a href="{{ path("recapitulatif_pdf", {'id': action.id, 'userId': user.id } ) }}" target="_blank"><i class="fa-solid fa-file"></i></a>#}
         <td data-label="Association" class="td">{{ action.association.name }}</td> 
         <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
         <td data-label="Ville de départ">{{ action.villeDepart }}</td>
@@ -17,9 +15,6 @@
         <td data-label="Heures valorisées" class="lastchild valoriseesTd" data-valorisees="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
         <td class="last-td-poubelle modal-open-delete"><a data-poubelle='{{action.id}}' class="hrefPoubelle data-id"><i class="fa-solid fa-trash poubelle"></i></a></td>
         <td class="last-td-poubelle"><a href="{{ path("recapitulatif_pdf", {'id': action.id, 'userId': user.id } ) }}" class="hrefPoubelle"><i class="fa-solid fa-file-pdf"></i></a></td>
-        {# {{path("recapitulatif_remove", { 'id' : action.id } )}} #}
+        <a href="{{path('recapitulatif_more', { 'id' : action.id } )}}">click moi</a>
     </tr>
-
-
-
 {% endfor %}
