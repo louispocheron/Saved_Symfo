@@ -29,7 +29,6 @@
                             <div class='rowSaisie'>
                                 <div class="info-supp">
                                     <label class="label">Association</label>
-                                    <i class="fa-solid fa-circle-info"></i>
                                 </div>
                                 {{form_widget(form.association)}}
                             </div>
@@ -41,11 +40,11 @@
                             </div>
 
                             <div class='rowSaisie'>
-                                <label class="label">Ville d'Arrivée</label>
+                                <label class="label">Ville d'arrivée</label>
                                 {{form_widget(form.villeArrive)}}
                             </div>
                             <div class='rowSaisie bottom-input'>
-                                <label class="label">Raisons</label>
+                                <label class="label">Nature du déplacement</label>
                                 {{form_widget(form.raisons)}}
                             </div>
                         </div>
@@ -68,12 +67,12 @@
                         </div>
                         <div class="date-assoc">
                             <div class='rowSaisie'>
-                                <label class="label">duree</label>
+                                <label class="label">Durée</label>
                                 {{form_widget(form.duree, {'attr': {'class': 'dureeInput disabled'}}) }}
                             </div>
                             <div class='rowSaisie row'>
                                 <div class="groupe-container">
-                                    <label class="label">groupe</label>
+                                    <label class="label">Groupe</label>
                                     {{form_widget(form.groupe, {'attr': {'class': 'heure groupe groupeSelect'}}) }}
                                 </div>
                                 <div class="groupe-container">
@@ -82,7 +81,7 @@
                                 </div>
                             </div>
                             <div class='rowSaisie' id="chargeInputId" data-charges='{{charges}}'>
-                                <label class="label">charges</label>
+                                <label class="label">Charges</label>
                                 {{form_widget(form.charges, {'attr': {'class': 'heure bottom-input disabled' }}) }}
                             </div>
                         </div>
@@ -98,19 +97,19 @@
                         </div>
 
                         <div class='rowSaisie'>
-                            <label>barème</label>
+                            <label>Barème</label>
                             <input class="bareme bottom-input" type="text" name="barème">
                         </div>
                     </div>
                     <div class="date-assoc">
                         <div class='rowSaisie'>
-                            <label>Frais</label>
+                            <label>Autres frais</label>
                             {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
                         </div>
 
                         
                         <div class='rowSaisie'>
-                            <label>frais kilométriques</label>
+                            <label>Frais kilométriques</label>
                             {{form_widget(form.fraisKilometrique, {'attr': {'class': 'fraisInput bottom-input disabled'}}) }}
                         </div>
                     </div>
@@ -121,7 +120,7 @@
                 <div class="input-container">
                     <div class="date-assoc">
                         <div class='rowSaisie'>
-                            <label>total note de frais</label>
+                            <label>Total note de frais</label>
                             <input  class="totalNote disabled" type="text" name="totalNote" value="0" disabled>
                         </div>
 
@@ -132,12 +131,12 @@
                     </div>
                     <div class="date-assoc">
                         <div class='rowSaisie'>
-                            <label>A payer</label>
+                            <label>Remboursement</label>
                             {{form_widget(form.aPayer, {'attr': {'class': 'apayerInput'}}) }}
                         </div>
 
                         <div class='rowSaisie'>
-                            <label>heures valorisées</label>
+                            <label>Heures valorisées</label>
                             {{form_widget(form.heuresValorisees, {'attr': {'class': 'heureValoriseesInput bottom-input'}}) }}
                         </div>
                     </div>
