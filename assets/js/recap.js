@@ -20,12 +20,6 @@ const valoriseesTd = document.querySelectorAll('.valoriseesTd');
 const alertMessage = document.querySelector('.alert-message');
 const reset = document.querySelector('.arrowTurn');
 
-let baseOption = document.createElement('option');
-baseOption.text = 'Tous';
-baseOption.value = 'rien';
-// baseOption.className = 'select-dd';
-selectYear.add(baseOption);
-
 
 
 let currentYear = new Date().getFullYear();    
@@ -38,6 +32,16 @@ while (currentYear >= earliestYear) {
     selectYear.add(dateOption);      
     currentYear -= 1;    
 }
+
+let baseOption = document.createElement('option');
+baseOption.text = 'Tous';
+baseOption.value = 'rien';
+// baseOption.className = 'select-dd';
+selectYear.add(baseOption);
+
+
+
+
 
 // CREATION SELECT MONTH
 const selectMonth = document.getElementById('selectMonth');
@@ -132,7 +136,7 @@ function Ajaxyear(){
             const payerTdAjax = document.querySelectorAll('.payerTd');
             const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer);
             let aPayerSumAjax = sumPay(trpayer);
-            payerP.innerHTML = `Remboursement : <span style="
+            payerP.innerHTML = `Remboursements : <span style="
             color:#097969;
             font-weight: bold;
             "> ${aPayerSumAjax}€</span>`;

@@ -1,5 +1,6 @@
 export function sumPay(data){
-    if(data.length > 1){        
+    if(data.length > 1){
+        console.log(data)
         // on calcul le total des euros
         let euros = data.map(el => el.split('.')[0]);
         euros.forEach(el => {

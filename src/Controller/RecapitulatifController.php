@@ -98,10 +98,9 @@ class RecapitulatifController extends AbstractController
         $action = $repo->find($id);
 
         $benevolat = $request->request->get('benevolat');
-
             return $this->render('pdf/test.html.twig', [
             'action' => $action,
-            'benevolat' => $benevolat
+            // 'benevolat' => $benevolat
         ]);
             //  return $this->redirectToRoute('pdf/test.html.twig');
     }

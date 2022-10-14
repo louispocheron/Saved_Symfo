@@ -11,6 +11,18 @@ justify-content: center;
 align-items: center;
 height: 100%;
 }
+.dangerP{
+    font-size: 1.1rem !important;
+    text-align: center;
+}
+.je-comprends{
+    margin: 0;
+    width: 100%;
+}
+.logo-modal{
+    font-size: 2rem;
+    color: red;
+}
 .hours{
     width: 100%;
     height: 50%;
@@ -127,7 +139,7 @@ height: 100%;
     display: none;
   }
   .modal-saisie button{
-    width: 40%;
+    width: 65%;
     height: 20%;
     border-radius: 5px;
     border: 2px solid #fff;
