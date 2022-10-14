@@ -24,7 +24,7 @@ class AssociationsRepository extends ServiceEntityRepository
         $query = $entityManager->createQuery(
             'SELECT a
             FROM App\Entity\Associations a
-            ORDER BY a.id ASC'
+            ORDER BY a.name ASC'
         );
         return $query;
     }
@@ -69,6 +69,16 @@ class AssociationsRepository extends ServiceEntityRepository
         ;
 
     }
+
+       public function getAllAssociation()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 }
 
 
@@ -107,14 +117,7 @@ class AssociationsRepository extends ServiceEntityRepository
         ;
     }
     */
-    // public function getAllAssociation()
-    // {
-    //     return $this->createQueryBuilder('a')
-    //         ->orderBy('a.id', 'ASC')
-    //         ->getQuery()
-    //         ->getResult()
-    //     ;
-    // }
+ 
     /*
 
     public function findOneBySomeField($value): ?Associations
