@@ -93,28 +93,25 @@ class RecapitulatifController extends AbstractController
     }
 
 
-    #[Route('/recapitulatif/pdf/{id}/{userId}', name: 'recapitulatif_pdf')]
-    public function pdfAction(ActionRepository $repo, $id, $userId){
-
-        $user = $this->getUser();
-        $userRealId = $user->getId();
+    #[Route('/recapitulatif/pdf/{id}', name: 'recapitulatif_pdf')]
+    public function pdfAction(ActionRepository $repo, Request $request, $id){
         $action = $repo->find($id);
-        if($userId != $userRealId){
-            // TU PEUX RENVOYER UNE ERREUR ICI CAR LE MEC ESSAYE DE TRICHER
-            return $this->redirectToRoute('home');
-        }
-        // else{
-        //    dd('salut');
-        return $this->render('pdf/test.html.twig', [
-            'action' => $action
+
+        $benevolat = $request->request->get('benevolat');
+
+            return $this->render('pdf/test.html.twig', [
+            'action' => $action,
+            'benevolat' => $benevolat
         ]);
             //  return $this->redirectToRoute('pdf/test.html.twig');
     }
+
 
     #[Route('/recapitulatif/{id}', name: 'recapitulatif_more')]
     public function presiseAction(ActionRepository $repo, $id){
         $action = $repo->find($id);
 
+        // dd($benevolat);
 
         return $this->render('recapitulatif/information.html.twig', [
             'action' => $action, 

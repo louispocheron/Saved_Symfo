@@ -20,7 +20,6 @@ const valoriseesTd = document.querySelectorAll('.valoriseesTd');
 const alertMessage = document.querySelector('.alert-message');
 const reset = document.querySelector('.arrowTurn');
 
-
 let baseOption = document.createElement('option');
 baseOption.text = 'Tous';
 baseOption.value = 'rien';
@@ -193,27 +192,6 @@ function Ajaxyear(){
     })  
 }
 
-
-// A FAIRE
-// reset.addEventListener('click', () => {
-//     console.log('salut');
-//     let queryString = new URLSearchParams();
-//     let url = new URL(window.location.href);
-//     queryString.append('all', true);
-
-//      axios.post(url.pathname + "?" + queryString.toString() + "&ajax=1",{
-//         'all': true
-//      })
-//      .then(data => {
-//         console.log(data.data);
-//      })
-//         .catch(err => {
-//             console.log(err);
-//         })
-// });
-
-
-
 // CALCUL AVEC LA FONCTION QU'ON IMPORTE LIGNE 1 ET APPEND POUR LA DUREE 
 const data = Array.from(duree).map(el => el.dataset.duree);
 // console.log(data);
@@ -252,62 +230,33 @@ valoriseeP.innerHTML = `Valorisées : <span style="
 
 
 
-    //  AREVOIR MAIS BONNE PISTE 
-    // TEST OK ON CLICK 
-    // const dataPoubelle = document.querySelectorAll('.hrefPoubelle');
-    // dataPoubelle.forEach(el => {
-    //     const id = el.dataset.poubelle
-    //     el.addEventListener('click', fucntion(id){
-    //         alert(id)
-    //     })
-    // })
 
-    // // ON SPLIT LES HEURES ET LES MINUTES ET ON LES CHANGE EN NUMBER AVEC PARSEINT POUR LES ADDITIONNER
-    // let dureeHours = parseInt(duree.split('h')[0]);
-    // // ALL RESULTS OF DUREEHOURS IN A ARRAY
-    // let dureeHoursArray = dureeHours.toString().split('');
+// ENVOIE DONNEES VERS PDF !! 
+const pdfAction = document.querySelectorAll('.pdfIcone'); 
+const baseHref = document.URL; 
 
-    // let totalHours = dureeHours.reduce(function(val1, val2){
-    //     return val1 + val2;
-    // }, 0);
+pdfAction.forEach(el => {
+    el.addEventListener('click', (event) => {
+        event.preventDefault();
+        const actionId = el.dataset.id;
+        const endPoint = `${baseHref}/pdf/${actionId}`;
+        console.log(dureeAjax)
+        axios.post(endPoint, { 
+            'benevolat': dureeAjax, 
+            // 'remboursement': aPayerSum,
+            // 'don': donSum,
+            // 'valorise': valoriseesSum
+        })
+        .then((response) => { 
+            console.log(response)
 
-    // console.log(totalHours);
-
-    // let dureeMinutes = parseInt(duree.split('h')[1]);
-
-    // SUM TOGETHER THE NUMBERS OF dureeHours AND dureeMinutes
-    
-    
-    /*
-    *
-    *
-    * 
-    * 
-    */
-
-    // newD = 
-    // console.log(duree);
-
-    // let dureeInt = parseInt(single.dataset.duree);
-    // console.log(dureeInt);
-    // add the hours and minutes together
-    // dureeInt.forEach(singleInt => {
-    //     singleInt 
-    // })
-
-// console.log('newfun');
-
-// for(let i = 0; i < trtest.length; i++){
-//     trtest[i].addEventListener('click', pdfOpen);
-// }
-
-
-// function pdfOpen(){
-//     let newHref = trtest.dataset.href
-//     window.open(newHref, '_blank');
-// }    
-
-
+            window.location.href = endPoint;
+        })
+        .catch((error) => {
+        console.log(error)
+        })
+    })
+})
 
 
 

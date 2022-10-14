@@ -1,8 +1,19 @@
 
-
 export function sumEuros(data){
     if(data.length > 1){
         // on calcul le total des euros
+
+        // SI DATA NULL ON CHOPE SON IDX DANS ARRAY ET ON LE REMPLACE AVEC 0 EN STRING
+        data.forEach(el => {
+            if(el == null){
+                let index = data.indexOf(el);
+                if(index !== -1){
+                    data[index] = '0'
+                }
+            }
+        })
+
+
         let euros = data.map(el => el.split('.')[0]);
         euros = euros.map(el => parseInt(el));
         let totalEuros = euros.reduce((a, b) => a + b);
@@ -17,7 +28,6 @@ export function sumEuros(data){
 
         cents = cents.map(el => parseInt(el));
         let totalCents = cents.reduce((a, b) => a + b);
-        // console.log(totalCents);
 
         // on ajoute les centimes au total des euros
     while(totalCents > 99){

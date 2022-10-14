@@ -52,7 +52,7 @@ class SaisieController extends AbstractController
                         'placeholder' => 'Ex: Lyon',
                     ],
                     ])
-                ->add('km', null, [
+                ->add('km', textType::class, [
                     'label' => 'Kilomètres',
                     'attr' => [
                         'placeholder' => 'Ex: 25',

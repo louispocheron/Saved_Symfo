@@ -1,6 +1,5 @@
 const wrapper = document.querySelector('.wrapper');
 
-
 let options = {
     image: {
         type: 'png'
@@ -16,5 +15,6 @@ const generatePdf = () => {
     .from(wrapper)
     .save();  
 }
+
 
 // generatePdf();   
