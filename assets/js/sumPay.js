@@ -1,8 +1,17 @@
 export function sumPay(data){
-    if(data.length > 1){
+    if(data.length > 1){        
         // on calcul le total des euros
         let euros = data.map(el => el.split('.')[0]);
+        euros.forEach(el => {
+            if(el == ''){
+                let idx = euros.indexOf(el);
+                if(idx !== -1){ 
+                    euros[idx] = '0'
+                }
+            }
+        })
         euros = euros.map(el => parseInt(el));
+        
         // console.log(euros)
         let totalEuros = 0;
         if(euros != undefined){
@@ -15,9 +24,16 @@ export function sumPay(data){
         // check if theres a cent
         let cents = data.map(el => el.split('.')[1]);
         let totalCents = null;
-        if(cents.includes(undefined)){
-            totalCents = 0;
-        } else {
+
+        cents.forEach(el => {
+            if(el == undefined){ 
+                let idx = cents.indexOf(el); 
+                if(idx !== -1){ 
+                    cents[idx] = '0'
+                }
+            }
+        })
+
         // On enleve les valeurs NaN
         cents = cents.filter(el => !isNaN(el));
 
@@ -29,11 +45,11 @@ export function sumPay(data){
                 totalEuros ++;
                 totalCents = totalCents - 10;
             }
-    }
         let totalSum = `${totalEuros}.${totalCents}`
         // if(totalCents == 0){
         //     totalSum = `${totalEuros}`
         // }
+
 
         return totalSum;
     }

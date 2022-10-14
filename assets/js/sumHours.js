@@ -1,6 +1,15 @@
 export function sumHours(data){
     if(data.length > 1){
-    
+
+        data.forEach(el => {
+            if(el == 0){ 
+                const idx = data.indexOf(el); 
+                if(idx != -1){
+                    data[idx] = '0h00'
+                }
+            }
+        })
+        
         // ON CHOPE LA PREMIERE PARTIE DE LA DUREE
         let hours = data.map(el => el.split('h')[0]);
 

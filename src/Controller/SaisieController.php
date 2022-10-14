@@ -96,7 +96,7 @@ class SaisieController extends AbstractController
                         'readonly' => true,
                     ],
                     ])
-                ->add('frais', null, [
+                ->add('frais', textType::class, [
                     'label' => 'Frais',
                     ])
 
