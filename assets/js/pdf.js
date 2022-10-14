@@ -1,9 +1,20 @@
 const wrapper = document.querySelector('.wrapper');
 
+
+let options = {
+    image: {
+        type: 'png'
+    },
+    html2canvas: { 
+        scale: 2
+    },
+};
+
 const generatePdf = () => {
     html2pdf(wrapper)
-    .open()
-    .save('pdf_saved');
+    .set(options)
+    .from(wrapper)
+    .save();  
 }
 
-generatePdf();  
+// generatePdf();   

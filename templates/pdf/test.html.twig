@@ -7,10 +7,13 @@
 
 {% block body %}
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
+
+
 
 <div class="wrapper">
     <div class="header-pdf">
-        <img src="{{ asset('assets/logo.SVG') }}"/>
+        {# <img src="{{ asset('assets/logo.SVG') }}"/> #}
     </div>
     <table class="table">
         <tr>
@@ -33,7 +36,33 @@
             <td>{{action.aPayer}}</td>
             <td>{{action.heuresValorisees}}</td>
         </tr>
+    </table>
+    <div class="accept-container">
+        <div class="p-container">
+            <p>je soussigné(e), auteur du présent état, certifie l'éxactitude et souhaite pour la somme notifiée</p>
+        </div>
+        <div class="p-container">
+                <input type="checkbox"/>
+            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier Remboursement ou en cas de changement de compte)</p>
+        </div>
+        <div class="p-container">
+            <input type="checkbox"/>
+            <p>Renoncer au Remboursement des frais du présent état au profit de l'association en tant que don</p>
+        </div>
+    </div>
+    <div class="sign-container"> 
+        <div class="fait-le">
+            <p class="p-sign">faît le : </p>
+        </div>
+        <div class="signature">
+            <p class="p-sign">Signature du salarié ou du bénévole : </p>
+        </div>
+        <div class="president">
+            <p class="p-sign">Signature du trésorié ou du président : </p>
+        </div>
+    </div>
 </div>
+
 
 {% endblock %}
 

@@ -21,19 +21,6 @@ const alertMessage = document.querySelector('.alert-message');
 const reset = document.querySelector('.arrowTurn');
 
 
-
-
-
-
-// OPTION DE BASE POUR LE SELECT YEAR
-// let baseOption  = document.createElement('option');
-// baseOption.text = 'Tous';
-// baseOption.value = 'rien';
-// baseOption.className = 'select-dd';  
-// selectYear.add(baseOption);
-
-// OPTION AVEC LES ANNNES 
-
 let baseOption = document.createElement('option');
 baseOption.text = 'Tous';
 baseOption.value = 'rien';
