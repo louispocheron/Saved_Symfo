@@ -3,7 +3,8 @@
 {% block title %}recapitulatif{% endblock %}
 
 {% block body %}
- <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
 
 <div class="content-container">
 <h2 class="h2-main">Récapitulatif</h2>
@@ -30,7 +31,7 @@
 
         <div class="sum-js">
             <p class="alert-message"></p>
-            <p class="total-paragraphe"></p>
+            <p class="total-paragraphe">Total de toutes vos saisies :</p>
             <div class="main-container">
                 <div class="total-container">
                     <p class="total-heure"></p>
@@ -93,6 +94,31 @@
 </div>
 
 
+<div class="wrapper-pdf" style="">
+     <div class="header-pdf">
+        {# <img src="{{ asset('assets/logo.SVG') }}"/> #}
+    </div>
+    <table class="table">
+        <tr>
+            <th>Association</th>
+            <th>Date</th>
+            <th>Depart</th>
+            <th>arrivée</th>
+            <th>Km</th>
+            <th>Durée</th>
+            <th>Frais</th>
+            <th>Don</th>
+            <th>Remboursement</th>
+            <th>Heures Valorisées</th>
+            <th>Charges</th>
+            <th>Groupe</th>
+        </tr>
+        <tbody class="ajaxDivContent">
+            {% include "recapitulatif/action_recap.html.twig" %}
+        </tbody>
+    </table> 
+
+</div>
 
 {% endblock %}
 
@@ -100,6 +126,8 @@
     <script src="dist/notiflix-aio-3.2.5.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     {{ encore_entry_script_tags('recap') }}
     {{ encore_entry_script_tags('sort') }}
     {{ encore_entry_script_tags('RemoveAction') }}

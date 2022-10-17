@@ -1,20 +1,24 @@
 const wrapper = document.querySelector('.wrapper');
 
-let options = {
+var options = {
+    filename: 'Saved_pdf.pdf',
+    margin: 1,
     image: {
-        type: 'png'
+        type: 'jpeg'
     },
     html2canvas: { 
-        scale: 2
+        scale: 10
+    },
+    jsPDF: {
+        orientation: 'landscape'
     },
 };
 
 const generatePdf = () => {
-    html2pdf(wrapper)
-    .set(options)
+    html2pdf()
     .from(wrapper)
+    .set(options)
     .save();  
 }
 
-
-// generatePdf();   
+generatePdf();

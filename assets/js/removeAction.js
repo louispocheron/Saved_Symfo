@@ -1,4 +1,3 @@
-console.log('removeAction');
 
 const modal = document.querySelector('.modal-adherer');
 const dataId = document.querySelectorAll('.data-id');
@@ -69,3 +68,18 @@ btnNo.addEventListener('click', () => {
      closeModal();
 })
 
+
+
+
+
+
+// CA CA MARCHE 
+const wrapper = document.querySelector('.testPdf');
+// wrapper.style.display = "block";
+const generatePdf = () => { 
+    wrapper.style.display = "block";
+    html2pdf()
+    .from(wrapper)
+    .save()
+}
+// generatePdf();   

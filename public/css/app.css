@@ -11,6 +11,7 @@
   }
   :root{
     --main-color: #152149;
+    /* --main-color: red; */
     --text: #2E2E2E;
     --text-secondary: 'Oxygen', sans-serif;
   }
@@ -751,5 +752,8 @@
   .homeCard-container{
     align-items: center;
     /* background-color: red; */
+  }
+  .navbar-20{
+    height: 12%;
   }
 }

@@ -18,9 +18,7 @@ export function sumEuros(data){
         euros = euros.map(el => parseInt(el));
         let totalEuros = euros.reduce((a, b) => a + b);
     
-        // puis le total des centimes
 
-        // check if there is a cent
         let cents = data.map(el => el.split('.')[1]);
         
         // On enleve les valeurs NaN

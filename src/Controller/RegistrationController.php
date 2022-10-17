@@ -48,9 +48,6 @@ class RegistrationController extends AbstractController
                 $user->setProfilPicture($fileName);
             }
            
-        
-
-
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email

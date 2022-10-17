@@ -22,6 +22,14 @@ const reset = document.querySelector('.arrowTurn');
 
 
 
+
+
+let baseOption = document.createElement('option');
+baseOption.text = 'Tous';
+baseOption.value = 'rien';
+// baseOption.className = 'select-dd';
+selectYear.add(baseOption);
+
 let currentYear = new Date().getFullYear();    
 let earliestYear = 1965;     
 while (currentYear >= earliestYear) {      
@@ -32,14 +40,6 @@ while (currentYear >= earliestYear) {
     selectYear.add(dateOption);      
     currentYear -= 1;    
 }
-
-let baseOption = document.createElement('option');
-baseOption.text = 'Tous';
-baseOption.value = 'rien';
-// baseOption.className = 'select-dd';
-selectYear.add(baseOption);
-
-
 
 
 
@@ -89,10 +89,9 @@ function Ajaxyear(){
         'month': month.value
     })
     .then(data => {
-        console.log(data); 
         // ON APPEND LES DONNEES SI ON LES RECOIS
         // SI ON LES RECOIS PAS ON APPEND UN MSG EN ROUGE A UNE DIV
-        const trContainer = document.querySelector('.ajaxDivContent');
+        const trContainer = document.querySelectorAll('.ajaxDivContent');
         const content = document.querySelectorAll('.trtest');
         const content2 = document.querySelector('.totalDiv');
         let dataUser = data.data.content;
@@ -116,12 +115,11 @@ function Ajaxyear(){
 
         // CAS OU ON RECOIS DES DONNEES
         } else {
-            const contentInfo = document.querySelector('.content-info');
             let year = selectYear.options[selectYear.selectedIndex].value;
-            trContainer.innerHTML = dataUser;
-            console.log(year)
-            console.log(month.value)
-
+            // trContainer.innerHTML = dataUser;
+            trContainer.forEach(el => {
+                el.innerHTML = dataUser
+            }
 
             // CALCUL DU TOTAL DES HEURES VALORISEES
             const tr = document.querySelectorAll('.duree');

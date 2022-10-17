@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block body %}
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> <link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
+<link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+<link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
 
 
 
@@ -18,22 +19,30 @@
         <tr>
             <th>Association</th>
             <th>Date</th>
+            <th>Depart</th>
+            <th>arrivée</th>
             <th>Km</th>
             <th>Durée</th>
             <th>Frais</th>
             <th>Don</th>
             <th>Remboursement</th>
             <th>Heures Valorisées</th>
+            <th>Charges</th>
+            <th>Groupe</th>
         </tr>
-        <tr>
+        <tr>        
             <td>{{action.association.name}}</td>
             <td>{{action.date|date('d/m/Y')}}</td>
+            <td>{{action.villeDepart}}</td>
+            <td>{{action.villeArrive}}</td>
             <td>{{action.km}}</td>
             <td>{{action.duree}}</td>
             <td>{{action.frais}}</td>
             <td>{{action.dons}}</td>
             <td>{{action.aPayer}}</td>
             <td>{{action.heuresValorisees}}</td>
+            <td>{{action.charges}}</td>
+            <td>{{action.groupe}}</td>
         </tr>
     </table>
     <div class="accept-container">
