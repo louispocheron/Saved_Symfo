@@ -75,6 +75,10 @@ for(let i=0; i<months.length; i++){
 btnSubmit.addEventListener('click', Ajaxyear);
 
 
+let totalDuree
+let aPayerSumAjax
+let donSumAjax
+let valoriseesSumAjax
 // APPEL AJAX POUR AFFICHER LES DONNEES
 function Ajaxyear(){
     let data = selectYear.options[selectYear.selectedIndex];
@@ -115,11 +119,12 @@ function Ajaxyear(){
 
         // CAS OU ON RECOIS DES DONNEES
         } else {
+            btnPdf.style.display = "block"
             let year = selectYear.options[selectYear.selectedIndex].value;
             // trContainer.innerHTML = dataUser;
             trContainer.forEach(el => {
                 el.innerHTML = dataUser
-            }
+            })
 
             // CALCUL DU TOTAL DES HEURES VALORISEES
             const tr = document.querySelectorAll('.duree');
@@ -133,7 +138,7 @@ function Ajaxyear(){
             // CALCUL DU TOTAL A PAYER
             const payerTdAjax = document.querySelectorAll('.payerTd');
             const trpayer = Array.from(payerTdAjax).map(el => el.dataset.payer);
-            let aPayerSumAjax = sumPay(trpayer);
+            aPayerSumAjax = sumPay(trpayer);
             payerP.innerHTML = `Remboursements : <span style="
             color:#097969;
             font-weight: bold;
@@ -144,7 +149,7 @@ function Ajaxyear(){
             // CALCUL DES DONS 
             const donTdAjax = document.querySelectorAll('.donTd');
             const trdon = Array.from(donTdAjax).map(el => el.dataset.don)
-            let donSumAjax = sumEuros(trdon);
+            donSumAjax = sumEuros(trdon);
             donP.innerHTML = `Dons :<span style="
             color:#097969;
             font-weight: bold;
@@ -154,7 +159,7 @@ function Ajaxyear(){
             // CALCUL DES VALORISATION
             const valoriseesTdAjax = document.querySelectorAll('.valoriseesTd');
             const trvalorisees = Array.from(valoriseesTdAjax).map(el => el.dataset.valorisees)
-            let valoriseesSumAjax = sumEuros(trvalorisees);
+            valoriseesSumAjax = sumEuros(trvalorisees);
             valoriseeP.innerHTML = `Valorisées : <span style="
             color:#097969;
             font-weight: bold;
@@ -243,15 +248,9 @@ pdfAction.forEach(el => {
         const actionId = el.dataset.id;
         const endPoint = `${baseHref}/pdf/${actionId}`;
         console.log(dureeAjax)
-        axios.post(endPoint, { 
-            'benevolat': dureeAjax, 
-            // 'remboursement': aPayerSum,
-            // 'don': donSum,
-            // 'valorise': valoriseesSum
-        })
+        axios.post(endPoint)
         .then((response) => { 
             console.log(response)
-
             window.location.href = endPoint;
         })
         .catch((error) => {
@@ -261,6 +260,69 @@ pdfAction.forEach(el => {
 })
 
 
+
+// CA CA MARCHE 
+const wrapper = document.querySelector('.wrapper-pdf');
+const pdfBenevolat = document.querySelector('.pdf-benevolat');
+const pdfDon = document.querySelector('.pdf-don');
+const pdfRemboursement = document.querySelector('.pdf-remboursement');
+const pdfValorisee = document.querySelector('.pdf-valorisee');
+
+async function generatePdf(){
+    wrapper.style.display = "flex";
+
+    pdfBenevolat.innerHTML = `Bénévolat : <span style="
+            color:#097969;
+            font-weight: bold;
+            "> ${totalDuree}</span>`;
+    pdfDon.innerHTML = `Dons :<span style="
+            color:#097969;
+            font-weight: bold;
+            "> ${donSumAjax}€</span>`;
+    pdfRemboursement.innerHTML = `Remboursements : <span style="color:#097969;
+            font-weight: bold;
+            "> ${aPayerSumAjax}€</span>`;
+    pdfValorisee.innerHTML = `Valorisées : <span style="
+            color:#097969;
+            font-weight: bold;
+            ">${valoriseesSumAjax}€</span> `;
+
+    // GENERATION DU PDF AVEC TOUTES LES INFOS
+    let options = {
+        filename: 'Saved_pdf.pdf',
+        margin: 1,
+        image: {
+            type: 'jpeg'
+        },
+        html2canvas: { 
+            scale: 10
+        },
+        jsPDF: {
+            orientation: 'landscape'
+        },
+    };
+
+    html2pdf()
+    .from(wrapper)
+    .set(options)
+    .save()
+}
+
+
+
+// APPELLE DEMANDE PDF ON CLICK
+const btnPdf = document.querySelector('.btn-pdf');
+
+btnPdf.addEventListener('click', () => {
+    generatePdf()
+    .then(() => { 
+        console.log('ok fini')
+        wrapper.style.display = "none";
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
 
 
 

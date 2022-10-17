@@ -73,13 +73,4 @@ btnNo.addEventListener('click', () => {
 
 
 
-// CA CA MARCHE 
-const wrapper = document.querySelector('.testPdf');
-// wrapper.style.display = "block";
-const generatePdf = () => { 
-    wrapper.style.display = "block";
-    html2pdf()
-    .from(wrapper)
-    .save()
-}
-// generatePdf();   
+  

@@ -1,6 +1,6 @@
 const wrapper = document.querySelector('.wrapper');
 
-var options = {
+let options = {
     filename: 'Saved_pdf.pdf',
     margin: 1,
     image: {

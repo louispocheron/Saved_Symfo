@@ -23,6 +23,10 @@
                 <select class="selectMonth" id="selectMonth"></select>
             </div>
             <input type="submit" class="btn-submit" value="rechercher">
+
+            <button class="btn-pdf" style="display: none">
+                pdf des saisies recherchées
+            </button> 
             {# INPUT RESET A FAIRE #}
             {# <input type="submit" class="fa-solid fa-arrows-rotate arrowTurn" value="test"> #}
         </div>
@@ -45,7 +49,6 @@
         </div>
     </div>
     <table class="sortable table">
-        
         <thead>
             <tr class="tr-first">
                 <th data-column="association" data-order="desc" class="no-sort column" >Association</th>
@@ -94,30 +97,64 @@
 </div>
 
 
-<div class="wrapper-pdf" style="">
+<div class="wrapper-pdf" style="display: none">
      <div class="header-pdf">
         {# <img src="{{ asset('assets/logo.SVG') }}"/> #}
     </div>
-    <table class="table">
-        <tr>
-            <th>Association</th>
-            <th>Date</th>
-            <th>Depart</th>
-            <th>arrivée</th>
-            <th>Km</th>
-            <th>Durée</th>
-            <th>Frais</th>
-            <th>Don</th>
-            <th>Remboursement</th>
-            <th>Heures Valorisées</th>
-            <th>Charges</th>
-            <th>Groupe</th>
-        </tr>
+    <table class="sortable table">
+        <thead>
+            <tr class="tr-first">
+                <th data-column="association" data-order="desc" class="no-sort column" >Association</th>
+                <th data-column="date" data-order="desc" class="column">Date</th>
+                <th>Ville de départ</th>
+                <th>Ville d'arrivée</th>    
+                <th>Km</th>
+                <th>Raisons</th>
+                <th>Heure de départ</th>
+                <th>Heure d'arrivée</th>
+                <th>Durée</th>
+                <th>Frais</th>
+                <th>Don</th>
+                <th>A payer</th>
+                <th>Heures valorisées</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
         <tbody class="ajaxDivContent">
             {% include "recapitulatif/action_recap.html.twig" %}
         </tbody>
-    </table> 
+    </table>
+    <div class="pdf-totaux">
+        <p class="pdf-benevolat"></p>
+        <p class="pdf-don"></p>
+        <p class="pdf-remboursement"></p>
+        <p class="pdf-valorisee"></p>
+    </div>
+    <div class="accept-container">
+        <div class="p-container">
+            <p>je soussigné(e), auteur du présent état, certifie l'éxactitude et souhaite pour la somme notifiée</p>
+        </div>
+        <div class="p-container">
+                <input type="checkbox"/>
+            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier Remboursement ou en cas de changement de compte)</p>
+        </div>
+        <div class="p-container">
+            <input type="checkbox"/>
+            <p>Renoncer au Remboursement des frais du présent état au profit de l'association en tant que don</p>
+        </div>
+    </div>
+    <div class="sign-container"> 
+        <div class="fait-le">
+            <p class="p-sign">faît le : </p>
 
+        </div>
+        <div class="signature">
+            <p class="p-sign">Signature du salarié ou du bénévole : </p>
+        </div>
+        <div class="president">
+            <p class="p-sign">Signature du trésorié ou du président : </p>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
