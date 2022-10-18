@@ -64,6 +64,14 @@ class RecapitulatifController extends AbstractController
 
         if($request->get("ajax")){
             return new JsonResponse([
+                'contentPdf' => $this->renderView(
+                   'recapitulatif/pdf_action.html.twig', [
+                        'actions' => $actionYearAndMonth,
+                        'user' => $uniqueUser,
+                        'year' => $year,
+                        'month' => $month,
+                   ]),
+
                 'content' => $this->renderView(
                    'recapitulatif/action_recap.html.twig', [
                         'actions' => $actionYearAndMonth,

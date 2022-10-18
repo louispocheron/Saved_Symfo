@@ -95,11 +95,11 @@ function Ajaxyear(){
     .then(data => {
         // ON APPEND LES DONNEES SI ON LES RECOIS
         // SI ON LES RECOIS PAS ON APPEND UN MSG EN ROUGE A UNE DIV
-        const trContainer = document.querySelectorAll('.ajaxDivContent');
-        const content = document.querySelectorAll('.trtest');
-        const content2 = document.querySelector('.totalDiv');
-        let dataUser = data.data.content;
+        const trContainer = document.querySelector('.ajaxDivContent');
+        const trContainerPdf = document.querySelector('.ajaxDivContentPdf');
 
+        let dataUser = data.data.content;
+        let dataUserPdf = data.data.contentPdf
         // CAS OU ON RECOIS RIEN DU SERV
         if (dataUser == "") {
             
@@ -121,15 +121,15 @@ function Ajaxyear(){
         } else {
             btnPdf.style.display = "block"
             let year = selectYear.options[selectYear.selectedIndex].value;
-            // trContainer.innerHTML = dataUser;
-            trContainer.forEach(el => {
-                el.innerHTML = dataUser
-            })
 
+            // trContainer.innerHTML = dataUser;
+            trContainer.innerHTML = dataUser
+            trContainerPdf.innerHTML = dataUserPdf
             // CALCUL DU TOTAL DES HEURES VALORISEES
             const tr = document.querySelectorAll('.duree');
+            console.log(tr);
             const trData = Array.from(tr).map(el => el.dataset.duree)
-            let totalDuree = sumHours(trData);
+            totalDuree = sumHours(trData);
             dureeP.innerHTML = `Bénévolat : <span style="
             color:#097969;
             font-weight: bold;
@@ -269,8 +269,8 @@ const pdfRemboursement = document.querySelector('.pdf-remboursement');
 const pdfValorisee = document.querySelector('.pdf-valorisee');
 
 async function generatePdf(){
-    wrapper.style.display = "flex";
 
+    wrapper.style.display = "flex";
     pdfBenevolat.innerHTML = `Bénévolat : <span style="
             color:#097969;
             font-weight: bold;
@@ -309,20 +309,15 @@ async function generatePdf(){
 }
 
 
-
 // APPELLE DEMANDE PDF ON CLICK
 const btnPdf = document.querySelector('.btn-pdf');
 
 btnPdf.addEventListener('click', () => {
     generatePdf()
     .then(() => { 
-        console.log('ok fini')
         wrapper.style.display = "none";
     })
     .catch((err) => {
         console.log(err)
     })
 })
-
-
-

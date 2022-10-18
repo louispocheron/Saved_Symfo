@@ -22,12 +22,15 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 flex-direction: row;
-width: 40%;
+width: 100%;
 height: auto;
 padding: 5px;
 border: 1px solid black;
 margin-bottom: 1rem;
 margin-top: 1rem;
+}
+.pdf-totaux p {
+  margin: 10px;
 }
 .h2-main{
   text-transform: uppercase;
@@ -197,11 +200,35 @@ tr:hover{
     align-self: center;
     margin-top: 1rem;
 }
+.btn-pdf{
+    text-align: center;
+  border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    margin: 0 1rem 1rem 1rem;
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    align-self: center;
+}
 .select-container{
   margin: 1rem;
 }
 .btn-submit:hover{
   background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-pdf:hover{
+  background-color: #e8e9f0;
     color: #152149;
     border: 1px solid #152149;
     font-weight: 600;
@@ -338,21 +365,35 @@ select{
     th{
         display: none;
     }
+    thead{
+      display: none;
+    }
     table, tr, td{
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
     tr{
         margin-bottom: 1rem;
     }
     td{
-        text-align: left;
-        position: relative;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .pdfIcone{
+      display: none;
+    }
+    .last-td-poubelle{
+      display: none;
+    }
+
     td::before{
         content: attr(data-label);
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 100%;
         padding-left: -5px;
         color: #152149;
@@ -365,16 +406,6 @@ select{
     .modal-adherer{
       height: auto;
       width: 80%;
-    }
-
-    .lastchild::after{
-        content: "";
-        display: block;
-        width: 90%;
-        height: 2px;
-        background-color: #152149;
-        position: absolute;
-        top: 4rem;
     }
     .totalDiv{
       flex-direction: column;

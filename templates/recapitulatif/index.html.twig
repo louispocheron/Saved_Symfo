@@ -21,14 +21,8 @@
             <div class="select-container">
                 <label>Mois :</label>
                 <select class="selectMonth" id="selectMonth"></select>
-            </div>
+            </div> 
             <input type="submit" class="btn-submit" value="rechercher">
-
-            <button class="btn-pdf" style="display: none">
-                pdf des saisies recherchées
-            </button> 
-            {# INPUT RESET A FAIRE #}
-            {# <input type="submit" class="fa-solid fa-arrows-rotate arrowTurn" value="test"> #}
         </div>
         {# <p class="flex-start"> Vous avez fait {{ actions.getTotalItemCount }} saisies </p> #}
          <p class="totalH1 flex-start"></p>
@@ -48,6 +42,9 @@
             </div>
         </div>
     </div>
+    <button class="btn-pdf" style="display: none">
+        pdf des saisies recherchées
+    </button>
     <table class="sortable table">
         <thead>
             <tr class="tr-first">
@@ -117,11 +114,10 @@
                 <th>Don</th>
                 <th>A payer</th>
                 <th>Heures valorisées</th>
-                <th>Supprimer</th>
             </tr>
         </thead>
-        <tbody class="ajaxDivContent">
-            {% include "recapitulatif/action_recap.html.twig" %}
+        <tbody class="ajaxDivContentPdf">
+            {% include "recapitulatif/pdf_action.html.twig" %}
         </tbody>
     </table>
     <div class="pdf-totaux">

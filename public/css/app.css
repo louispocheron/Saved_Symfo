@@ -15,6 +15,16 @@
     --text: #2E2E2E;
     --text-secondary: 'Oxygen', sans-serif;
   }
+main::-webkit-scrollbar{
+    width: 10px;
+}
+main::-webkit-scrollbar-track {
+  background-color: #e8e9f0;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: #152149;
+  border-radius: 5px;
+}
   .test{
     display: flex;
     justify-content: center;

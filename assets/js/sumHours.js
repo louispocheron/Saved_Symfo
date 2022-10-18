@@ -1,8 +1,10 @@
 export function sumHours(data){
     if(data.length > 1){
 
+        console.log(data);
+
         data.forEach(el => {
-            if(el == 0){ 
+            if(el == 0 || el == undefined){ 
                 const idx = data.indexOf(el); 
                 if(idx != -1){
                     data[idx] = '0h00'
