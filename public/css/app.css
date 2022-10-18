@@ -7,7 +7,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+  }
+  main{
+    overflow-y: scroll;
   }
   :root{
     --main-color: #152149;
@@ -497,6 +499,7 @@ main::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  flex-wrap: wrap;
 }
 .selectYear .selectMonth{
   width: 100%;
@@ -518,7 +521,7 @@ main::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 .select-dd{
@@ -571,8 +574,24 @@ main::-webkit-scrollbar-thumb {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 80%;
     }
+    .user-name{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 70%;
+      height: 100%
+    }
+    .container-img-header{
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .h1-assoc{
       font-size: 1.5rem;
       font-weight: 600;
@@ -592,7 +611,8 @@ main::-webkit-scrollbar-thumb {
     .user-info{
       margin-left: auto;
       display: flex;
-      width: 1rem;
+      width: 20%;
+      height: 100%;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
@@ -600,15 +620,15 @@ main::-webkit-scrollbar-thumb {
       font-family: var(--text-secondary);
     }
     .user-avatar{
-      width: 3rem !important;
-      height: auto;
+      height: 80%;
+      width: auto;
       border-radius: 50%;
       margin-right: 1rem;
     }
 
     .default{
-      width: 3rem;
-      margin-top: 10px;
+      height: 60%;
+      width: auto;
     }
 
     .hamburger{
@@ -742,7 +762,6 @@ main::-webkit-scrollbar-thumb {
     }
     .user-info-a{
       text-decoration: none;
-      margin-left: auto;
     }
     .navbar-20{
       height: 15%;

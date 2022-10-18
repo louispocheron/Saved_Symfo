@@ -99,14 +99,14 @@
                     <h1 class="h1-assoc">Vous n'avez pas encore d'association</h1>
                 {% endif %}
             </div>
-
-            <a href="{{ path('mon_compte') }}" class="user-info-a">
                 <div class="user-info">
-                    {% if app.user.profilPicture != null %}
-                        <img src="{{ asset('/build/profil_picture/' ~ app.user.profilPicture) }}" alt="" class="user-avatar" />
-                    {% else %}
-                        <img src="{{ asset('/build/profil_picture/default_profil.png') }}" alt="" class="user-avatar default" />
-                    {% endif %}
+                    <div class="container-img-header">
+                        {% if app.user.profilPicture != null %}
+                            <img src="{{ asset('/build/profil_picture/' ~ app.user.profilPicture) }}" alt="" class="user-avatar" />
+                        {% else %}
+                            <img src="{{ asset('/build/profil_picture/default_profil.png') }}" alt="" class="user-avatar default" />
+                        {% endif %}
+                    </div>
                     <div class="user-name">
                         <h2 class="user-username"> {{app.user.username}} </h2> 
                         <h3 class="user-email"> {{app.user.email}}</h3>
@@ -118,7 +118,6 @@
                         {% endif %}
                     </div>
                 </div>
-            </a>
         </div>
         {# MENU BURGER POUR LE MOBILE #}
         <div class="header">
