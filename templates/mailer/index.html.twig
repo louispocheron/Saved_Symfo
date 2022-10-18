@@ -11,13 +11,13 @@
         <h1 class="h1">NOUS CONTACTER</h1>
         {{ form_start(form) }}
         <div class="form-input sujet">
-            {{ form_widget(form.sujet) }}
+            {{ form_widget(form.email) }}
         </div>
         <div class="form-input message">
-            {{ form_widget(form.message) }}
+            {{ form_widget(form.content) }}
         </div>
         <div class="form-input save">
-            {{ form_widget(form.enregistrer) }}
+            {{ form_widget(form.envoyer) }}
         </div>
         {{ form_end(form) }}
     </div>

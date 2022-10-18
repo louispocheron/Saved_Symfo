@@ -12,7 +12,7 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
+use App\Service\MailerService;
 
 
 
@@ -22,44 +22,30 @@ class MailerController extends AbstractController
     #[Route('/mailer', name: 'app_mailer')]
     public function index(MailerInterface $mailer, Request $request): Response
     {
-        $user = $this->getUser();
-        $userMail = $user->getEmail();
+        $form = $this->createForm(MailerService::class);
 
-        $form = $this->createFormBuilder()
-                     ->add('sujet', textareaType::class, [
-                        'label' => 'Sujet',
-                        'attr' => [
-                            'placeholder' => 'sujet'
-                        ]
-                     ])
-                     ->add('message', textareaType::class, [
-                        'label' => 'Message',
-                        'attr' => [
-                            'placeholder' => 'Message...'
-                        ]
-                     ])
-                     ->add('enregistrer', SubmitType::class, ['label' => 'Enregistrer'])
-                     ->getform();
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()){ 
-            $email = (new Email())
-                ->from($userMail)
-                ->to('pocheron.louisamazon1@gmail.com')
-                ->text($form->get('message')->getData() );
-                $mailer->send($email);
 
+        if($form->isSubmitted() && $form->isValid()){
+
+            $emailAdress = $form->get('email')->getData();
+            $content = $form->get('content')->getData();
+            
+            $email = (new Email())
+                    ->from($emailAdress)
+                    ->to('yo@example.com')
+                    ->subject('saved nous contacter')
+                    ->text($content)
+            ;
+            $mailer->send($email);
         }
 
-        // $email = (new Email())
-        //     ->from('test@gmail.com')
-        //     ->to('pocheron.louis@gmail.com')
-        //     ->text('Lorem ipsum...');
 
-
-        // $mailer->send($email);
-        return $this->render('mailer/index.html.twig', [
-            'form' => $form->createView(),
+        return $this->renderForm('mailer/index.html.twig', [
+            'form' => $form,
         ]);
 
+
     }
+    
 }

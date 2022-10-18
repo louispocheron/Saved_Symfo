@@ -308,7 +308,6 @@ async function generatePdf(){
     .save()
 }
 
-
 // APPELLE DEMANDE PDF ON CLICK
 const btnPdf = document.querySelector('.btn-pdf');
 
