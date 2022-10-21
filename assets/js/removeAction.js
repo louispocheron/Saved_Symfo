@@ -1,3 +1,5 @@
+import { Ajaxyear } from "./recap.js";
+
 
 const modal = document.querySelector('.modal-adherer');
 const dataId = document.querySelectorAll('.data-id');
@@ -5,8 +7,6 @@ const trash = document.querySelectorAll('.modal-open-delete');
 const btnNo = document.querySelector('.btn-no');
 const btnYes = document.querySelector('.btn-yes');
 const main = document.querySelector('.content-container');
-
-
 
 
 
@@ -58,6 +58,7 @@ btnYes.addEventListener('click', (event) => {
                 },
                 onClick: function(){}
             }).showToast();
+        Ajaxyear();
     })
     .catch((err) => {
         console.log(err);

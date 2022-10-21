@@ -3,9 +3,6 @@ import { sumEuros } from "./sumEuros";
 import { sumPay } from "./sumPay";
 
 
-const totalH1 = document.querySelector(".totalH1");
-
-
 // GRAB LES ELEMENTS DU DOM
 const selectYear = document.getElementById('selectYear');
 const totalParagraph = document.querySelector('.total-paragraphe');
@@ -80,7 +77,7 @@ let aPayerSumAjax
 let donSumAjax
 let valoriseesSumAjax
 // APPEL AJAX POUR AFFICHER LES DONNEES
-function Ajaxyear(){
+export function Ajaxyear(){
     let data = selectYear.options[selectYear.selectedIndex];
     let month = selectMonth.options[selectMonth.selectedIndex];
     let queryString = new URLSearchParams();
@@ -241,6 +238,7 @@ valoriseeP.innerHTML = `Valorisées : <span style="
 // ENVOIE DONNEES VERS PDF !! 
 const pdfAction = document.querySelectorAll('.pdfIcone'); 
 const baseHref = document.URL; 
+
 
 pdfAction.forEach(el => {
     el.addEventListener('click', (event) => {

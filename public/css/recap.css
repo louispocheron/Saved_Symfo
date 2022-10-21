@@ -14,6 +14,7 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 5px;
 }
 .pdf-totaux{
 align-self: center;
@@ -22,7 +23,7 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 flex-direction: row;
-width: 100%;
+width: 80%;
 height: auto;
 padding: 5px;
 border: 1px solid black;
@@ -100,21 +101,8 @@ margin-top: 1rem;
     font-weight: 400;
 }
 */
-.table th:hover{
-    cursor: pointer;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-tr:hover{
-  background-color: #e4e4e4;
-}
-/* 
-.separation-tr{
+
+/* .separation-tr{
     display: none;
 } */
 .test-salut{
@@ -281,7 +269,34 @@ select{
 
 
 /* CSS TABLEAU */
-.sortable {
+.table td, .table th{
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: center;
+}
+.pdfIcone{
+  border-top: 1px solid #ddd;
+}
+
+.table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+.table th{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #152149;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+.table tr:hover{
+  cursor: pointer;
+}
+.table td:last-child{
+  text-align: center;
+}
+/* .sortable {
   border-spacing: 0;
 }
 
@@ -314,7 +329,7 @@ select{
   cursor: pointer;
   font-weight: normal;
   text-align: center;
-}
+} */
 
 
 /* .sortable th:hover::after {

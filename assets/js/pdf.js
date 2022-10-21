@@ -13,12 +13,12 @@ let options = {
         orientation: 'landscape'
     },
 };
-
-const generatePdf = () => {
+ const generatePdf = async () => {
     html2pdf()
     .from(wrapper)
     .set(options)
     .save();  
 }
 
-generatePdf();
+
+generatePdf()
