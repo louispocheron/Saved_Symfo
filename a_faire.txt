@@ -92,7 +92,6 @@ qu'ai je a faire le reste de la semaine?
 finir le css de /mailer
 faire marcher le mailer?? ca marche pas wtf 
 
-faire un git push git add . 
 
 
 responsive de tout les modals

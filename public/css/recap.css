@@ -387,7 +387,7 @@ select{
       display: none;
     }
     .last-td-poubelle{
-      display: none;
+      /* display: none; */
     }
 
     td::before{

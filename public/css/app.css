@@ -592,6 +592,8 @@ main::-webkit-scrollbar-thumb {
       align-items: center;
     }
 
+
+    
     .h1-assoc{
       font-size: 1.5rem;
       font-weight: 600;
@@ -605,7 +607,7 @@ main::-webkit-scrollbar-thumb {
     .logo-main-assoc{
       aspect-ratio: 1;
       margin-left: 1rem;
-      width: 6rem;
+      width: 4rem;
       height: auto;
     }
     .user-info{

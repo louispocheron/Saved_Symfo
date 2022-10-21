@@ -4,7 +4,7 @@ main{
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .infoPerso{
     display: flex;
@@ -20,6 +20,7 @@ main{
   }
   .infoPerso h1{
     text-align: center;
+    justify-self: flex-start;
     font-size: 1.5rem;
     color: #2E2E2E;
   }
@@ -67,8 +68,13 @@ main{
     }
     .infoPerso{
       width: 50%;
+      height: 60%;
       justify-content: center;
       align-items: center;
+    }
+    .container-container{
+      align-self: center;
+      justify-self: center;
     }
     .moncompte-avatar{
       width: 10%;
