@@ -21,6 +21,10 @@
             <div class="select-container">
                 <label>Mois :</label>
                 <select class="selectMonth" id="selectMonth"></select>
+            </div>
+            <div class="select-container">
+                <label>Association :</label>
+                <select class="selectAssoc" id="selectMonth"></select>
             </div> 
             <input type="submit" class="btn-submit" value="rechercher">
         </div>
@@ -44,6 +48,7 @@
     </div>
     <button class="btn-pdf" style="display: none">
         pdf des saisies recherchées
+        <i class="fa-solid fa-file-pdf"></i>
     </button>
     <table class="sortable table">
         <thead>
@@ -142,7 +147,6 @@
     <div class="sign-container"> 
         <div class="fait-le">
             <p class="p-sign">faît le : </p>
-
         </div>
         <div class="signature">
             <p class="p-sign">Signature du salarié ou du bénévole : </p>
@@ -152,6 +156,14 @@
         </div>
     </div>
 </div>
+
+
+{# DATA DIV FOR JS #}
+{% for assoc in assocUser %}
+    <div class="data-assoc" data-association="{{assoc.name}}" data-id="{{assoc.id}}" style="display: none;"></div>
+{% endfor %}
+
+
 
 {% endblock %}
 

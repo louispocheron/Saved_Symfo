@@ -113,7 +113,7 @@ groupeSelect.addEventListener("change", () => {
 
     
 
-    bareme.value = 0.319;
+    bareme.value = 0.324;
     kmInput.value = 0;
     coutInput.value = 0;
     fraisInput.value = 0;

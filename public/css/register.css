@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+ul{
+  margin: 0;
+}
+li{
+  font-size: 13px;
+  color: red;
+  list-style: none;
+}
 body{
     margin: 0;
     padding: 0;
@@ -104,6 +111,6 @@ align-items: center;
         align-items: center;
     }
     .logo-login{
-        width: 30%;
+        width: 50%;
     }
 }

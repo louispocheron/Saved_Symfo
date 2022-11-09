@@ -9,10 +9,7 @@
 </head>
 <body>
 
-
-    {{form_start(registrationForm)}}
-
-
+{{form_start(registrationForm)}}
 <div class="container">
     <h1 class="h3 mb-3 font-weight-normal">S'INSCRIRE</h1>
     <div class="row">
@@ -20,7 +17,7 @@
         {{ form_widget(registrationForm.email) }}
     </div>
     <div class="row">
-        <label>Nom d'utilisateur</label>
+        <label>Nom / Prénom</label>
         {{ form_widget(registrationForm.username) }}
     </div>
     <div class="row">
@@ -31,12 +28,17 @@
         <label>Photo de profil</label>
         {{ form_widget(registrationForm.profilPicture) }}
     </div>
-    <div class="row last">
+    <div class="checkbox" class="label-checkbox">
+        <label>
+            <input type="checkbox" required="required" class="checkbox-input" /> Accepter la loi sur la protection des données
+        </label>
+    </div> 
+    <div class="row-last">
         <button type="submit" class="btn-submit">S'inscrire</button>
     </div>
 </div>
 <div class="container aside">
-    <img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-login">
+    <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
 </div>
 
     {{form_end(registrationForm)}}

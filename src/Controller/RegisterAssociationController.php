@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -87,6 +88,12 @@ class RegisterAssociationController extends AbstractController
                                 'placeholder' => 'Région',
                                 ],
                             ])
+                            ->add('departement', TextType::class, [
+                                'label'=>'Numero département',
+                                'attr' => [
+                                    'placeholder' => "ex: 39"
+                                ]
+                            ])
                      ->add('enregister', SubmitType::class, ['label' => 'Enregistrer'])
                      ->getform();
 
@@ -94,6 +101,7 @@ class RegisterAssociationController extends AbstractController
                      $form->handleRequest($request);
 
                         if($form->isSubmitted() && $form->isValid()){
+                            // dd($form->get('region')->getData());
                                 // RECUPERATION DE L'IMAGE
                             $file = $form->get('logo')->getData(); 
                             

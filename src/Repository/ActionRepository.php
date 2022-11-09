@@ -82,8 +82,8 @@ class ActionRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('action')
             ->andWhere('action.association = :association')
             ->andWhere('action.user = :user')
-            ->setParameter('association', $association->getId())
-            ->setParameter('user', $user->getId())
+            ->setParameter('association', $association)
+            ->setParameter('user', $user)
             ->getQuery()
             ->getResult()
         ;

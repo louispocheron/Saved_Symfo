@@ -69,9 +69,28 @@ for(let i=0; i<months.length; i++){
     selectMonth.add(monthOption);
 }
 
+
+// CREATION SELECT ASSOC 
+const assocs = document.querySelectorAll('.data-assoc');
+const selectAssoc = document.querySelector('.selectAssoc');
+
+const addEl = document.createElement('option');
+addEl.text = "toutes";
+addEl.value = "rien";
+selectAssoc.add(addEl);
+
+assocs.forEach(el => {
+    const assocOptions = document.createElement('option')
+    assocOptions.text = el.dataset.association
+    assocOptions.value = el.dataset.id
+    selectAssoc.add(assocOptions);
+})
+
+
+
+
+
 btnSubmit.addEventListener('click', Ajaxyear);
-
-
 let totalDuree
 let aPayerSumAjax
 let donSumAjax
@@ -80,14 +99,17 @@ let valoriseesSumAjax
 export function Ajaxyear(){
     let data = selectYear.options[selectYear.selectedIndex];
     let month = selectMonth.options[selectMonth.selectedIndex];
+    let assoc = selectAssoc.options[selectAssoc.selectedIndex];
     let queryString = new URLSearchParams();
     queryString.append('year', data.value);
     queryString.append('month', month.value);
+    queryString.append('association', assoc.value);
     let url = new URL(window.location.href);
 
     axios.post(url.pathname + "?" + queryString.toString() + "&ajax=1", {
         'year': data.value,
-        'month': month.value
+        'month': month.value,
+        'association': assoc.value
     })
     .then(data => {
         // ON APPEND LES DONNEES SI ON LES RECOIS
@@ -229,10 +251,6 @@ valoriseeP.innerHTML = `Valorisées : <span style="
             color:#097969;
             font-weight: bold;
             ">${valoriseesSum}€</span>`;
-
-
-
-
 
 
 // ENVOIE DONNEES VERS PDF !! 

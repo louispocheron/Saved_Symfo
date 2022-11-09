@@ -7,9 +7,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
-
+<div class="content-container">
     {% if userAction == null %}
-        <p>Aucune action n'a été effectuée par cet utilisateur</p>
+        <h2>Aucune action n'a été effectuée par cet utilisateur</h2>
+        <img src="{{ asset('assets/Human.png') }}" alt="human" class="img-responsive" style="margin: 0 auto;" />
+        </div>
     {% else %}
 <div class="content-container">
     <div class="content-info">
@@ -84,6 +86,7 @@
         </button>
     </div>
 </div>
+
 {% endblock %}
 {% block javascripts %}
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

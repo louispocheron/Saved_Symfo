@@ -30,7 +30,12 @@
             <div class="form-register-row">
                 <label>Région</label>
                 {{ form_widget(form.region) }}
+            </div>
             <div class="form-register-row">
+                <label>Numéro département</label>
+                {{ form_widget(form.departement) }}
+            </div>
+            <div class="form-register-row last">
                 {{ form_widget(form.enregister) }}
             </div>
         {{ form_end(form) }}

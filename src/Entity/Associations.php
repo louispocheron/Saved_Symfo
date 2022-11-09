@@ -9,13 +9,12 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use ApiPlatform\Core\Annotation\ApiResource;
+
 
 
 #[ORM\Entity(repositoryClass: AssociationsRepository::class)]
 #[UniqueEntity(fields: ['numeroSiret'], message: 'Ce numéro SIRET est déjà utilisé par une association')]
-
-
-
 class Associations
 {
     #[ORM\Id]
@@ -50,6 +49,9 @@ class Associations
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $region;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $departement = null;
 
     public function __construct()
     {
@@ -188,6 +190,18 @@ class Associations
     public function setRegion(?string $region): self
     {
         $this->region = $region;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?string
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(?string $departement): self
+    {
+        $this->departement = $departement;
 
         return $this;
     }

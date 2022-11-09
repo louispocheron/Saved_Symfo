@@ -27,6 +27,9 @@ main{
 .form-register-row{
     margin-top: 1rem;
 }
+.last{
+    margin: 0 !important;
+}
 
 .form-register-row input{
     display: block;

@@ -11,6 +11,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 
+
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['username'], message: 'il y a deja un utilisateur avec ce nom')]
 #[UniqueEntity(fields: ['email'], message: 'il y a deja un compte avec cet email')]

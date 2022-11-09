@@ -4,9 +4,9 @@ namespace App\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\ActionRepository;
+use App\Repository\AssociationsRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Repository\AssociationsRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,7 +17,7 @@ use Knp\Component\Pager\PaginatorInterface;
 class RecapitulatifController extends AbstractController
 {
     #[Route('/recapitulatif', name: 'recapitulatif')]
-    public function index(ActionRepository $actionRepo, PaginatorInterface $paginator, Request $request, UserRepository $userRepo): Response
+    public function index(ActionRepository $actionRepo, PaginatorInterface $paginator, Request $request, UserRepository $userRepo, AssociationsRepository $assocRepo): Response
     {
 
         $user = $this->getUser();
@@ -25,7 +25,8 @@ class RecapitulatifController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
         $actions = $actionRepo->findByUsers($user);
-        $latest = $actionRepo->findLatestAction($user);	
+        $latest = $actionRepo->findLatestAction($user);
+        $findAllAssocUser = $assocRepo->findAssociationByUser($user);
 
         $actions = $paginator->paginate(
             $actions,
@@ -38,16 +39,30 @@ class RecapitulatifController extends AbstractController
         
         $year = $request->get("year");
         $month = $request->get("month");
+        $associationRequest = $request->get("association");
+        // dd(gettype($associationRequest));
+        // $assocIdToNumber = intval($associationRequest);
+        // $assocFinal = $assocRepo->findById($associationRequest);
+        // dd($request);
         // $all = $request->get("all");
-   
+
+        // switch($year){
+        //     case()
+        // }
         
         //  dd($actionRepo->findByUserAndMonth($uniqueUser, 3));
-
-
+        // if($associationRequest != "" && $year == "rien" && $month == ""){
+        //     dd($request);
+        // }
+            // if($associationRequest){ 
+            //     dd($associationRequest);
+            // }
         // REFACTOR EN SWITCH CASE APRES PSQ DEGUEU CA 
         if($year != "rien" && $month == '') {
+            // dd($request);
+            // echo 'passe par la';
             $actionYearAndMonth = $actionRepo->findByUserAndYear($uniqueUser, $year);
-            // $actionYearAndMonth = "hey";
+            $actionYearAndMonth = "hey";
         }
         if($year == "rien" && $month == '') {
             $actionYearAndMonth = $actionRepo->findByUser($uniqueUser);
@@ -60,6 +75,10 @@ class RecapitulatifController extends AbstractController
         if($year == 'rien' && $month != ''){
             $actionYearAndMonth = $actionRepo->findByUserAndMonth($uniqueUser, $month);
             // $actionYearAndMonth = "hey2";
+        }
+        
+        if($year == "rien" && $month == '' && $associationRequest != "rien"){
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUser($associationRequest, $uniqueUser);
         }
 
         if($request->get("ajax")){
@@ -88,6 +107,7 @@ class RecapitulatifController extends AbstractController
             'user' => $user,
             'actions' => $actions,
             'latest' => $latest,
+            'assocUser' => $findAllAssocUser,
         ]);
     }
 

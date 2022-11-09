@@ -90,6 +90,7 @@ class AdminController extends AbstractController
   
 
     $association = $request->attributes->get('idAssoc');
+    // dd(gettype($association));
     // RESTREINT L'ACCES A LA PAGE ADMIN . IDASSOC
     // $this ->denyAccessUnlessGranted('ROLE_ADMIN'.$association, null, 'Vous n\'avez pas accès à cette page');
 

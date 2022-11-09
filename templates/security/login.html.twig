@@ -14,14 +14,15 @@
               
                 <h1 class="h3 mb-3 font-weight-normal">SE CONNECTER</h1>
                 <div class="input-container">
+                    {% if error %}
+                        <div class="form-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
                     <label for="inputUsername" class="label-input-password">Email</label>
                     <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control inputlogin" autocomplete="username" required autofocus placeholder="Adresse email">
                 </div>
                 <div class="input-container">
                     <label for="inputPassword" class="label-input-password">Mot de passe</label>
-                    {% if error %}
-                        <div class="form-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                    {% endif %}
+                    
                     <input type="password" name="password" id="inputPassword" class="form-control inputlogin" autocomplete="current-password" required placeholder="Mot de passe">
                     <input type="hidden" name="_csrf_token"
                         value="{{ csrf_token('authenticate') }}"
@@ -46,8 +47,8 @@
         </div>
         <div class="form-container aside">
             <h1>Bienvenue sur Saved !</h1>
-            <img src="{{ asset('assets/logo_blanc.SVG') }}" alt="logo" class="logo-login">
-            <p> Votre plateforme qui valorise vos heures de bénévolats !</p>
+            <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
+            <p>Votre plateforme qui simplifie vos démarches bénévoles !</p>
         </div>
     </div>
 </body>
