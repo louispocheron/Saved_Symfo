@@ -82,7 +82,36 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
+  .register-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+    width: 10rem;
+    height: 1rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .register-btn:hover{
+    text-align: center;
+    background-color: white;
+    color:#2E2E2E;
+    display: block;
+    border: 1px solid #2E2E2E;
+    cursor: pointer;
+  }
+
   .btn-signin:hover{
     background-color: white;
     color: #152149;
@@ -104,7 +133,7 @@ display: none;
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;  
-  margin: 1rem;
+  margin: 1rem 1rem 5px 1rem;
   width: 15rem;
   height: 2.7rem;
     transition: all 0.5s ease-in-out;
