@@ -40,46 +40,41 @@ class RecapitulatifController extends AbstractController
         $year = $request->get("year");
         $month = $request->get("month");
         $associationRequest = $request->get("association");
-        // dd(gettype($associationRequest));
-        // $assocIdToNumber = intval($associationRequest);
-        // $assocFinal = $assocRepo->findById($associationRequest);
-        // dd($request);
-        // $all = $request->get("all");
 
-        // switch($year){
-        //     case()
-        // }
-        
-        //  dd($actionRepo->findByUserAndMonth($uniqueUser, 3));
-        // if($associationRequest != "" && $year == "rien" && $month == ""){
-        //     dd($request);
-        // }
-            // if($associationRequest){ 
-            //     dd($associationRequest);
-            // }
         // REFACTOR EN SWITCH CASE APRES PSQ DEGUEU CA 
-        if($year != "rien" && $month == '') {
-            // dd($request);
-            // echo 'passe par la';
+        if($year != "rien" && $month == '' && $associationRequest == 'rien') {
             $actionYearAndMonth = $actionRepo->findByUserAndYear($uniqueUser, $year);
-            $actionYearAndMonth = "hey";
         }
-        if($year == "rien" && $month == '') {
+        if($year == "rien" && $month == '' && $associationRequest == 'rien') {
             $actionYearAndMonth = $actionRepo->findByUser($uniqueUser);
-            // $actionYearAndMonth = "hey";
         }
-        if($year != 'rien' && $month != ''){
-            $actionYearAndMonth = $actionRepo->findByUserAndYearAndMonth($uniqueUser, $year, $month);
-            // $actionYearAndMonth = "hey1";
+        if($year != 'rien' && $month != '' && $associationRequest == "rien"){
+            // dd(gettype($month));
+            // dd($actionRepo->findByUserAndYearAndMonth($uniqueUser, $year, $month));
         }
-        if($year == 'rien' && $month != ''){
-            $actionYearAndMonth = $actionRepo->findByUserAndMonth($uniqueUser, $month);
-            // $actionYearAndMonth = "hey2";
-        }
-        
-        if($year == "rien" && $month == '' && $associationRequest != "rien"){
+
+
+        if($year == "rien" && $month == "" && $associationRequest != "rien")
+        {
             $actionYearAndMonth = $actionRepo->findByAssociationAndUser($associationRequest, $uniqueUser);
         }
+
+
+        if($year != "rien" && $month == "" && $associationRequest != "rien")
+        {
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUserAndYear($associationRequest, $uniqueUser, $year);
+        }
+        if($year != "rien" && $month != "" && $associationRequest != "rien"){
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUserByMonthAndYear($associationRequest, $uniqueUser, $month, $year);
+        }
+        // if($year == 'rien' && $month != ''){
+        //     $actionYearAndMonth = $actionRepo->findByUserAndMonth($uniqueUser, $month);
+        //     // $actionYearAndMonth = "hey2";
+        // }
+        
+        // if($year == "rien" && $month == '' && $associationRequest != "rien"){
+        //     $actionYearAndMonth = $actionRepo->findByAssociationAndUser($associationRequest, $uniqueUser);
+        // }
 
         if($request->get("ajax")){
             return new JsonResponse([

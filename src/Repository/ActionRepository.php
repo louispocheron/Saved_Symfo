@@ -134,7 +134,7 @@ class ActionRepository extends ServiceEntityRepository
             ->andWhere('action.association = :association')
             ->andWhere('action.user = :user')
             ->andWhere('action.date BETWEEN :date1 AND :date2')
-            ->setParameter('association', $association->getId())
+            ->setParameter('association', $association)
             ->setParameter('user', $user->getId())
             ->setParameter('date1', $year.'-01-01')
             ->setParameter('date2', $year.'-12-31')
@@ -154,6 +154,8 @@ class ActionRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+
 public function findByUserAndYearAndMonth($user, $year, $month){
     return $this->createQueryBuilder('action')
         ->andWhere('action.user = :user')
@@ -174,10 +176,11 @@ public function findByUserAndYearAndMonth($user, $year, $month){
         return $this->createQueryBuilder('action')
             ->andWhere('action.association = :association')
             ->andWhere('action.user = :user')
-            ->andWhere('action.date >= :date')
-            ->setParameter('association', $association->getId())
+            ->andWhere('action.date BETWEEN :date1 AND :date2')
+            ->setParameter('association', $association)
             ->setParameter('user', $user->getId())
-            ->setParameter('date', date('Y-'.$month.'-01', strtotime($year)))
+            ->setParameter('date1', $year.'-'.$month.'-01')
+            ->setParameter('date2', $year.'-'.$month.'-31')
             ->getQuery()
             ->getResult()
         ;
