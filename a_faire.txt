@@ -108,8 +108,8 @@ responsive de tout les modals
     boutton s'inscrire au lieu d'un lien avec text-decorationn------------------PUSHED
     trouver un truc pour le rgpd register
     modal point d'interrogation sur la meme ligne-------------------------------a expliquer principe des media queries zz  
-    boutton pdf a l'arrivé recap pour toutes les saisies
-    manque une ligne dans recap
+    boutton pdf a l'arrivé recap pour toutes les saisies------------------------FAIT 
+    manque une ligne dans recapàà
     saisie : 
         bug arrondis pas ?toFixed(2)?
     botton admin inverser dans choix assoc

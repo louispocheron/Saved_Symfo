@@ -97,6 +97,7 @@ let donSumAjax
 let valoriseesSumAjax
 // APPEL AJAX POUR AFFICHER LES DONNEES
 export function Ajaxyear(){
+    btnPdfAll.style.display = "none"
     let data = selectYear.options[selectYear.selectedIndex];
     let month = selectMonth.options[selectMonth.selectedIndex];
     let assoc = selectAssoc.options[selectAssoc.selectedIndex];
@@ -324,11 +325,63 @@ async function generatePdf(){
     .save()
 }
 
+
+async function generatePdfAll(){
+
+    wrapper.style.display = "flex";
+    pdfBenevolat.innerHTML = `Bénévolat : <span style="
+            color:#097969;
+            font-weight: bold;
+            "> ${dureeAjax}</span>`;
+    pdfDon.innerHTML = `Dons :<span style="
+            color:#097969;
+            font-weight: bold;
+            "> ${donSum}€</span>`;
+    pdfRemboursement.innerHTML = `Remboursements : <span style="color:#097969;
+            font-weight: bold;
+            "> ${aPayerSum}€</span>`;
+    pdfValorisee.innerHTML = `Valorisées : <span style="
+            color:#097969;
+            font-weight: bold;
+            ">${valoriseesSum}€</span> `;
+
+    // GENERATION DU PDF AVEC TOUTES LES INFOS
+    let optionsAll = {
+        filename: 'Saved_pdf.pdf',
+        margin: 1,
+        image: {
+            type: 'jpeg'
+        },
+        html2canvas: { 
+            scale: 10
+        },
+        jsPDF: {
+            orientation: 'landscape'
+        },
+    };
+
+    html2pdf()
+    .from(wrapper)
+    .set(optionsAll)
+    .save()
+}
+
 // APPELLE DEMANDE PDF ON CLICK
 const btnPdf = document.querySelector('.btn-pdf');
+const btnPdfAll = document.querySelector('.btn-pdf-all');
+
 
 btnPdf.addEventListener('click', () => {
     generatePdf()
+    .then(() => { 
+        wrapper.style.display = "none";
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+btnPdfAll.addEventListener('click', () => {
+    generatePdfAll()
     .then(() => { 
         wrapper.style.display = "none";
     })
