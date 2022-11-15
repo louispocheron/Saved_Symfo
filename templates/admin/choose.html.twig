@@ -10,6 +10,15 @@
             {# {{ dump(association)}} #}
 
             <div class="assoc-container">
+                    <a href="{{ path('admin', {'idAssoc': association.id }) }}">
+                        <button class="btn-admin">Administer</button>
+                    </a>
+                <h2>{{ association.name }}</h2>
+                {% if association.logo != null %}
+                    <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img"/>
+                {% else %}
+                    <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+                {% endif %}
                 <form action="{{ path('change_logo',  {'idAssoc': association.id }) }}" method="post" enctype="multipart/form-data" class="form-sbmt">
                         <input type="hidden" name="token" value="{{ csrf_token('upload') }}" />
                         <label for="my_file-{{loop.index}}" class="input-file">Changer logo</label>
@@ -22,17 +31,6 @@
                             </div>
                         {% endfor %}
                 </form>
-                <h2>{{ association.name }}</h2>
-                {% if association.logo != null %}
-                    <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img"/>
-                {% else %}
-                    <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
-                {% endif %}
-                <div class="btn-container">
-                    <a href="{{ path('admin', {'idAssoc': association.id }) }}">
-                        <button class="btn-admin">Administer</button>
-                    </a>
-                </div>
             </div>
         {% endfor %}
     </div>

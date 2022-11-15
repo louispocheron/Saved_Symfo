@@ -58,11 +58,12 @@ h2{
     padding: 0;
 }
 .form-sbmt{
-    margin: 5px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-top: auto;
 }
 .btn-send{
     margin: 5px;
@@ -88,6 +89,7 @@ h2{
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     padding: 5px;
+    margin: 10px;
 }
 .input-btn{
     display: none;

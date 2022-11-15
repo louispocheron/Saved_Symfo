@@ -14,10 +14,14 @@
     align-items: center;
     flex-direction: column;
     width: 80%;
-    border: 1px solid black;
     margin-top: 2rem;
 }
-
+h3{
+  color: #152149;
+}
+.ul-container{
+  align-self: flex-start;
+}
 /* scrollBar */
 .container::-webkit-scrollbar{
     width: 10px;

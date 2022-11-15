@@ -127,6 +127,7 @@ groupeSelect.addEventListener("change", () => {
 
 
     parseFloat(totalNote.value);
+    // totalNote.value.toFixed(2);
 
 
 
@@ -146,8 +147,8 @@ groupeSelect.addEventListener("change", () => {
             if(isNaN(baremeValue)){
                 baremeValue = 0;
             }
-            // localStorage.setItem('donsInput', donsInput.value);
-            totalNote.value = parseFloat(fraisInput.value) + parseFloat(coutValue)
+            // localStorage.setItem('donsInput', donsInput.value);;
+            totalNote.value = (parseFloat(fraisInput.value) + parseFloat(coutValue)).toFixed(2)
 
 
             if(parseFloat(payer.value) > totalNote.value){

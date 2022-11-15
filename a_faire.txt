@@ -109,7 +109,7 @@ responsive de tout les modals
     trouver un truc pour le rgpd register
     modal point d'interrogation sur la meme ligne-------------------------------a expliquer principe des media queries zz  
     boutton pdf a l'arrivé recap pour toutes les saisies------------------------FAIT 
-    manque une ligne dans recapàà
+    manque une ligne dans recap
     saisie : 
-        bug arrondis pas ?toFixed(2)?
-    botton admin inverser dans choix assoc
+        bug arrondis pas ?toFixed(2)?-------------------------------------------FAIT
+    botton admin inverser dans choix assoc--------------------------------------FAIT
