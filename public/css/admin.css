@@ -2,14 +2,39 @@ main{
     width: 100%;
     height: 100%;
 }
+.main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+.card-container{
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    flex-direction: row;
+}
+.full-card-container h4{
+    text-align: center;
+    color: #152149;
+}
+.homeCard{
+    place-self: center;
+}
 .assoc-pres{
     margin-top: 1rem;
 }
 .assoc-name{
     font-size: 1.5rem;
 }
+.assoc-container h3{
+    margin: 5px !important;
+}
 .table{
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
     display: flex;
     flex-direction: row;
@@ -22,9 +47,11 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 .assoc-logo{
-    width: 5rem;
+    width: 10rem;
+    border-radius: 50%;
 }
 .table td, .table th{
     border: 1px solid #ddd;

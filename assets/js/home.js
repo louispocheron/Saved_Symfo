@@ -28,7 +28,6 @@ window.onload = () => {
             benevolat.push(el.duree)
         })
 
-    console.log(dons);
         // OK
         const total_valorisee = sumEuros(valorisees)
         benevolatDom.innerHTML = total_valorisee + "€"

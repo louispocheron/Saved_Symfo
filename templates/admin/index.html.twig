@@ -5,41 +5,67 @@
 {% block body %}
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
-
-<h3 class="assoc-pres">administration de l'association :</h3>
 <div class="assoc-container">
+    <h3 class="assoc-pres">administration de l'association :</h3>
     <h3 class="assoc-name">{{association.name}}</h3>
     {% if association.logo != null %}
         <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
     {% else %}
         <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
-    {% endif %}
+        {% endif %}
 </div>
 
-<table class="table">
-        <tr>
-            <th>Utilisateur</th>
-            <th>Email</th>
-            <th>Supprimer</th>
-        </tr>
-{% if users is empty %}
-    <tr>
-        <td>Aucun utilisateur</td>
-        <td></td>
-        <td></td>
-    </tr>
-{% else %}
-    {% for user in users %}
-            <tr onclick="window.location='{{path('admin_user', {'idAssoc': association.id, 'id': user.id } )}}'">
-                <td>{{ user.username }}</td>
-                <td>{{ user.email }}</td>
-                <td><a href="{{ path('remove_user', {'idAssoc': association.id, 'id': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
+<div class="main-container">
+    <table class="table">
+            <tr>
+                <th>Utilisateur</th>
+                <th>Email</th>
+                <th>Supprimer</th>
             </tr>
-    {% endfor %} 
-{% endif %}
-
-</table>
-{{ knp_pagination_render(users) }}
+    {% if users is empty %}
+        <tr>
+            <td>Aucun utilisateur</td>
+            <td></td>
+            <td></td>
+        </tr>
+    {% else %}
+        {% for user in users %}
+                <tr onclick="window.location='{{path('admin_user', {'idAssoc': association.id, 'id': user.id } )}}'">
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td><a href="{{ path('remove_user', {'idAssoc': association.id, 'id': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+        {% endfor %} 
+    {% endif %}
+    
+    </table>
+    {{ knp_pagination_render(users) }}
+    <div class="full-card-container">
+        <h4>Total de toutes les saisies de vos adhérants</h4>
+        <div class="card-container">
+            <div class="homeCard">
+                <img src="{{asset('assets/DONSPNG.png') }}" class='svg-home'>
+                <h2 class="dons-card"></h2>
+                <h3>Dons</h3>
+            </div>
+            <div class="homeCard">
+                <img src="{{asset('assets/REMBOURSEMENT-02.svg') }}" class='svg-home'>
+                <h2 class="remboursement-card"></h2>
+                <h3>Remboursement</h3>
+            </div>
+            <div class="homeCard">
+                <i class="fa-solid fa-clock svg-homecard"></i>
+                <h2 class="heure-card"></h2>
+                <h3>Heure de bénévolat</h3>
+            </div>
+            <div class="homeCard">
+                <img src="{{asset('assets/VALORISATION-01.svg') }}" class='svg-home bene'>
+                <h2 class="benevolat-card"></h2>
+                <h3>Bénévolat</h3>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 {% block javascripts %}

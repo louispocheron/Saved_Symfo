@@ -61,7 +61,7 @@ class ActionRepository extends ServiceEntityRepository
             ->getQuery()
             ->getArrayResult()
         ;
-    }
+        }
 
     public function findByAssociation($association){
         return $this->createQueryBuilder('action')
