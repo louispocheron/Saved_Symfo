@@ -17,6 +17,7 @@ const benevolat = [];
 
 
 window.onload = () => {
+    console.log(href + 'ajax_endpoint')
     axios.get(href + 'ajax_endpoint').then((response) => {
         const data = response.data.data;
         // console.log(data);
@@ -47,14 +48,3 @@ window.onload = () => {
         console.log(error);
     })
 }
-
-
-// LOGO MAIN MENU 
-
-
-
-// donArray.forEach(test => {
-//     console.log(test);
-// })
-// let totalDons = sumEuros(dons);
-// console.log(totalDons)

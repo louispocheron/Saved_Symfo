@@ -9,7 +9,6 @@ const btnYes = document.querySelector('.btn-yes');
 const main = document.querySelector('.content-container');
 
 
-
 // EVENT POUR OUVRIR LE MODAL 
 const openModal = () => {
     modal.dataset.active = true;
@@ -27,6 +26,7 @@ let index
 
 trash.forEach((el, idx) =>{
     el.addEventListener('click', () => {
+        console.log('clicked');
         index = idx
         openModal();
     })

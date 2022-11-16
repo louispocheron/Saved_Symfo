@@ -2,8 +2,6 @@ import { sumHours } from "./sumHours";
 import { sumEuros } from "./sumEuros";
 import { sumPay } from "./sumPay";
 
-
-
 //NOMBRE D'HEURE ET MINUTES PAR ADHERENT
 
 const selectYear = document.getElementById('selectYear');

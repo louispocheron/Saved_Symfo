@@ -54,7 +54,14 @@ class ActionRepository extends ServiceEntityRepository
         ;
     }
 
-
+    public function findByAssociationForAjax($association){
+        return $this->createQueryBuilder('action')
+            ->andWhere('action.association = :association')
+            ->setParameter('association', $association->getId())
+            ->getQuery()
+            ->getArrayResult()
+        ;
+    }
 
     public function findByAssociation($association){
         return $this->createQueryBuilder('action')
@@ -158,14 +165,14 @@ class ActionRepository extends ServiceEntityRepository
 
 public function findByUserAndYearAndMonth($user, $year, $month){
     return $this->createQueryBuilder('action')
-        ->andWhere('action.user = :user')
-        ->andWhere('action.date BETWEEN :date1 AND :date2')
-        ->setParameter('user', $user->getId())
-        ->setParameter('date1', $year.'-'.$month.'-01')
-        ->setParameter('date2', $year.'-'.$month.'-31')
-        ->getQuery()
-        ->getResult()
-    ;
+    ->andWhere('action.user = :user')
+    ->andWhere('action.date BETWEEN :date1 AND :date2')
+    ->setParameter('user', $user->getId())
+    ->setParameter('date1', $year.'-'.$month.'-01')
+    ->setParameter('date2', $year.'-'.$month.'-31')
+    ->getQuery()
+    ->getResult()
+;
 }
 
 

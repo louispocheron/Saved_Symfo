@@ -45,14 +45,15 @@ class RecapitulatifController extends AbstractController
         if($year != "rien" && $month == '' && $associationRequest == 'rien') {
             $actionYearAndMonth = $actionRepo->findByUserAndYear($uniqueUser, $year);
         }
+
         if($year == "rien" && $month == '' && $associationRequest == 'rien') {
             $actionYearAndMonth = $actionRepo->findByUser($uniqueUser);
         }
-        if($year != 'rien' && $month != '' && $associationRequest == "rien"){
-            // dd(gettype($month));
-            // dd($actionRepo->findByUserAndYearAndMonth($uniqueUser, $year, $month));
-        }
 
+        if($year != 'rien' && $month != '' && $associationRequest == "rien"){
+            $actionYearAndMonth = $actionRepo->findByUserAndYearAndMonth($uniqueUser, $year, $month);
+            // $actionYearAndMonth = "salut";
+        }
 
         if($year == "rien" && $month == "" && $associationRequest != "rien")
         {

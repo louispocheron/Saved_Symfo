@@ -69,6 +69,7 @@ class AdminController extends AbstractController
             'association' => $association,
             'actions' => $actions ?? false,
             'users' => $users ?? false,
+            'assocId' => $assocId,
             'controller_name' => 'AdminController',
         ]);
     }
@@ -237,6 +238,20 @@ class AdminController extends AbstractController
                 $em->flush();    
             }
         return $this->redirectToRoute('admin_choose'); 
+    }
+
+    #[Route('/admin/{idAssoc}/ajax_endpoint', name: 'data_user_admin')]
+    public function DataAdminActions(ActionRepository $repo, AssociationsRepository $assocRepo, Request $request){
+
+        $assocId = $request->attributes->get('idAssoc');
+        $association = $assocRepo->find($assocId);
+
+        $actions = $repo->findByAssociationForAjax($association);
+
+
+        return new JsonResponse([
+            'data' => $actions,
+        ]);
     }
 
 }

@@ -19,6 +19,3 @@ let options = {
     .set(options)
     .save();  
 }
-
-
-generatePdf()

@@ -380,6 +380,7 @@ btnPdf.addEventListener('click', () => {
         console.log(err)
     })
 })
+
 btnPdfAll.addEventListener('click', () => {
     generatePdfAll()
     .then(() => { 

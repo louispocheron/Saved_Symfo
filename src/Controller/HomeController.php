@@ -57,7 +57,8 @@ class HomeController extends AbstractController
 {
     $user = $this->getUser();
     $data = $actionRepo->findByUsersForAjax($user);
-   
+
+
     return new JsonResponse([
         'data' => $data
     ]);

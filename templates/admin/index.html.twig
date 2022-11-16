@@ -30,7 +30,7 @@
     </tr>
 {% else %}
     {% for user in users %}
-            <tr onclick="window.location='{{path('admin_user', {'idAssoc': association.id, 'id': user.id, } )}}'">
+            <tr onclick="window.location='{{path('admin_user', {'idAssoc': association.id, 'id': user.id } )}}'">
                 <td>{{ user.username }}</td>
                 <td>{{ user.email }}</td>
                 <td><a href="{{ path('remove_user', {'idAssoc': association.id, 'id': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
@@ -41,31 +41,9 @@
 </table>
 {{ knp_pagination_render(users) }}
 
-        {# <div class="tableau">
-
-            {% for action in actions %}
-                    
-                        <div class="ligne" >
-                            <p>{{ action.user.username }}</p>
-                            <p>{{ action.villeDepart }}</p>
-                            <p>{{ action.villeArrive }}</p>
-                            <p>{{ action.km }}</p>
-                            <p>{{ action.raisons }}</p>
-                            <p>{{ action.heureDepart|date('H:i') }}</p>
-                            <p>{{ action.heureArrivee|date('H:i') }}</p>
-                            <p>{{ action.duree }}</p>
-                            <p>{{ action.frais }}</p>
-                            <p>{{ action.date|date('d/m/Y') }}</p>
-                        </div>
-
-                      
-            {% endfor %}
-
-        </div> #}
-
-
 {% endblock %}
-{% block javascript %}
-    <script src="{{ asset('action.js') }}"></script>
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('fetchData') }}
     {{ encore_entry_script_tags('sort') }}
 {% endblock %}

@@ -113,3 +113,12 @@ responsive de tout les modals
     saisie : 
         bug arrondis pas ?toFixed(2)?-------------------------------------------FAIT
     botton admin inverser dans choix assoc--------------------------------------FAIT
+
+
+
+
+// A FAIRE SEMAINE 14/11
+    recherche annnee/mois sans assoc marche pas
+    PDF IDENTIQUE GROUPE / UNIQUE
+    CARD POUR COMPTE ADMIN / SUPER ADMIN
+    CSS SUPER ADMIN
