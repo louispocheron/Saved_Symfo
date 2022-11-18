@@ -629,8 +629,9 @@ main::-webkit-scrollbar-thumb {
     }
 
     .default{
-      height: 60%;
+      height: 55%;
       width: auto;
+      aspect-ratio: 1 / 1;
     }
 
     .hamburger{

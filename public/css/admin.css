@@ -50,7 +50,8 @@ main{
     margin-bottom: 2rem;
 }
 .assoc-logo{
-    width: 10rem;
+    width: 10%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 .table td, .table th{

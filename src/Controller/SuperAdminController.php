@@ -15,6 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 class SuperAdminController extends AbstractController
@@ -155,5 +156,19 @@ class SuperAdminController extends AbstractController
         //         'code' => 200,
         //         'message' => 'ok',
         // ], 200);
+    }
+
+    #[Route('/superadmin/{idAssoc}/ajax_endpoint', name: 'data_user_admin')]
+    public function DataAdminActions(ActionRepository $repo, AssociationsRepository $assocRepo, Request $request){
+
+        $assocId = $request->attributes->get('idAssoc');
+        $association = $assocRepo->find($assocId);
+
+        $actions = $repo->findByAssociationForAjax($association);
+
+
+        return new JsonResponse([
+            'data' => $actions,
+        ]);
     }
 }

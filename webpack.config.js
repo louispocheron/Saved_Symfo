@@ -36,6 +36,8 @@ Encore
     .addEntry('pdfJs', './assets/js/pdf.js')
     .addEntry('fetchData', './assets/js/fetchData.js')
     .addEntry('deleteActionSuperAdmin', './assets/js/deleteActionSuperAdmin.js')
+    .addEntry('superAdminFetch', './assets/js/SuperAdminFetching.js')
+
 
 
 

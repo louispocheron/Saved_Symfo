@@ -1,3 +1,4 @@
+console.log("salut superadmin       ")
 import { sumHours } from "./sumHours";
 import { sumEuros } from "./sumEuros";
 import { sumPay } from "./sumPay";
@@ -19,7 +20,9 @@ const endPoint = `${baseHref}/ajax_endpoint`
 window.onload = () => {
     axios.get(endPoint).then((response) => {
         const data = response.data.data;
+        console.log(data.length)
         if(data.length >= 1){
+            console.log("sup a 1")
             // console.log(data);
             data.forEach(el => {
                 valorisees.push(el.heuresValorisees)
@@ -44,6 +47,7 @@ window.onload = () => {
             donDom.innerHTML = total_dons + "€"
         }
         else{
+            console.log("inf")
             benevolatDom.innerHTML = "0€"
             remboursementDom.innerHTML = "0€"
             heureDom.innerHTML = "00h00"
