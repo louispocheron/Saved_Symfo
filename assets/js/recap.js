@@ -3,9 +3,12 @@ import { sumEuros } from "./sumEuros";
 import { sumPay } from "./sumPay";
 
 
+
+
 // GRAB LES ELEMENTS DU DOM
 const selectYear = document.getElementById('selectYear');
 const totalParagraph = document.querySelector('.total-paragraphe');
+const modal = document.querySelector('.modal-adherer');
 const dureeP = document.querySelector('.total-heure');
 const payerP = document.querySelector('.total-payer');
 const donP = document.querySelector('.total-don');
@@ -16,9 +19,22 @@ const donTd = document.querySelectorAll('.donTd');
 const valoriseesTd = document.querySelectorAll('.valoriseesTd');
 const alertMessage = document.querySelector('.alert-message');
 const reset = document.querySelector('.arrowTurn');
+const main = document.querySelector('.content-container');
 
 
 
+// SUPPRIMER SAISIE AVEC AJAX
+    // EVENT POUR OUVRIR LE MODAL 
+const openModal = () => {
+    modal.dataset.active = true;
+    main.style.opacity = '0.4';
+}
+
+
+const closeModal = () => {
+    delete modal.dataset.active;
+    main.style.opacity = '1';
+}
 
 
 let baseOption = document.createElement('option');
@@ -75,7 +91,7 @@ const assocs = document.querySelectorAll('.data-assoc');
 const selectAssoc = document.querySelector('.selectAssoc');
 
 const addEl = document.createElement('option');
-addEl.text = "toutes";
+addEl.text = "Toutes";
 addEl.value = "rien";
 selectAssoc.add(addEl);
 
@@ -86,8 +102,11 @@ assocs.forEach(el => {
     selectAssoc.add(assocOptions);
 })
 
-
-
+// DELETE SAISIE
+let dataId = document.querySelectorAll('.data-id');
+let trash = document.querySelectorAll('.modal-open-delete');
+const btnNo = document.querySelector('.btn-no');
+const btnYes = document.querySelector('.btn-yes');
 
 
 btnSubmit.addEventListener('click', Ajaxyear);
@@ -95,6 +114,8 @@ let totalDuree
 let aPayerSumAjax
 let donSumAjax
 let valoriseesSumAjax
+
+
 // APPEL AJAX POUR AFFICHER LES DONNEES
 export function Ajaxyear(){
     btnPdfAll.style.display = "none"
@@ -121,9 +142,8 @@ export function Ajaxyear(){
         let dataUser = data.data.content;
         let dataUserPdf = data.data.contentPdf
         // CAS OU ON RECOIS RIEN DU SERV
-        if (dataUser == "") {
-            
 
+        if (dataUser == "") {
             // ON RETIRE LE CONTENU DE LA DIV SI ON L'A DEJA AJOUTEE
             [totalParagraph, dureeP, payerP, donP, valoriseeP].forEach(el => {
                 el.textContent = "";
@@ -147,7 +167,6 @@ export function Ajaxyear(){
             trContainerPdf.innerHTML = dataUserPdf
             // CALCUL DU TOTAL DES HEURES VALORISEES
             const tr = document.querySelectorAll('.duree');
-            console.log(tr);
             const trData = Array.from(tr).map(el => el.dataset.duree)
             totalDuree = sumHours(trData);
             dureeP.innerHTML = `Bénévolat : <span style="
@@ -389,4 +408,59 @@ btnPdfAll.addEventListener('click', () => {
     .catch((err) => {
         console.log(err)
     })
+})
+
+
+
+
+
+
+
+// INITIE LA VARIABLE AVANT FONCTION IMPORTANT
+let index
+
+trash.forEach((el, idx) =>{
+    console.log(el)
+    el.addEventListener('click', () => {
+        console.log('clicked');
+        index = idx
+        openModal();
+    })
+})
+
+
+btnYes.addEventListener('click', (event) => {
+    event.preventDefault();
+    const id = dataId[index].dataset.poubelle;
+    const baseHref = document.URL;
+    const endPoint = `${baseHref}/remove/${id}`;
+
+    // APPELLE AJAX SUR L'ENDPOINT 
+    axios.post(endPoint).then((res) => {
+        console.log(res);
+        const domToRemove = document.querySelector(`.tr-${id}`);
+        domToRemove.remove();
+        closeModal();
+        Toastify({
+                text: "Saisie bien supprimé",
+                duration: 5000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){}
+            }).showToast();
+        Ajaxyear();
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+})
+
+btnNo.addEventListener('click', () => {
+     closeModal();
 })

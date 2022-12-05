@@ -23,7 +23,20 @@ main{
 .form-register-container h1{
     text-align: center;
 }
-
+.input-btn-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.input-btn-container input{
+    display: block;
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px;
+}
 .form-register-row{
     margin-top: 1rem;
 }
@@ -71,6 +84,28 @@ main{
     height: 2.7rem;
     text-decoration: none;
 }
+.form-register-container button {
+ border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    margin: 1rem;
+    width: 15rem;
+    height: 2.7rem;
+    text-decoration: none;   
+}
+.form-register-container button:hover{
+   background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 700;
+    cursor: pointer; 
+}
 .form-register-row button:hover{
     background-color: white;
     color: #152149;
@@ -78,7 +113,16 @@ main{
     font-weight: 700;
     cursor: pointer;
 }
-
+.input2{
+    height: 30%;
+    margin: 1rem;
+}
+.input2 textarea{
+    resize: none;
+    height: 80%;
+    background: transparent;
+    border: solid 1px #ccc;
+}
 @media only screen and (min-width : 964px){
     main{
         align-items: center;

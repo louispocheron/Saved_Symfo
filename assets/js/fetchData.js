@@ -14,7 +14,8 @@ const remboursement = [];
 const benevolat = [];
 
 const baseHref = document.URL
-const endPoint = `${baseHref}/ajax_endpoint`
+const endPoint = baseHref + '/ajax_endpoint'
+console.log(endPoint)
 
 window.onload = () => {
     axios.get(endPoint).then((response) => {

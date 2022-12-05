@@ -9,6 +9,13 @@ main{
     align-items: center;
     flex-direction: column;
 }
+h4{
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.full-card-container{ 
+  margin: 0 !important;
+}
 .search-bar-input{
     padding-left: 25px;
     background-repeat: no-repeat;
@@ -187,7 +194,9 @@ main{
     flex-direction: column;
 }
 .assoc-logo{
-    width: 5rem;
+    width: 80%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 .table td, .table th{
     border: 1px solid #ddd;

@@ -63,10 +63,10 @@
                 <th>Ville d'arrivée</th>    
                 <th>Km</th>
                 <th>Raisons</th>
-                <th>Heure de départ</th>
-                <th>Heure d'arrivée</th>
                 <th>Durée</th>
                 <th>Frais</th>
+                <th>Groupe</th>
+                <th>barème</th>
                 <th>Don</th>
                 <th>A payer</th>
                 <th>Heures valorisées</th>
@@ -116,10 +116,10 @@
                 <th>Ville d'arrivée</th>    
                 <th>Km</th>
                 <th>Raisons</th>
-                <th>Heure de départ</th>
-                <th>Heure d'arrivée</th>
                 <th>Durée</th>
                 <th>Frais</th>
+                <th>Groupe</th>
+                <th>barème</th>
                 <th>Don</th>
                 <th>A payer</th>
                 <th>Heures valorisées</th>
@@ -161,6 +161,7 @@
     </div>
 </div>
 
+{# SINGLE WRAPPER PDF #}
 
 {# DATA DIV FOR JS #}
 {% for assoc in assocUser %}
@@ -179,7 +180,6 @@
 
     {{ encore_entry_script_tags('recap') }}
     {{ encore_entry_script_tags('sort') }}
-    {{ encore_entry_script_tags('RemoveAction') }}
 
 
 {% endblock %}

@@ -10,27 +10,28 @@
             {# {{ dump(association)}} #}
 
             <div class="assoc-container">
-                    <a href="{{ path('admin', {'idAssoc': association.id }) }}">
-                        <button class="btn-admin">Administer</button>
-                    </a>
                 <h2>{{ association.name }}</h2>
                 {% if association.logo != null %}
                     <img src="{{asset('/build/logo_directory/' ~ association.logo) }}" alt="{{association.name}}" class="assoc-img"/>
                 {% else %}
-                    <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+                    <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img"></img>
                 {% endif %}
-                <form action="{{ path('change_logo',  {'idAssoc': association.id }) }}" method="post" enctype="multipart/form-data" class="form-sbmt">
-                        <input type="hidden" name="token" value="{{ csrf_token('upload') }}" />
-                        <label for="my_file-{{loop.index}}" class="input-file">Changer logo</label>
-                        <input type="file" id="my_file-{{loop.index}}" name="logo" class="input-sbmt" data-id="{{loop.index}}"></input>
-                        <button type="submit" class="btn-send"><i class="fa-sharp fa-solid fa-check"></i></button>
-                        {# {{ dump(app.flashes('error')) }} #}
-                        {% for message in app.flashes('error') %}
-                            <div class="alert alert-danger">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                </form>
+                <div class="btn-container">
+                    <a href="{{ path('admin', {'idAssoc': association.id }) }}">
+                            <button class="btn-admin">Administrer</button>
+                    </a>
+                    <form action="{{ path('change_logo',  {'idAssoc': association.id }) }}" method="post" enctype="multipart/form-data" class="form-sbmt">
+                            <input type="hidden" name="token" value="{{ csrf_token('upload') }}" />
+                            <label for="my_file-{{loop.index}}" class="input-file">Changer logo</label>
+                            <input type="file" id="my_file-{{loop.index}}" name="logo" class="input-sbmt" data-id="{{loop.index}}"></input>
+                            {# {{ dump(app.flashes('error')) }} #}
+                            {% for message in app.flashes('error') %}
+                                <div class="alert alert-danger">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                    </form>
+                </div>
             </div>
         {% endfor %}
     </div>

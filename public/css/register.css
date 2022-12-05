@@ -17,7 +17,9 @@ body{
     align-items: center;
      font-family: 'Montserrat', sans-serif;
         background-color: #f5f4f9;
-
+}
+.logo-saved{
+  width: 60%;
 }
 form{
     width: 100%;
@@ -104,6 +106,7 @@ align-items: center;
 @media only screen and (min-width: 1024px){
     .container{
         width: 30%;
+        height: 85%;
     }
     .aside{
         display: flex;

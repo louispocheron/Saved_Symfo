@@ -38,13 +38,15 @@ h2{
     color: white;
 }
 .assoc-img{
-    width: 50%;
+    width: 80%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 .btn-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin-top: auto;
     margin-bottom: 2rem;

@@ -6,10 +6,10 @@
         <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
         <td data-label="Km">{{ action.km }}km</td>
         <td data-label="Raison">{{ action.raisons }}</td>
-        <td data-label="Heure de départ">{{ action.heureDepart|date('H:i') }}</td>
-        <td data-label="Heure d'arrivée">{{ action.heureArrivee|date('H:i') }}</td>
         <td data-label="Durée" class="duree" data-duree="{{ action.duree }}">{{ action.duree }}</td>
         <td data-label="Frais">{{ action.frais }}€</td>
+        <td data-label="Frais">{{ action.groupe }}</td>
+        <td data-label="Frais">{{ action.bareme }}</td>
         <td data-label="Don" class="donTd" data-don="{{ action.dons|number_format(2) }}">{{ action.dons|number_format(2) }}€</td>
         <td data-label="A payer" class="payerTd" data-payer="{{ action.Apayer }}">{{ action.Apayer|number_format(2) }}€</td>
         <td data-label="Heures valorisées" class="lastchild valoriseesTd" data-valorisees="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>

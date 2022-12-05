@@ -22,25 +22,34 @@ height: 100vh;
 .form-login{
   width: 100%;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .form-container{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 60%;
+  height: auto;
   background-color: #fff;
 	border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 		  0 10px 10px rgba(0,0,0,0.22);
 }
+.logo-saved{
+  width: 60%;
+}
 
 .form-container h1{
   text-align: center;
+  margin: 0 0 1rem 0;
 }
 .input-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .inputlogin{
@@ -117,7 +126,6 @@ display: none;
     color: #152149;
     display: block;
     border: 1px solid #152149;
-    font-weight: 600;
     cursor: pointer;
   }
 .label-input-password{
@@ -128,6 +136,7 @@ display: none;
 	border: 2px solid #fff;
 	background-color: #152149;
 	color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -136,8 +145,7 @@ display: none;
   margin: 1rem 1rem 5px 1rem;
   width: 15rem;
   height: 2.7rem;
-    transition: all 0.5s ease-in-out;
-
+  transition: all 0.5s ease-in-out;
 }
 .message-alert{
   list-style-type: none;

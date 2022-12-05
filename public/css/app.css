@@ -605,7 +605,6 @@ main::-webkit-scrollbar-thumb {
       display: none !important;
     }
     .logo-main-assoc{
-      aspect-ratio: 1;
       margin-left: 1rem;
       width: 4rem;
       height: auto;
@@ -777,6 +776,9 @@ main::-webkit-scrollbar-thumb {
 @media screen and (min-width: 1600px) {
   main{
     width: 100%;
+  }
+  .secondary-logo{
+    height: 80%;
   }
   .navbar-ul{
     height: 100%;

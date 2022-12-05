@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-nous{% endblock %}
+
+{% block body %}
+<link href="{{ asset('css/assocRegister.css') }}" rel="stylesheet">
+
+ <div class="form-register-container">
+    <h1>CONTACTEZ NOUS</h1>
+    <div class="input-btn-container">
+        <label>A propos</label>
+        <input/>
+    </div>
+    <div class="input-btn-container input2">
+        <label>Message</label>
+        <textarea>
+        </textarea>
+    </div>
+    <button class="btn-false">ENVOYER</button>       
+</div>
+
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    {{ encore_entry_script_tags('false') }}
+
+{% endblock %}

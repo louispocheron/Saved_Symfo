@@ -95,10 +95,13 @@
                             <label>Kilomètrage</label>
                             {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
                         </div>
-
-                        <div class='rowSaisie'>
+                        {# <div class='rowSaisie'>
                             <label>Barème</label>
                             <input class="bareme bottom-input" type="text" name="barème">
+                        </div> #}
+                           <div class='rowSaisie'>
+                            <label>bareme</label>
+                            {{form_widget(form.bareme, {'attr': {'class': 'bareme bottom-input'}}) }}
                         </div>
                     </div>
                     <div class="date-assoc">

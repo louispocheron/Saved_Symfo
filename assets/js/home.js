@@ -19,30 +19,38 @@ const benevolat = [];
 window.onload = () => {
     console.log(href + 'ajax_endpoint')
     axios.get(href + 'ajax_endpoint').then((response) => {
-        const data = response.data.data;
-        // console.log(data);
-        data.forEach(el => {
-            valorisees.push(el.heuresValorisees)
-            dons.push(el.dons)
-            remboursement.push(el.aPayer)
-            benevolat.push(el.duree)
-        })
+        const data = response.data.data
+        if(data.length >= 1){
+            data.forEach(el => {
+                valorisees.push(el.heuresValorisees)
+                dons.push(el.dons)
+                remboursement.push(el.aPayer)
+                benevolat.push(el.duree)
+            })
 
-        // OK
-        const total_valorisee = sumEuros(valorisees)
-        benevolatDom.innerHTML = total_valorisee + "€"
+            // OK
+            const total_valorisee = sumEuros(valorisees)
+            benevolatDom.innerHTML = total_valorisee + "€"
 
-        // OK
-        const total_remboursement = sumPay(remboursement)
-        remboursementDom.innerHTML = total_remboursement + "€"
+            // OK
+            const total_remboursement = sumPay(remboursement)
+            remboursementDom.innerHTML = total_remboursement + "€"
 
-        const total_benevolat = sumHours(benevolat);
-        heureDom.innerHTML = total_benevolat
-         
-        // console.log(total_remboursement);
-        const total_dons = sumEuros(dons);
-        donDom.innerHTML = total_dons + "€"
+            const total_benevolat = sumHours(benevolat);
+            heureDom.innerHTML = total_benevolat
+            
+            // console.log(total_remboursement);
+            const total_dons = sumEuros(dons);
+            donDom.innerHTML = total_dons + "€"
+        }
+        else{
+            benevolatDom.innerHTML = "0€"
+            remboursementDom.innerHTML = "0€"
+            heureDom.innerHTML = "00h00"
+            donDom.innerHTML = "0€"
+        }
     })
+
     .catch((error) => {
         console.log(error);
     })

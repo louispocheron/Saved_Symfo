@@ -158,8 +158,8 @@ class SuperAdminController extends AbstractController
         // ], 200);
     }
 
-    #[Route('/superadmin/{idAssoc}/ajax_endpoint', name: 'data_user_admin')]
-    public function DataAdminActions(ActionRepository $repo, AssociationsRepository $assocRepo, Request $request){
+    #[Route('/superadmin/{idAssoc}/ajax_endpoint', name: 'data_user_super_admin')]
+    public function DataSuperAdminActions(ActionRepository $repo, AssociationsRepository $assocRepo, Request $request){
 
         $assocId = $request->attributes->get('idAssoc');
         $association = $assocRepo->find($assocId);

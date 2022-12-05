@@ -50,32 +50,31 @@
         {% endfor %} 
     {% endif %}
     </table>
-
-        <div class="full-card-container">
-            <h4>Total de toutes les saisies de vos adhérants</h4>
-            <div class="card-container">
-                <div class="homeCard">
-                    <img src="{{asset('assets/DONSPNG.png') }}" class='svg-home'>
-                    <h2 class="dons-card"></h2>
-                    <h3>Dons</h3>
-                </div>
-                <div class="homeCard">
-                    <img src="{{asset('assets/REMBOURSEMENT-02.svg') }}" class='svg-home'>
-                    <h2 class="remboursement-card"></h2>
-                    <h3>Remboursement</h3>
-                </div>
-                <div class="homeCard">
-                    <i class="fa-solid fa-clock svg-homecard"></i>
-                    <h2 class="heure-card"></h2>
-                    <h3>Heure de bénévolat</h3>
-                </div>
-                <div class="homeCard">
-                    <img src="{{asset('assets/VALORISATION-01.svg') }}" class='svg-home bene'>
-                    <h2 class="benevolat-card"></h2>
-                    <h3>Bénévolat</h3>
-                </div>
+    <div class="full-card-container">
+        <h4>Total de toutes les saisies de {{association.name}}</h4>
+        <div class="card-container">
+            <div class="homeCardAdmin">
+                <img src="{{asset('assets/DONSPNG.png') }}" class='svg-home'>
+                <h2 class="dons-card"></h2>
+                <h3>Dons</h3>
+            </div>
+            <div class="homeCardAdmin">
+                <img src="{{asset('assets/REMBOURSEMENT-02.svg') }}" class='svg-home'>
+                <h2 class="remboursement-card"></h2>
+                <h3>Remboursement</h3>
+            </div>
+            <div class="homeCardAdmin">
+                <i class="fa-solid fa-clock svg-homecard"></i>
+                <h2 class="heure-card"></h2>
+                <h3 class="heure-card-bene">Heure de bénévolat</h3>
+            </div>
+            <div class="homeCardAdmin">
+                <img src="{{asset('assets/VALORISATION-01.svg') }}" class='svg-home bene'>
+                <h2 class="benevolat-card"></h2>
+                <h3>Bénévolat</h3>
             </div>
         </div>
+    </div>
     </div>
 
 

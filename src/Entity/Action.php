@@ -69,6 +69,9 @@ class Action
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $aPayer;
 
+    #[ORM\Column(type: 'decimal')]
+    private $bareme;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -286,6 +289,18 @@ class Action
     public function setAPayer(?string $aPayer): self
     {
         $this->aPayer = $aPayer;
+
+        return $this;
+    }
+
+    public function getBareme()
+    {
+        return $this->bareme;
+    }
+
+    public function setBareme($bareme): self
+    {
+        $this->bareme = $bareme;
 
         return $this;
     }

@@ -111,6 +111,8 @@ main{
 .assoc-img{
     width: 50%;
     height: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
   }
   .btn-adherer{
   border-radius: 20px;
@@ -171,7 +173,9 @@ main{
     text-align: center;
   }
   .assoc-img-first{
-    width: 7rem;
+    width: 80%;
+    object-fit: contain;
+    aspect-ratio: 3/2;
     height: auto;
   }
   .arrow-left{

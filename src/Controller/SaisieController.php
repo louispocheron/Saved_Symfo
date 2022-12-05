@@ -134,9 +134,10 @@ class SaisieController extends AbstractController
                 ])
                 ->add('heuresValorisees', TextType::class,[
                     'attr' => [
-                        'readonly' => true,
+                        'readonly' => true, 
                     ],
                 ])
+                ->add('bareme', TextType::class)
                 ->add('aPayer', TextType::class)
 
                 ->add('enregistrer', SubmitType::class, ['label' => 'Enregistrer'])
@@ -148,10 +149,11 @@ class SaisieController extends AbstractController
         if($issetDate == null){
             $form->get('date')->setData(new \DateTime());
         }
-        
+
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            // dd($bareme);
 
             $action = $form->getData();
             $issetDate = $form->get('date')->getData();

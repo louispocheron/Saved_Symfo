@@ -12,17 +12,44 @@ main{
     justify-self: flex-start;
     align-self: flex-start;
     width: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
 }
 .full-card-container h4{
     text-align: center;
     color: #152149;
+
 }
-.homeCard{
-    place-self: center;
+.full-card-container{
+    margin-top: -4rem;
+}
+.homeCardAdmin{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    animation: slide 1s forwards
+}
+.homeCardAdmin h3{
+    font-size: small;
+}
+.homeCardAdmin h3{
+    font-size: small;
+}
+.homeCardAdmin img{ 
+    width: 25px;
+}
+.homeCardAdmin svg{
+    width: 25px;
 }
 .assoc-pres{
     margin-top: 1rem;
