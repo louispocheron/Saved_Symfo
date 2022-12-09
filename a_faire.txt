@@ -115,8 +115,6 @@ responsive de tout les modals
     botton admin inverser dans choix assoc--------------------------------------FAIT
 
 
-
-
 // A FAIRE SEMAINE 14/11
     recherche annnee/mois sans assoc marche pas
     PDF IDENTIQUE GROUPE / UNIQUE
@@ -125,3 +123,42 @@ responsive de tout les modals
 
 
 // LEARN REACT NATIVE MTN NON ? 
+
+
+
+A FAIRE 09/12 : 
+METTRE LOGO CDOS DANS LOGIN-----------------------------------------------------FAIT
+REGISTER LES DEUX LOGO CDOS SAVED-----------------------------------------------FAIT
+en cliquant vous accepter les conditions générales d'utilisations de Saved------FAIT
+info pratique menu burger mobile------------------------------------------------FAIT
+
+
+DEMANDER CIRYL :
+ 	IMAGE : API / mvc backend
+	MAILER DNS CONTACT 
+
+
+recap: 
+Barème km
+
+mobile : 
+affiche frais au lieu de bareme-------------------------------FAIT
+
+ASSOC DATE VD VA RAISONS KM BAREMEKM FRAIS DONS A PAYER DUREE GRP HEURES VALORISEES---FAIT
+
+MEME PDF GROUPE QUE SIMPLE-------------------------------------FAIT
+
+QUESTIONS FREQUENTES -> INFOS PRATIQUES------------------------FAIT 
+protection des données avec un seul s--------------------------FAIT
+template mettre dans le register-------------------------------FAIT
+
+
+BAREME KM AVEC ACCENT DANS SAISIE------------------------------FAIT
+
+
+AUCUNE ASSOCIATION TROUVEE SI RIEN DE TROUVEE
+POPUP POUR LES MESSAGES d'ERREURS
+
+ADMIN SUPER ADMIN TOTAL PAS ALIGNEE
+
+REGARDER BAREME ET TAUX HORAIRE SI POSSIBLE DE CHANGER DANS LA BDD;

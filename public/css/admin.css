@@ -50,6 +50,7 @@ main{
 }
 .homeCardAdmin svg{
     width: 25px;
+    height: auto;
 }
 .assoc-pres{
     margin-top: 1rem;

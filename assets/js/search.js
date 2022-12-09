@@ -19,12 +19,14 @@ function ajax(filter){
     axios.get(url.pathname + "?" + queryString.toString() + "&ajax=1", null)
          .then(data => {
             let dataUser = data.data;
+            console.log(dataUser.length)
             if(dataUser == ""){
                 let p = document.createElement('p');
                 p.innerHTML = "Aucun résultat";
                 ajaxAssocContent.appendChild(p);
             }else{
-            ajaxAssocContent.innerHTML = dataUser;
+                console.log("trouvée")
+                ajaxAssocContent.innerHTML = dataUser;
             }
         })  
         .catch(err => {

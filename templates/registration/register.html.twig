@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='{{ asset("assets/favicon.png")}}' rel='shortcut icon' type='image/x-icon'/> 
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
     <title>S'inscrire</title>
 </head>
@@ -30,7 +31,7 @@
     </div>
     <div class="checkbox" class="label-checkbox">
         <label>
-            <input type="checkbox" required="required" class="checkbox-input" /> Accepter la loi sur la protection des données
+            <input type="checkbox" required="required" class="checkbox-input" />en cochant vous accepter les <a href="/conditions-utilisation">conditions générales d'utilisations de Saved</a>
         </label>
     </div> 
     <div class="row-last">
@@ -38,7 +39,11 @@
     </div>
 </div>
 <div class="container aside">
-    <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
+    <div class="img-container-aside">
+        <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
+        <span></span>
+        <img src="{{ asset('assets/logo_blanc.svg') }}" alt="logo" class="logo-login">
+    </div>
 </div>
 
     {{form_end(registrationForm)}}

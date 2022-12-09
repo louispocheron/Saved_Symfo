@@ -106,7 +106,7 @@ align-items: center;
 @media only screen and (min-width: 1024px){
     .container{
         width: 30%;
-        height: 85%;
+        height: 90%;
     }
     .aside{
         display: flex;
@@ -115,5 +115,20 @@ align-items: center;
     }
     .logo-login{
         width: 50%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+    .img-container-aside{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .img-container-aside span{
+      width: 40%;
+      height: 1px;
+      margin-bottom: 15px;
+      background-color: white;
     }
 }

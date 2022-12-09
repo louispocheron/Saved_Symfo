@@ -1,12 +1,18 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='{{ asset("assets/favicon.png")}}' rel='shortcut icon' type='image/x-icon'/> 
+    <link href="{{ asset('css/rgpd.css') }}" rel="stylesheet">
+    <title>RGPD</title>
+</head>
+<body>
 
-{% block title %}FAQ{% endblock %}
-
-{% block body %}
- <link href="{{ asset('css/faq.css') }}" rel="stylesheet">
-
-    <div class="container">
-        <h1>infos pratiques</h1>
+</body> 
+<div class="container">
+    <h1>Conditions d'utilisation</h1>
         <div class="question-container">
             <h3>Protection des données / RGPD</h3>  
             <p>En soumettant ce formulaire, vous acceptez que les informations personnelles saisies
@@ -81,4 +87,3 @@ aux mentions légales du site, dans la partie « 6. Gestion des données person
         </div>
     </div>
 
-{% endblock %}
