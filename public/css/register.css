@@ -75,6 +75,7 @@ align-items: center;
   .btn-submit{
      border-radius: 20px;
 	border: 2px solid #fff;
+  font-family: 'Montserrat', sans-serif;
 	background-color: #152149;
 	color: #FFFFFF;
 	font-size: 12px;
@@ -103,6 +104,10 @@ align-items: center;
   .input-password{
       width: 90%;
     }
+  .required::after{
+     content:" *";
+      color: red;
+  }
 @media only screen and (min-width: 1024px){
     .container{
         width: 30%;

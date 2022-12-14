@@ -20,6 +20,13 @@ main{
     flex-direction: column;
     margin-top: 2rem;
 }
+li{
+    list-style: none;
+}
+.required::after{
+    content:" *";
+    color: red;
+}
 .form-register-container h1{
     text-align: center;
 }

@@ -10,6 +10,15 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.logo-saved{
+  width: 25%;
+}
+.first{
+ margin-top: 0 !important;
+}
+.main-title{
+  text-align: center;
+}
 .question-container{
     padding: 0;
     display: flex;
@@ -35,4 +44,9 @@ h3{
 .container::-webkit-scrollbar-thumb {
   background-color: #152149;
   border-radius: 5px;
+}
+@media only screen and (max-width: 963px){
+  .logo-saved{
+    width: 50%;
+  }
 }

@@ -32,7 +32,7 @@ class RegistrationFormType extends AbstractType
             ->add('username' , null, [
                 // add placeholder username
                 'attr' => [
-                    'placeholder' => 'nom d\'utilisateur',
+                    'placeholder' => 'Nom / Prénom',
                 ],
             ])
             ->add('plainPassword', RepeatedType::class,[

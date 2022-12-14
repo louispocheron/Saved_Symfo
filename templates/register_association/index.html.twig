@@ -8,8 +8,11 @@
     <div class="form-register-container">
         <h1>ENREGISTER UNE ASSOCIATION</h1>
         {{ form_start(form) }}
+            <div class='form-error'>
+                {{ form_errors(form.name) }}
+            </div>
             <div class="form-register-row">
-                <label>Nom de l'association</label>
+                <label class="required">Nom de l'association</label>
                 {{ form_widget(form.name) }}
             </div>
             <div class="form-register-row upload">
@@ -21,14 +24,14 @@
                 {{ form_widget(form.description) }}
             </div>
             <div class="form-register-row">
-                <label>Numéro de siret</label>
+                <label class="required">Numéro de siret</label>
                 <div class='form-error'>
                     {{ form_errors(form.numeroSiret) }}
                 </div>
                 {{ form_widget(form.numeroSiret) }}
             </div>
             <div class="form-register-row">
-                <label>Région</label>
+                <label class="required">Région</label>
                 {{ form_widget(form.region) }}
             </div>
             <div class="form-register-row">

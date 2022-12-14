@@ -15,6 +15,8 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 #[ORM\Entity(repositoryClass: AssociationsRepository::class)]
 #[UniqueEntity(fields: ['numeroSiret'], message: 'Ce numéro SIRET est déjà utilisé par une association')]
+#[UniqueEntity(fields: ['name'], message: 'Une association utilise déja ce nom')]
+
 class Associations
 {
     #[ORM\Id]
