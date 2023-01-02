@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
-  
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
   body {
     height: 100vh;
     width: 100vw;
@@ -26,6 +27,9 @@ main::-webkit-scrollbar-track {
 main::-webkit-scrollbar-thumb {
   background-color: #152149;
   border-radius: 5px;
+}
+button{
+  font-family: 'Montserrat', sans-serif !important;
 }
   .test{
     display: flex;
@@ -628,7 +632,7 @@ main::-webkit-scrollbar-thumb {
     }
 
     .default{
-      height: 55%;
+      height: 5rem;
       width: auto;
       aspect-ratio: 1 / 1;
     }

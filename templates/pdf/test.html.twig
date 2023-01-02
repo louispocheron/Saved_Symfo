@@ -13,7 +13,7 @@
 
 <div class="wrapper">
     <div class="header-pdf">
-        {# <img src="{{ asset('assets/logo.SVG') }}"/> #}
+         <h2 class="h2-pdf">{{app.user.username}}</h2>
     </div>
     <table class="table">
         <tr>
@@ -59,17 +59,16 @@
             <input type="checkbox"/>
             <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
         </div>
+        <div class="p-container start">
+            <p style="text-align: start;">Faît le : </p>
+        </div>
     </div>
     <div class="sign-container"> 
-        <div class="fait-le">
-            <p class="p-sign">Faît le : </p>
-
-        </div>
         <div class="signature">
             <p class="p-sign">Signature du salarié ou du bénévole : </p>
         </div>
-        <div class="president">
-            <p class="p-sign">Signature du Trésorier ou du président : </p>
+        <div class="signature">
+            <p class="p-sign">Signature du trésorier ou du président : </p>
         </div>
     </div>
 </div>

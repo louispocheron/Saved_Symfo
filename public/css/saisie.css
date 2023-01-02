@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');  
 
 form{
     width: 100%;
@@ -238,6 +239,9 @@ height: 100%;
     width: 49%;
     height: 100%;
     align-self: flex-start;
+}
+.fonted{
+  font-family: 'Montserrat', sans-serif !important;
 }
 .input-container{
     display: flex;

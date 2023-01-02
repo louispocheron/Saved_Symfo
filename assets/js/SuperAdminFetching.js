@@ -47,7 +47,6 @@ window.onload = () => {
             donDom.innerHTML = total_dons + "€"
         }
         else{
-            console.log("inf")
             benevolatDom.innerHTML = "0€"
             remboursementDom.innerHTML = "0€"
             heureDom.innerHTML = "00h00"

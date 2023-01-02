@@ -8,8 +8,8 @@
 
 {% if isAssoc == [] %}
 <div class="container-no">
-    <h2 style="text-align: center;">Vous devez d'abord adherer à une association avant de faire des saisies</h2>
-    <h3 style="text-align: center;">Retrouver la liste des associations</h3>
+    <h2 style="text-align: center;">Vous devez d'abord adhérer à une association avant de faire des saisies</h2>
+    <h3 style="text-align: center;">Retrouvez la liste des associations</h3>
     <a href='{{ path('association') }}' class="btn-basic ref">ici</a>
 
     <img src="{{ asset('assets/Human.png') }}" alt="human" class="img-responsive" style="margin: 0 auto;">
@@ -146,7 +146,7 @@
                 </div> 
             </div>
                     <div class='rowSaisie btn-container'>
-                            {{form_widget(form.enregistrer , {'attr': {'class': 'btn-basic'}}) }}
+                            {{form_widget(form.enregistrer , {'attr': {'class': 'btn-basic fonted'}}) }}
                     </div>
                 </div>
             </div>

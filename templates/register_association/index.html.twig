@@ -6,7 +6,7 @@
 
  <link href="{{ asset('css/assocRegister.css') }}" rel="stylesheet">
     <div class="form-register-container">
-        <h1>ENREGISTER UNE ASSOCIATION</h1>
+        <h1>ENREGISTRER UNE ASSOCIATION</h1>
         {{ form_start(form) }}
             <div class='form-error'>
                 {{ form_errors(form.name) }}
@@ -35,7 +35,7 @@
                 {{ form_widget(form.region) }}
             </div>
             <div class="form-register-row">
-                <label>Numéro département</label>
+                <label class="required">Numéro département</label>
                 {{ form_widget(form.departement) }}
             </div>
             <div class="form-register-row last">

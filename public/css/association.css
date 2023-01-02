@@ -24,7 +24,9 @@ main{
     border: 2px solid #152149;
 }
 .assoc-img-modal {
-  width: 6rem;
+  width: 50%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 .associations {
@@ -60,6 +62,13 @@ main{
       font-size: 1.2em;
       flex-wrap: wrap;
       width: 13rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  .assoc-name-fully{
+    font-size: 1.2em;
+    width: auto;
   }
     .card-description{
         font-size: 0.8em;
@@ -173,10 +182,9 @@ main{
     text-align: center;
   }
   .assoc-img-first{
-    width: 80%;
+    width: 80% !important;
     object-fit: contain;
     aspect-ratio: 3/2;
-    height: auto;
   }
   .arrow-left{
     display: none;
@@ -207,7 +215,7 @@ main{
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
-    height: 40%;
+    height: auto;
     width: 30%;
     position: absolute;
     top: 50%;

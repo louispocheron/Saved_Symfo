@@ -70,7 +70,16 @@ h4{
       font-size: 1.2em;
       flex-wrap: wrap;
       width: 13rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
   }
+  .assoc-name-main{
+ font-size: 1.2em;
+ width: auto;
+  }
+
+
     .card-description{
         font-size: 0.8em;
         text-overflow: ellipsis;

@@ -54,6 +54,7 @@ main{
 }
 .assoc-pres{
     margin-top: 1rem;
+    width: auto;
 }
 .assoc-name{
     font-size: 1.5rem;
@@ -78,9 +79,9 @@ main{
     margin-bottom: 2rem;
 }
 .assoc-logo{
-    width: 10%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    width: 15%;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
 }
 .table td, .table th{
     border: 1px solid #ddd;

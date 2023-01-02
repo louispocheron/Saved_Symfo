@@ -14,11 +14,14 @@ let options = {
     },
 };
  const generatePdf = async () => {
-    html2pdf()
+    await html2pdf()
     .from(wrapper)
     .set(options)
-    .save();  
+    .save()
+    .then(() => {
+        window.location.href = '/recapitulatif';
+
+    })  
 }
 
 generatePdf();
-

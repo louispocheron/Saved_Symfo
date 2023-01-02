@@ -1,21 +1,26 @@
 
-{% block title %}Reset your password{% endblock %}
+{# {% block title %}Reset your password{% endblock %} #}
 
 {% block body %}
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
     {% for flash_error in app.flashes('reset_password_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
-    <h1>Reset your password</h1>
-
     {{ form_start(requestForm) }}
-        {{ form_row(requestForm.email) }}
-        <div>
-            <small>
-                Enter your email address and we will send you a
-                link to reset your password.
-            </small>
+    <div class="container">
+    <h3 class="h3">RETROUVEZ VOTRE MOT DE PASSE</h3>
+        <div class="row">
+            <label class="required">Email</label>
+            {{ form_widget(requestForm.email) }}
         </div>
-
-        <button class="btn btn-primary">Send password reset email</button>
+        <button class="btn-submit">Envoyer</button>
+        </div>
+    <div class="container aside">
+    <div class="img-container-aside">
+        <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
+        <span></span>
+        <img src="{{ asset('assets/logo_blanc.svg') }}" alt="logo" class="logo-login">
+    </div>
     {{ form_end(requestForm) }}
+
 {% endblock %}

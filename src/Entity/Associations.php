@@ -52,7 +52,7 @@ class Associations
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $region;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255, nullable: false)]
     private ?string $departement = null;
 
     public function __construct()

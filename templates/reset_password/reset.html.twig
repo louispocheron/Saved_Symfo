@@ -1,11 +1,10 @@
 
-{% block title %}Reset your password{% endblock %}
-
 {% block body %}
-    <h1>Reset your password</h1>
+    <link href="{{ asset('css/password.css') }}" rel="stylesheet">
+    <h1>Nouveau mot de passe</h1>
 
     {{ form_start(resetForm) }}
         {{ form_row(resetForm.plainPassword) }}
-        <button class="btn btn-primary">Reset password</button>
+        <button class="btn btn-primary">Sauvegarder</button>
     {{ form_end(resetForm) }}
 {% endblock %}
