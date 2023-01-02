@@ -1,4 +1,3 @@
-console.log("salut superadmin       ")
 import { sumHours } from "./sumHours";
 import { sumEuros } from "./sumEuros";
 import { sumPay } from "./sumPay";
