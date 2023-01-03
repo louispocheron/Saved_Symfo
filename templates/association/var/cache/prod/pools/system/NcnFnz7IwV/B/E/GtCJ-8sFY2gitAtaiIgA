@@ -1,0 +1,90 @@
+<?php //a69409edfaac0fe5050173eb444c7231
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'user' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.name AS name_1, a0_.logo AS logo_2, a0_.description AS description_3, a0_.numero_siret AS numero_siret_4, a0_.region AS region_5, a0_.departement AS departement_6, a0_.user_id AS user_id_7 FROM associations a0_ WHERE EXISTS (SELECT 1 FROM user_associations u1_ WHERE u1_.associations_id = a0_.id AND u1_.user_id IN (?))',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'associations' => 'App\\Entity\\Associations',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'name_1' => 'name',
+                    'logo_2' => 'logo',
+                    'description_3' => 'description',
+                    'numero_siret_4' => 'numeroSiret',
+                    'region_5' => 'region',
+                    'departement_6' => 'departement',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_7' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'associations' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_7' => 'user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'associations',
+                    'name_1' => 'associations',
+                    'logo_2' => 'associations',
+                    'description_3' => 'associations',
+                    'numero_siret_4' => 'associations',
+                    'region_5' => 'associations',
+                    'departement_6' => 'associations',
+                    'user_id_7' => 'associations',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Associations',
+                    'name_1' => 'App\\Entity\\Associations',
+                    'logo_2' => 'App\\Entity\\Associations',
+                    'description_3' => 'App\\Entity\\Associations',
+                    'numero_siret_4' => 'App\\Entity\\Associations',
+                    'region_5' => 'App\\Entity\\Associations',
+                    'departement_6' => 'App\\Entity\\Associations',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

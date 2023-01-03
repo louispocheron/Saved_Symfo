@@ -162,3 +162,52 @@ POPUP POUR LES MESSAGES d'ERREURS
 ADMIN SUPER ADMIN TOTAL PAS ALIGNEE
 
 REGARDER BAREME ET TAUX HORAIRE SI POSSIBLE DE CHANGER DANS LA BDD;
+
+
+
+// A FAIRE CETTE SEMAINE 
+
+PAS DE TIRET SUR LE MODAL VOULEZ VOUS SUPPRIMER
+
+ADMIN RECAP A PAYER MANQUE ESPACE
+BOUTON PAS BONNE POLICE DANS RECAP 
+
+QUAND DUREE = 0; null pour benevolat; mettre 0 valeur de depart
+
+PAS DE SAISIE 0 AU LIEU DE 00H00 ET NULL HEURE VALORISEES
+BOUTON RECHERCHER PAS BONNE POLICE
+
+ALL PDF pas de majuscule a remboursement
+
+PDF IMAGE SAVED A METTRE A DROITE DU PRENOM.
+
+
+peux pas supprimer, apres premiere supression d'une saisie
+
+contactez-nous avec tiret
+
+UPPERCASE DANS LISTE ASSOCIATION ET DANS SINGLE ASSOC ET DANS ADMIN ET ADMIN SINGLE
+
+majuscule administration association
+adherents association single
+
+mettre a jour recap recherche dans admin lors d'une supprésion de saisie.
+centrer les saisies dans le tableau. 
+ 
+met le message pas de saisies trouvé dans admin qu'une seul fois. 
+
+admin, mettre nom logo en haut a gauche, tableau utilisateur haut droite, recap dessous gauche
+
+contactez nous dans mobile 
+
+saisie NOM DES CASES EN PLUS GRAS; 
+
+ENREGISTRER UNE ASSOC SIRET EN MAJUSCULE ET PLACEHOLDER AUSSI 
+
+
+placeholder saisie nature du deplacement : 
+conseil d'administration; 
+
+SINSCRIE NOM TOUT EN MAJUSCULE ET PLACEHOLDER
+
+rgpd a l'inscirptiOn TITRE COMME INSCRIPTION MEME FONT MEME TAILLE 

@@ -1,0 +1,3 @@
+<?php //App%255CController%255CAdminController%2523RemoveActionEndpoint
+
+return [PHP_INT_MAX, []];

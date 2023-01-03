@@ -1,0 +1,126 @@
+<?php //2190b5b03801baf7e7f668f809a8df17
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'association' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.ville_depart AS ville_depart_1, a0_.ville_arrive AS ville_arrive_2, a0_.km AS km_3, a0_.raisons AS raisons_4, a0_.heure_depart AS heure_depart_5, a0_.heure_arrivee AS heure_arrivee_6, a0_.date AS date_7, a0_.duree AS duree_8, a0_.frais AS frais_9, a0_.created_at AS created_at_10, a0_.frais_kilometrique AS frais_kilometrique_11, a0_.charges AS charges_12, a0_.groupe AS groupe_13, a0_.dons AS dons_14, a0_.heures_valorisees AS heures_valorisees_15, a0_.a_payer AS a_payer_16, a0_.bareme AS bareme_17, a0_.user_id AS user_id_18, a0_.association_id AS association_id_19 FROM action a0_ WHERE a0_.association_id = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'action' => 'App\\Entity\\Action',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'ville_depart_1' => 'villeDepart',
+                    'ville_arrive_2' => 'villeArrive',
+                    'km_3' => 'km',
+                    'raisons_4' => 'raisons',
+                    'heure_depart_5' => 'heureDepart',
+                    'heure_arrivee_6' => 'heureArrivee',
+                    'date_7' => 'date',
+                    'duree_8' => 'duree',
+                    'frais_9' => 'frais',
+                    'created_at_10' => 'createdAt',
+                    'frais_kilometrique_11' => 'fraisKilometrique',
+                    'charges_12' => 'charges',
+                    'groupe_13' => 'groupe',
+                    'dons_14' => 'dons',
+                    'heures_valorisees_15' => 'heuresValorisees',
+                    'a_payer_16' => 'aPayer',
+                    'bareme_17' => 'bareme',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_18' => 'integer',
+                    'association_id_19' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'action' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_18' => 'user_id',
+                    'association_id_19' => 'association_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'action',
+                    'ville_depart_1' => 'action',
+                    'ville_arrive_2' => 'action',
+                    'km_3' => 'action',
+                    'raisons_4' => 'action',
+                    'heure_depart_5' => 'action',
+                    'heure_arrivee_6' => 'action',
+                    'date_7' => 'action',
+                    'duree_8' => 'action',
+                    'frais_9' => 'action',
+                    'created_at_10' => 'action',
+                    'frais_kilometrique_11' => 'action',
+                    'charges_12' => 'action',
+                    'groupe_13' => 'action',
+                    'dons_14' => 'action',
+                    'heures_valorisees_15' => 'action',
+                    'a_payer_16' => 'action',
+                    'bareme_17' => 'action',
+                    'user_id_18' => 'action',
+                    'association_id_19' => 'action',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Action',
+                    'ville_depart_1' => 'App\\Entity\\Action',
+                    'ville_arrive_2' => 'App\\Entity\\Action',
+                    'km_3' => 'App\\Entity\\Action',
+                    'raisons_4' => 'App\\Entity\\Action',
+                    'heure_depart_5' => 'App\\Entity\\Action',
+                    'heure_arrivee_6' => 'App\\Entity\\Action',
+                    'date_7' => 'App\\Entity\\Action',
+                    'duree_8' => 'App\\Entity\\Action',
+                    'frais_9' => 'App\\Entity\\Action',
+                    'created_at_10' => 'App\\Entity\\Action',
+                    'frais_kilometrique_11' => 'App\\Entity\\Action',
+                    'charges_12' => 'App\\Entity\\Action',
+                    'groupe_13' => 'App\\Entity\\Action',
+                    'dons_14' => 'App\\Entity\\Action',
+                    'heures_valorisees_15' => 'App\\Entity\\Action',
+                    'a_payer_16' => 'App\\Entity\\Action',
+                    'bareme_17' => 'App\\Entity\\Action',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
