@@ -117,7 +117,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
                 <label>Association :</label>
                 <select class=\"selectAssoc\" id=\"selectMonth\"></select>
             </div> 
-            <input type=\"submit\" class=\"btn-submit\" value=\"rechercher\">
+            <button type=\"submit\" class=\"btn-submit\" value=\"rechercher\">rechercher</button>
         </div>
         ";
             // line 32
@@ -196,7 +196,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
 
 <div class=\"modal-adherer\">
-    <h1 class=\"modalP\">Voulez vous vraiment supprimer cette saisie ?</h1>
+    <h1 class=\"modalP\">Voulez-vous vraiment supprimer cette saisie ?</h1>
     <img src=\"";
         // line 95
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/HumanMan.png"), "html", null, true);
@@ -218,6 +218,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         // line 109
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 109, $this->source); })()), "user", [], "any", false, false, false, 109), "username", [], "any", false, false, false, 109), "html", null, true);
         echo "</h2>
+         <img src=\"../../public/assets/SAVED_JPG.JPG\" alt=\"an image\" class=\"pdf-img\">
     </div>
     <table class=\"sortable table\">
         <thead>
@@ -239,9 +240,9 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         </thead>
         <tbody class=\"ajaxDivContentPdf\">
             ";
-        // line 130
-        $this->loadTemplate("recapitulatif/pdf_action.html.twig", "recapitulatif/index.html.twig", 130)->display($context);
         // line 131
+        $this->loadTemplate("recapitulatif/pdf_action.html.twig", "recapitulatif/index.html.twig", 131)->display($context);
+        // line 132
         echo "        </tbody>
     </table>
     <div class=\"pdf-totaux\">
@@ -256,7 +257,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         </div>
         <div class=\"p-container\">
                 <input type=\"checkbox\"/>
-            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier Remboursement ou en cas de changement de compte)</p>
+            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier remboursement ou en cas de changement de compte)</p>
         </div>
         <div class=\"p-container\">
             <input type=\"checkbox\"/>
@@ -277,28 +278,28 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 </div>
 
 ";
-        // line 166
+        // line 167
         echo "
 ";
-        // line 168
+        // line 169
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["assocUser"]) || array_key_exists("assocUser", $context) ? $context["assocUser"] : (function () { throw new RuntimeError('Variable "assocUser" does not exist.', 168, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["assocUser"]) || array_key_exists("assocUser", $context) ? $context["assocUser"] : (function () { throw new RuntimeError('Variable "assocUser" does not exist.', 169, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["assoc"]) {
-            // line 169
+            // line 170
             echo "    <div class=\"data-assoc\" data-association=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "name", [], "any", false, false, false, 169), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "name", [], "any", false, false, false, 170), "html", null, true);
             echo "\" data-id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "id", [], "any", false, false, false, 169), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "id", [], "any", false, false, false, 170), "html", null, true);
             echo "\" style=\"display: none;\"></div>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['assoc'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 171
+        // line 172
         echo "
 ";
-        // line 173
+        // line 174
         echo "
 ";
         
@@ -309,7 +310,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
     }
 
-    // line 176
+    // line 177
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -319,18 +320,18 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 177
+        // line 178
         echo "    <script src=\"dist/notiflix-aio-3.2.5.min.js\"></script>
     <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/toastify-js\"></script>
     <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\" integrity=\"sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>
 
     ";
-        // line 182
+        // line 183
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("recap");
         echo "
     ";
-        // line 183
+        // line 184
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("sort");
         echo "
 
@@ -356,7 +357,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
     public function getDebugInfo()
     {
-        return array (  334 => 183,  330 => 182,  323 => 177,  313 => 176,  302 => 173,  299 => 171,  288 => 169,  284 => 168,  281 => 166,  245 => 131,  243 => 130,  219 => 109,  202 => 95,  193 => 89,  189 => 87,  184 => 85,  181 => 84,  174 => 79,  172 => 78,  124 => 32,  103 => 12,  101 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  335 => 184,  331 => 183,  324 => 178,  314 => 177,  303 => 174,  300 => 172,  289 => 170,  285 => 169,  282 => 167,  246 => 132,  244 => 131,  219 => 109,  202 => 95,  193 => 89,  189 => 87,  184 => 85,  181 => 84,  174 => 79,  172 => 78,  124 => 32,  103 => 12,  101 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -389,7 +390,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
                 <label>Association :</label>
                 <select class=\"selectAssoc\" id=\"selectMonth\"></select>
             </div> 
-            <input type=\"submit\" class=\"btn-submit\" value=\"rechercher\">
+            <button type=\"submit\" class=\"btn-submit\" value=\"rechercher\">rechercher</button>
         </div>
         {# <p class=\"flex-start\"> Vous avez fait {{ actions.getTotalItemCount }} saisies </p> #}
          <p class=\"totalH1 flex-start\"></p>
@@ -454,7 +455,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
 
 <div class=\"modal-adherer\">
-    <h1 class=\"modalP\">Voulez vous vraiment supprimer cette saisie ?</h1>
+    <h1 class=\"modalP\">Voulez-vous vraiment supprimer cette saisie ?</h1>
     <img src=\"{{ asset('assets/HumanMan.png') }}\" class=\"img-modal\"/>
     <div class='btn-container'>
             <button class=\"btn-yes\">
@@ -470,6 +471,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 <div class=\"wrapper-pdf\" style=\"display: none\">
      <div class=\"header-pdf\">
          <h2 class=\"h2-pdf\">{{app.user.username}}</h2>
+         <img src=\"../../public/assets/SAVED_JPG.JPG\" alt=\"an image\" class=\"pdf-img\">
     </div>
     <table class=\"sortable table\">
         <thead>
@@ -505,7 +507,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         </div>
         <div class=\"p-container\">
                 <input type=\"checkbox\"/>
-            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier Remboursement ou en cas de changement de compte)</p>
+            <p>Son reglement par chèque ou par virement bancaire (fournir RIB pour le premier remboursement ou en cas de changement de compte)</p>
         </div>
         <div class=\"p-container\">
             <input type=\"checkbox\"/>
@@ -547,6 +549,6 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
 
 {% endblock %}
-", "recapitulatif/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
+", "recapitulatif/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
     }
 }

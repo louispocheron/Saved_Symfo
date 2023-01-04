@@ -14,10 +14,9 @@ const valorisees = [];
 const dons = [];
 const remboursement = [];
 const benevolat = [];
-
+console.log("xd")
 
 window.onload = () => {
-    console.log(href + 'ajax_endpoint')
     axios.get(href + 'ajax_endpoint').then((response) => {
         const data = response.data.data
         if(data.length >= 1){
@@ -37,6 +36,7 @@ window.onload = () => {
             remboursementDom.innerHTML = total_remboursement + "€"
 
             const total_benevolat = sumHours(benevolat);
+            console.log(total_benevolat)
             heureDom.innerHTML = total_benevolat
             
             // console.log(total_remboursement);

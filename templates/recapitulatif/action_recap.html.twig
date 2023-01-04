@@ -13,7 +13,7 @@
         <td data-label="Durée" class="duree" data-duree="{{ action.duree }}">{{ action.duree }}</td>
         <td data-label="Frais">{{ action.groupe }}</td>
         <td data-label="Heures valorisées" class="lastchild valoriseesTd" data-valorisees="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
-        <td class="last-td-poubelle modal-open-delete"><a data-poubelle='{{action.id}}' class="hrefPoubelle data-id"><i class="fa-solid fa-trash poubelle"></i></a></td>
+        <td class="last-td-poubelle modal-open-delete" data-id="{{action.id}}"><a class="hrefPoubelle data-id"><i class="fa-solid fa-trash poubelle"></i></a></td>
         <td class="last-td-poubelle pdfIcone" data-id="{{ action.id }}"><i class="fa-solid fa-file-pdf"></i></a></td>
         {# <a href="{{path('recapitulatif_more', { 'id' : action.id } )}}">click moi</a> #}
     </tr>

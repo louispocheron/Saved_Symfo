@@ -91,10 +91,11 @@ function sendYear(){
                 el.textContent = "";
             });
 
+            alertMessage.style.display = "block"
             alertMessage.innerHTML = '<p style="color:red; text-align: center;">aucune donnée trouvée pour cette recherche</p>';
             // TIMEOUT POUR SUPPR LE MESSAGE D ERREUR
             setTimeout(()=>{
-                alertMessage.remove();
+                alertMessage.style.display = "none";
             }, 3000);
         }
         else{
@@ -180,7 +181,7 @@ dureeP.innerHTML = `Durée : <span style="
 const dataPayer = Array.from(payerTd).map(el => el.dataset.payer);
 console.log(dataPayer);
 let aPayerSum = sumPay(dataPayer);
-payerP.innerHTML = `A payer :<span style="
+payerP.innerHTML = `A payer : <span style="
             color:#097969;
             font-weight: bold;
             ">${aPayerSum}€</span>`;
@@ -250,6 +251,7 @@ yes.addEventListener('click', (e) => {
                 },
                 onClick: function(){}
             }).showToast();
+            sendYear();
     })
      .catch((err) => {
         console.log(err);

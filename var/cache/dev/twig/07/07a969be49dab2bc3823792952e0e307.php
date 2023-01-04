@@ -197,6 +197,6 @@ class __TwigTemplate_bf0b284c559fc7803e077354024dd226 extends Template
         {% endif %}
     </div>
 {% endif %}
-", "@KnpPaginator/Pagination/sliding.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/vendor/knplabs/knp-paginator-bundle/templates/Pagination/sliding.html.twig");
+", "@KnpPaginator/Pagination/sliding.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/vendor/knplabs/knp-paginator-bundle/templates/Pagination/sliding.html.twig");
     }
 }

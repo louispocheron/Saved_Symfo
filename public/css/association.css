@@ -59,6 +59,7 @@ main{
   }
   
   .assoc-name{
+      text-transform: uppercase;
       font-size: 1.2em;
       flex-wrap: wrap;
       width: 13rem;

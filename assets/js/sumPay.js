@@ -1,6 +1,5 @@
 export function sumPay(data){
     if(data.length > 1){
-        console.log(data)
         // on calcul le total des euros
         data.forEach(el => {
             if(el == '' || el == undefined){

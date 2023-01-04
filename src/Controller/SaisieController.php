@@ -62,7 +62,7 @@ class SaisieController extends AbstractController
                 ->add('raisons', null, [
                     'label' => 'Raisons',
                     'attr' => [
-                        'placeholder' => 'Ex: déplacement pour l\'association',
+                        'placeholder' => 'Ex: conseil d\'administration',
                         ],
                     ])
                 ->add('heureDepart', TimeType::class, [

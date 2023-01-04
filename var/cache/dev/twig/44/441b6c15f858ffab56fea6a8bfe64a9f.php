@@ -107,10 +107,10 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
             echo "\">";
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "heuresValorisees", [], "any", false, false, false, 15), 2), "html", null, true);
             echo "</td>
-        <td class=\"last-td-poubelle modal-open-delete\"><a data-poubelle='";
+        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"";
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 16), "html", null, true);
-            echo "' class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
+            echo "\"><a class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
         <td class=\"last-td-poubelle pdfIcone\" data-id=\"";
             // line 17
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 17), "html", null, true);
@@ -163,10 +163,10 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
         <td data-label=\"Durée\" class=\"duree\" data-duree=\"{{ action.duree }}\">{{ action.duree }}</td>
         <td data-label=\"Frais\">{{ action.groupe }}</td>
         <td data-label=\"Heures valorisées\" class=\"lastchild valoriseesTd\" data-valorisees=\"{{ action.heuresValorisees|number_format(2) }}\">{{ action.heuresValorisees|number_format(2)}}</td>
-        <td class=\"last-td-poubelle modal-open-delete\"><a data-poubelle='{{action.id}}' class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
+        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><a class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
         <td class=\"last-td-poubelle pdfIcone\" data-id=\"{{ action.id }}\"><i class=\"fa-solid fa-file-pdf\"></i></a></td>
         {# <a href=\"{{path('recapitulatif_more', { 'id' : action.id } )}}\">click moi</a> #}
     </tr>
-{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
+{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
     }
 }

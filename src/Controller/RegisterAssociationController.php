@@ -64,7 +64,7 @@ class RegisterAssociationController extends AbstractController
                      ->add('numeroSiret', TextType::class, [
                          'label' => 'Numéro de siret',
                          'attr' => [
-                            'placeholder' => 'Numéro de siret',
+                            'placeholder' => 'Numéro de SIRET',
                             ],
                          ])
                      ->add('region', choiceType::class, [

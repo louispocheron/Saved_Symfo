@@ -6,6 +6,7 @@ export function sumEuros(data){
         // SI DATA NULL ON CHOPE SON IDX DANS ARRAY ET ON LE REMPLACE AVEC 0 EN STRING
         data.forEach(el => {
             if(el == null){
+
                 let index = data.indexOf(el);
                 if(index !== -1){
                     data[index] = '0'
@@ -40,7 +41,10 @@ export function sumEuros(data){
 
         return totalSum;
     }
-    if(data.length == 1){
+    if(data.length == 1 && data[0] != null){
         return data[0];
+    }
+    else{
+        return '0'
     }
 }

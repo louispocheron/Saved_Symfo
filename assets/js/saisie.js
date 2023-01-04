@@ -20,7 +20,7 @@ document.querySelector('.flatpickr').flatpickr({
     let groupeSelect = document.querySelector('.groupeSelect');
     const heureValoriseesInput = document.querySelector('.heureValoriseesInput');
     const payer = document.querySelector('.apayerInput');
-
+    const btnSubmit = document.querySelector('.btn-basic');
 
     //set default value to heuredepart to 00
 
@@ -130,7 +130,25 @@ groupeSelect.addEventListener("change", () => {
     // totalNote.value.toFixed(2);
 
 
+    
+    const disableBtn = (bool) => {
+        console.log(isBtnDisabled())
+        if(bool){
+            btnSubmit.disable = true;
+        }
+        else{
+            btnSubmit.disable = false;
+        }
+    }
 
+    const isBtnDisabled = () => {
+        if(btnSubmit.disable == true){
+            return true
+        }
+        if(btnSubmit.disable == false){
+            return false
+        }
+    }
   
     [bareme, kmInput, coutInput, payer].forEach(evt => {
         evt.addEventListener('keyup', () => {
@@ -150,12 +168,12 @@ groupeSelect.addEventListener("change", () => {
             // localStorage.setItem('donsInput', donsInput.value);;
             totalNote.value = (parseFloat(fraisInput.value) + parseFloat(coutValue)).toFixed(2)
 
-
             if(parseFloat(payer.value) > totalNote.value){
+                disableBtn(true);
                 payer.style = 'border: 1px solid red;';
-                // donsInput.style = 'background-color: #f2dede;';
-            }
-            if(parseFloat(payer.value) < totalNote.value){
+
+            }else{
+                disableBtn(false);
                 payer.style = 'border: 1px solid green;';
             }
 
@@ -213,9 +231,6 @@ groupeSelect.addEventListener("change", () => {
         }
     });
 
-
-console.log('salut saisie')
-
     // const form_association = document.querySelector('#form_association');
     // form_association.select2({
     //     placeholder: 'Association',
@@ -250,5 +265,24 @@ console.log('salut saisie')
         closeModal();
     })
 
+
+    btnSubmit.addEventListener('click', () => {
+        if(isBtnDisabled()){
+            Toastify({
+                text: "Vous ne pouvez pas vous faire rembourser une somme supérieur a votre total",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                     // red as default
+                    background: "linear-gradient(315deg, #3f0d12 0%, #a71d31 74%)",
+                },
+                onClick: function(){} // Callback after click
+            }).showToast();
+        }
+    })
 
 

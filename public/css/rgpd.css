@@ -18,6 +18,7 @@ body{
 }
 .main-title{
   text-align: center;
+  text-transform: uppercase;
 }
 .question-container{
     padding: 0;

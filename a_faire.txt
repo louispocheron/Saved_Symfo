@@ -167,47 +167,47 @@ REGARDER BAREME ET TAUX HORAIRE SI POSSIBLE DE CHANGER DANS LA BDD;
 
 // A FAIRE CETTE SEMAINE 
 
-PAS DE TIRET SUR LE MODAL VOULEZ VOUS SUPPRIMER
+PAS DE TIRET SUR LE MODAL VOULEZ VOUS SUPPRIMER---------------------FAIT
 
-ADMIN RECAP A PAYER MANQUE ESPACE
-BOUTON PAS BONNE POLICE DANS RECAP 
+ADMIN RECAP A PAYER MANQUE ESPACE-----------------------------------FAIT
+BOUTON PAS BONNE POLICE DANS RECAP----------------------------------FAIT
 
-QUAND DUREE = 0; null pour benevolat; mettre 0 valeur de depart
+QUAND DUREE = 0; null pour benevolat; mettre 0 valeur de depart-----FAIT 
 
-PAS DE SAISIE 0 AU LIEU DE 00H00 ET NULL HEURE VALORISEES
-BOUTON RECHERCHER PAS BONNE POLICE
+PAS DE SAISIE 0 AU LIEU DE 00H00 ET NULL HEURE VALORISEES-----------FAIT
+BOUTON RECHERCHER PAS BONNE POLICE----------------------------------FAIT
 
-ALL PDF pas de majuscule a remboursement
+ALL PDF pas de majuscule a remboursement----------------------------FAIT
 
-PDF IMAGE SAVED A METTRE A DROITE DU PRENOM.
+PDF IMAGE SAVED A METTRE A DROITE DU PRENOM. !!!!!
 
 
-peux pas supprimer, apres premiere supression d'une saisie
+peux pas supprimer, apres premiere supression d'une saisie-------------CHOIX A FAIRE
 
-contactez-nous avec tiret
+contactez-nous avec tiret------------------------------------------------FAIT
 
-UPPERCASE DANS LISTE ASSOCIATION ET DANS SINGLE ASSOC ET DANS ADMIN ET ADMIN SINGLE
+UPPERCASE DANS LISTE ASSOCIATION ET DANS SINGLE ASSOC ET DANS ADMIN ET ADMIN SINGLE-----FAIT
 
-majuscule administration association
-adherents association single
+majuscule administration association------------------------FAIT
+adherents association single--------------------------------FAIT
 
-mettre a jour recap recherche dans admin lors d'une supprésion de saisie.
-centrer les saisies dans le tableau. 
+mettre a jour recap recherche dans admin lors d'une supprésion de saisie. DE PAIRE AVEC LA SUPRRESSION
+centrer les saisies dans le tableau.-------------------------------------FAIT
  
-met le message pas de saisies trouvé dans admin qu'une seul fois. 
+met le message pas de saisies trouvé dans admin qu'une seul fois.------------------FAIT
 
-admin, mettre nom logo en haut a gauche, tableau utilisateur haut droite, recap dessous gauche
+admin, mettre nom logo en haut a gauche, tableau utilisateur haut droite, recap dessous gauche---FAIT
 
 contactez nous dans mobile 
 
-saisie NOM DES CASES EN PLUS GRAS; 
+saisie NOM DES CASES EN PLUS GRAS--------------------------FAIT
 
-ENREGISTRER UNE ASSOC SIRET EN MAJUSCULE ET PLACEHOLDER AUSSI 
+ENREGISTRER UNE ASSOC SIRET EN MAJUSCULE ET PLACEHOLDER AUSSI------------FAIT
 
 
 placeholder saisie nature du deplacement : 
-conseil d'administration; 
+conseil d'administration-----------------FAIT
 
-SINSCRIE NOM TOUT EN MAJUSCULE ET PLACEHOLDER
+SINSCRIE NOM TOUT EN MAJUSCULE ET PLACEHOLDER---------------------FAIT
 
 rgpd a l'inscirptiOn TITRE COMME INSCRIPTION MEME FONT MEME TAILLE 

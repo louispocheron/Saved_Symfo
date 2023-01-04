@@ -301,6 +301,6 @@ class __TwigTemplate_c4a198af83cfc28fcc967094ee92580a extends Template
     <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>
     {{ encore_entry_script_tags('home') }}
 {% endblock %}
-", "home/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/home/index.html.twig");
+", "home/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/home/index.html.twig");
     }
 }

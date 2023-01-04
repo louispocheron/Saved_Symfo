@@ -1,17 +1,22 @@
 main{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 .main-container{
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-direction: row;
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 .card-container{
     justify-self: flex-start;
     align-self: flex-start;
     width: auto;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,18 +25,27 @@ main{
 .full-card-container h4{
     text-align: center;
     color: #152149;
-
+    margin: 0;
+}
+.assoc-info{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 .full-card-container{
-    margin-top: -4rem;
+    height: 50%;
+    width: 100%;
 }
 .homeCardAdmin{
      display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10rem;
-    width: 10rem;
+    height: 75%;
+    width: 100%;
     margin: 1rem;
     border-radius: 5px;
     color: white;
@@ -46,18 +60,18 @@ main{
     font-size: small;
 }
 .homeCardAdmin img{ 
-    width: 25px;
+    width: 35px;
 }
 .homeCardAdmin svg{
-    width: 25px;
+    width: 35px;
     height: auto;
 }
 .assoc-pres{
-    margin-top: 1rem;
     width: auto;
 }
 .assoc-name{
-    font-size: 1.5rem;
+    color: #152149;
+    font-size: 2rem;
 }
 .assoc-container h3{
     margin: 5px !important;
@@ -73,13 +87,14 @@ main{
 
 .assoc-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 2rem;
+    width: 50%;
+    height: 100%;
 }
 .assoc-logo{
-    width: 15%;
+    width: 20%;
     aspect-ratio: 2 / 3;
     object-fit: contain;
 }

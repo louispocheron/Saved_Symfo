@@ -85,6 +85,7 @@ for(let i=0; i<months.length; i++){
     selectMonth.add(monthOption);
 }
 
+console.log("04")
 
 // CREATION SELECT ASSOC 
 const assocs = document.querySelectorAll('.data-assoc');
@@ -103,7 +104,7 @@ assocs.forEach(el => {
 })
 
 // DELETE SAISIE
-let dataId = document.querySelectorAll('.data-id');
+let dataId = document.querySelectorAll('.actionDelete');
 let trash = document.querySelectorAll('.modal-open-delete');
 const btnNo = document.querySelector('.btn-no');
 const btnYes = document.querySelector('.btn-yes');
@@ -412,18 +413,17 @@ btnPdfAll.addEventListener('click', () => {
 
 
 
-
+console.log("fait ? 11 ");
 
 
 
 // INITIE LA VARIABLE AVANT FONCTION IMPORTANT
-let index
+let idAction
 
 trash.forEach((el, idx) =>{
     console.log(el)
     el.addEventListener('click', () => {
-        console.log('clicked');
-        index = idx
+        idAction = el.dataset.id
         openModal();
     })
 })
@@ -431,14 +431,13 @@ trash.forEach((el, idx) =>{
 
 btnYes.addEventListener('click', (event) => {
     event.preventDefault();
-    const id = dataId[index].dataset.poubelle;
     const baseHref = document.URL;
-    const endPoint = `${baseHref}/remove/${id}`;
+    const endPoint = `${baseHref}/remove/${idAction}`;
 
     // APPELLE AJAX SUR L'ENDPOINT 
     axios.post(endPoint).then((res) => {
         console.log(res);
-        const domToRemove = document.querySelector(`.tr-${id}`);
+        const domToRemove = document.querySelector(`.tr-${idAction}`);
         domToRemove.remove();
         closeModal();
         Toastify({
@@ -454,7 +453,6 @@ btnYes.addEventListener('click', (event) => {
                 },
                 onClick: function(){}
             }).showToast();
-        Ajaxyear();
     })
     .catch((err) => {
         console.log(err);

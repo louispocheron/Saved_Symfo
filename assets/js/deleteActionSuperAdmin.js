@@ -28,7 +28,6 @@ btnYesAction.addEventListener('click', (event) => {
     const endPoint = `${baseHref}/delete/${id}`;
 
     axios.post(endPoint).then((response) => {
-        console.log(response)
         const trToDelete = document.querySelector( `.tr-${id}`);
         trToDelete.remove();
         closeModal();
