@@ -1,6 +1,8 @@
 main{
   height: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
 }
 .association-container{
     width: 100%;
@@ -201,6 +203,7 @@ h4{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50%;
 }
 .assoc-logo{
     width: 80%;

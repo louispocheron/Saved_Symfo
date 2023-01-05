@@ -32,15 +32,16 @@ main{
     width: 80%;
     margin-left: 1rem;
   }
+  .moncompte-avatar{
+    width: 2.5rem;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+  }
   .infoPerso-container p{
     margin: 5px;
   }
   .server-served{
     font-weight: 500;
-  }
-  .moncompte-avatar{
-    margin: 0;
-    width: 20%;
   }
   .btn-saisie{
     border-radius: 20px;
@@ -76,17 +77,11 @@ main{
       align-self: center;
       justify-self: center;
     }
-    .moncompte-avatar{
-      width: 10%;
-    }
     .infoPerso-container{
       flex-direction: row;
       margin: 0;
     }
     @media only screen and (min-width: 1280px){
-      .user-avatar{
-        width: 2rem;
-      }
     }
       
     }

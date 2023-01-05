@@ -5,41 +5,46 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+// use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
-
+use App\Form\ContactType;
+use Symfony\Component\Mime\Email;
 
 class ContactUsController extends AbstractController
 {
     #[Route('/contact-us', name: 'app_contact_us')]
-    public function index(): Response
+    public function index(Request $request, MailerInterface $mailer): Response
     {
         $user = $this->getUser();
+        $userEmail = $user->getEmail();
         if (!$user) {
             return $this->redirectToRoute('app_login');
         }
-        // $form = $this->createFormBuilder()   
-        //              ->add('Apropos', TextType::class, [
-        //                 'label' => 'A propos',
-        //              ])
-        //              ->add('message', TextType::class, [
-        //                 'label' => 'Message',
-        //              ])
-        //              ->add('enregistrer', SubmitType::class, ['label' => 'Envoyer'])
-        //             ->getForm();
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            //     // Form data is valid, do something with it (e.g. send an email)
+            //     // dd($form->get("Sujet")->getData());
+            $subject = $form->get("Sujet")->getData();
+            $message = $form->get("Message")->getData();
+            // dd($message);
+            //     // ...
+            $email = (new Email())
+                ->from($userEmail)
+                ->to("crib.cotedor@franceolympique.com")
+                ->subject($subject)
+                ->text($message);
 
-        //             $form->handleRequest($request);
-                    
-        // if($form->isSubmitted() && $form->isValid()){
-        //     dd($form->getData());
-        // }
-        
+            $mailer->send($email);
+        }
+
 
         return $this->render('contact_us/index.html.twig', [
             'controller_name' => 'ContactUsController',
-            // 'form' => $form->createView(),
+            'form' => $form->createView(),
         ]);
     }
 }

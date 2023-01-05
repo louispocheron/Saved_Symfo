@@ -1,2 +1,2 @@
 #!/bin/sh 
-rsync -av ./ cdosegxi-saved@ssh.cluster005.hosting.ovh.net:~/saved --include=public/build --include=public/.htaccess --include=public/.ovhconfig --include=vendor --exclude-from=.gitignore --exclude=public/build/logo_directory --exclude=".*"
+rsync -av ./ cdosegxi-saved@ssh.cluster005.hosting.ovh.net:~/saved --include=public/build --include=public/.htaccess --include=public/.ovhconfig --include=vendor --exclude-from=.gitignore  --exclude=public/build/logo_directory --exclude=".*"

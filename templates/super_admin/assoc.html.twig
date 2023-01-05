@@ -8,48 +8,22 @@
 
 {% block body %}
     <link href="{{ asset('css/supeadmin.css') }}" rel="stylesheet">
+    {# <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> #}
 
-        <div>
-            {# <tr onclick="window.location='{{path('super_admin_user_delete', {'id': association.id, 'userID': user.id} )}}"><i class="fa-solid fa-trash"></i></tr>
-            <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id }  )}}"><p>{{ user.username }}</p></tr> #}
-        <div>
  <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
 
 <div class="assoc-container">
-    <h3 class="assoc-name-main">{{association.name}}</h3>
-    {% if association.logo != null %}
-        <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
-    {% else %}
-        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
-    {% endif %}
-    <h5 style="color:#505050">Cette association est gérée par {{association.user.username}}</h5>
-    <a href="{{path("super_admin_action_change_admin", { id: association.id })}}"><button class="btn-yes custom-btn">Changer l'administrateur</button></a>
-</div>
-
-<div class="main-container">
-    <table class="table">
-            <tr>
-                <th>Utilisateur</th>
-                <th>Email</th>
-                <th>Supprimer</th>
-            </tr>
-    {% if users is empty %}
-        <tr>
-            <td>Aucun utilisateur</td>
-            <td></td>
-            <td></td>
-        </tr>
-    {% else %}
-        {% for user in users %}
-                <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id, } )}}'">
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.email }}</td>
-                    <td><a href="{{ path('super_admin_user_delete', {'id': association.id, 'userID': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
-                </tr>
-        {% endfor %} 
-    {% endif %}
-    </table>
+    <div class="assoc-info">
+        <h3 class="assoc-name-main">{{association.name}}</h3>
+        {% if association.logo != null %}
+            <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
+        {% else %}
+            <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+        {% endif %}
+        <h5 style="color:#505050">Cette association est gérée par {{association.user.username}}</h5>
+        <a href="{{path("super_admin_action_change_admin", { id: association.id })}}"><button class="btn-yes custom-btn">Changer l'administrateur</button></a>
+    </div>
     <div class="full-card-container">
         <h4>Total de toutes les saisies de {{association.name}}</h4>
         <div class="card-container">
@@ -75,6 +49,31 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="main-container">
+    <table class="table">
+            <tr>
+                <th>Utilisateur</th>
+                <th>Email</th>
+                <th>Supprimer</th>
+            </tr>
+    {% if users is empty %}
+        <tr>
+            <td>Aucun utilisateur</td>
+            <td></td>
+            <td></td>
+        </tr>
+    {% else %}
+        {% for user in users %}
+                <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id, } )}}'">
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td><a href="{{ path('super_admin_user_delete', {'id': association.id, 'userID': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+        {% endfor %} 
+    {% endif %}
+    </table>
     </div>
 
 
