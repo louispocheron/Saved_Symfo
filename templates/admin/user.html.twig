@@ -90,7 +90,8 @@
 {% endblock %}
 {% block javascripts %}
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   {{ encore_entry_script_tags('admin') }}
-  {{ encore_entry_script_tags('deleteActionSuperAdmin') }}
+  {# {{ encore_entry_script_tags('deleteActionSuperAdmin') }} #}
 
 {% endblock %}

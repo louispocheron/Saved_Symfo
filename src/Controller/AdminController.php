@@ -102,17 +102,18 @@ class AdminController extends AbstractController
     $month = $request->get("month");
 
     if($month == ''){
-            $actionYearAndMonth = $actionRepo->findByUserAndYear($uniqueUser, $year);
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUserAndYear($association, $uniqueUser, $year);
         }
         if($year == 'rien' && $month == ''){
-            $actionYearAndMonth = $actionRepo->findAllActionByUser($uniqueUser);
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUserAdmin($association, $uniqueUser);
         }
         if($year != 'rien' && $month != ''){
-            $actionYearAndMonth = $actionRepo->findByUserAndYearAndMonth($uniqueUser, $year, $month);
+            $actionYearAndMonth = $actionRepo->findByAssociationAndUserByMonthAndYear($association, $uniqueUser, $month, $year);
         }
 
 
 //    dd($actionYear);
+
 //   ON VERIFIE SI IL Y A DE l'AJAX 
     if($request->get("ajax")){
     

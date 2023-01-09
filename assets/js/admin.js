@@ -221,11 +221,11 @@ const closeModal = () => {
 
 
 let idAction
-actionToDelete.forEach((el, idx) => { 
-    el.addEventListener('click', () => {
-        idAction = el.dataset.id;
+table.addEventListener('click', (event) => { 
+    if(event.target.matches('.trash-png')){
+        idAction = event.target.dataset.id; 
         openModal();
-    })
+    }
 })
 
 

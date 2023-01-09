@@ -22,7 +22,9 @@ main{overflow-y: scroll;}
 .sortable th:first-child {
   border-top-left-radius: 4px;
 }
-
+.trash-png{
+  width: 13px;
+}
 .sortable td:last-child,
 .sortable th:last-child {
   border-top-right-radius: 4px;
