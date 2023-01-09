@@ -55,7 +55,7 @@ btnYes.addEventListener('click', (event) => {
         else{
             closeModal()
             Toastify({
-                text: "vous êtes deja adhérant de l'association",
+                text: "vous êtes deja adhérent de l'association",
                 duration: 3000,
                 newWindow: true,
                 close: true,
@@ -141,7 +141,7 @@ btnYesQuit.addEventListener("click", (event) => {
         else{
             closeModalUnfollow();
             Toastify({
-                text: "Vous n'êtes pas adherant de l'association",
+                text: "Vous n'êtes pas adherent de l'association",
                 duration: 3000,
                 newWindow: true,
                 close: true,

@@ -211,3 +211,8 @@ conseil d'administration-----------------FAIT
 SINSCRIE NOM TOUT EN MAJUSCULE ET PLACEHOLDER---------------------FAIT
 
 rgpd a l'inscirptiOn TITRE COMME INSCRIPTION MEME FONT MEME TAILLE 
+
+
+ENVOYER CLEAR TEXT INPUT ET TOAST 
+toast vous etes deja adherent pas adherant.
+vous n'etes pas adherant adherent
