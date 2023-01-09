@@ -110,13 +110,18 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
         <td class=\"last-td-poubelle modal-open-delete\" data-id=\"";
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 16), "html", null, true);
-            echo "\"><a class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
-        <td class=\"last-td-poubelle pdfIcone\" data-id=\"";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 17), "html", null, true);
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/trash-solid.png"), "html", null, true);
+            echo "\" class=\"trash-png\"  data-id=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 16), "html", null, true);
+            echo "\"/></td>  
+        ";
+            // line 18
+            echo "        <td class=\"last-td-poubelle pdfIcone\" data-id=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 18), "html", null, true);
             echo "\"><i class=\"fa-solid fa-file-pdf\"></i></a></td>
         ";
-            // line 19
+            // line 20
             echo "    </tr>
 ";
         }
@@ -143,7 +148,7 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 19,  116 => 17,  112 => 16,  106 => 15,  102 => 14,  96 => 13,  90 => 12,  84 => 11,  80 => 10,  76 => 9,  72 => 8,  68 => 7,  64 => 6,  60 => 5,  56 => 4,  52 => 3,  47 => 2,  43 => 1,);
+        return array (  125 => 20,  120 => 18,  112 => 16,  106 => 15,  102 => 14,  96 => 13,  90 => 12,  84 => 11,  80 => 10,  76 => 9,  72 => 8,  68 => 7,  64 => 6,  60 => 5,  56 => 4,  52 => 3,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -163,10 +168,11 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
         <td data-label=\"Durée\" class=\"duree\" data-duree=\"{{ action.duree }}\">{{ action.duree }}</td>
         <td data-label=\"Frais\">{{ action.groupe }}</td>
         <td data-label=\"Heures valorisées\" class=\"lastchild valoriseesTd\" data-valorisees=\"{{ action.heuresValorisees|number_format(2) }}\">{{ action.heuresValorisees|number_format(2)}}</td>
-        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><a class=\"hrefPoubelle data-id\"><i class=\"fa-solid fa-trash poubelle\"></i></a></td>
+        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><img src=\"{{ asset('assets/trash-solid.png') }}\" class=\"trash-png\"  data-id=\"{{action.id}}\"/></td>  
+        {# <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><button class=\"btn-suppr\" data-id=\"{{action.id}}\"><i class=\"fa-solid fa-trash poubelle\"></i></button></td> #}
         <td class=\"last-td-poubelle pdfIcone\" data-id=\"{{ action.id }}\"><i class=\"fa-solid fa-file-pdf\"></i></a></td>
         {# <a href=\"{{path('recapitulatif_more', { 'id' : action.id } )}}\">click moi</a> #}
     </tr>
-{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
+{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
     }
 }

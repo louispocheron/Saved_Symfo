@@ -85,7 +85,6 @@ for(let i=0; i<months.length; i++){
     selectMonth.add(monthOption);
 }
 
-console.log("04")
 
 // CREATION SELECT ASSOC 
 const assocs = document.querySelectorAll('.data-assoc');
@@ -231,7 +230,6 @@ export function Ajaxyear(){
             font-weight: bold;
             ">${month.text}</span>:`;
             }
-
         }
     })
     .catch(err => {
@@ -420,12 +418,11 @@ console.log("fait ? 11 ");
 // INITIE LA VARIABLE AVANT FONCTION IMPORTANT
 let idAction
 
-trash.forEach((el, idx) =>{
-    console.log(el)
-    el.addEventListener('click', () => {
-        idAction = el.dataset.id
+table.addEventListener('click', (e) => {
+    if(e.target.matches('.trash-png')){
+        idAction = e.target.dataset.id;
         openModal();
-    })
+    }
 })
 
 
@@ -453,6 +450,7 @@ btnYes.addEventListener('click', (event) => {
                 },
                 onClick: function(){}
             }).showToast();
+            Ajaxyear(); 
     })
     .catch((err) => {
         console.log(err);
