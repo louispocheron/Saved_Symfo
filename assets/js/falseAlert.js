@@ -2,7 +2,7 @@ const btn = document.querySelector('.btn-false');
 
 btn.addEventListener('click', () => {
     Toastify({
-                text: "une erreur est survenue, réessayez plus tard",
+                text: "Message bien envoyé",
                 duration: 3000,
                 newWindow: true,
                 close: true,
