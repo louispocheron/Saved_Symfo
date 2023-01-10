@@ -19,15 +19,12 @@ form.addEventListener("submit", async function(event) {
     event.preventDefault();
     try {
         const formData = new FormData(event.target);
-        // Send the form data to the server via an XMLHttpRequest
         const response = await fetch("/contact-us", {
             method: "POST",
             body: formData
         });
-
-        // Check the response status
         if (response.status === 200) {
-            // email sent successfully
+            // EMAIL BIEN ENVOYE
             form.reset();
             Toastify({
                 text: "Votre email a bien été envoyé",
