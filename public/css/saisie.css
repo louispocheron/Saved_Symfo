@@ -75,6 +75,7 @@ height: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 10px;
+    font-weight: 600;
 }
 
 .evenement1 input {

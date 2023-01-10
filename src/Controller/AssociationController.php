@@ -67,7 +67,6 @@ class AssociationController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
-
         if($assoc->getUsers()->contains($user)){
             return $this->json([
                 'code' => 200,

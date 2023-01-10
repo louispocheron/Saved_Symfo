@@ -33,7 +33,7 @@ Encore
     .addEntry('association', './assets/js/association.js')
     .addEntry('superAdmin', './assets/js/superAdmin.js')
     .addEntry('pdfJs', './assets/js/pdf.js')
-    .addEntry('false', './assets/js/falseAlert.js')
+    .addEntry('contactUs', './assets/js/contactUs.js')
     .addEntry('fetchData', './assets/js/fetchData.js')
     .addEntry('deleteActionSuperAdmin', './assets/js/deleteActionSuperAdmin.js')
     .addEntry('superAdminFetch', './assets/js/SuperAdminFetching.js')

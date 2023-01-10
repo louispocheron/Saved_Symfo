@@ -247,6 +247,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
     </table>
     <div class=\"pdf-totaux\">
         <p class=\"pdf-benevolat\"></p>
+
         <p class=\"pdf-don\"></p>
         <p class=\"pdf-remboursement\"></p>
         <p class=\"pdf-valorisee\"></p>
@@ -264,7 +265,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
             <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
         </div>
         <div class=\"p-container start\">
-            <p style=\"text-align: start;\">Faît le : </p>
+            <p style=\"text-align: start;\">Fait-le : </p>
         </div>
     </div>
     <div class=\"sign-container\"> 
@@ -278,28 +279,28 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 </div>
 
 ";
-        // line 167
+        // line 168
         echo "
 ";
-        // line 169
+        // line 170
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["assocUser"]) || array_key_exists("assocUser", $context) ? $context["assocUser"] : (function () { throw new RuntimeError('Variable "assocUser" does not exist.', 169, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["assocUser"]) || array_key_exists("assocUser", $context) ? $context["assocUser"] : (function () { throw new RuntimeError('Variable "assocUser" does not exist.', 170, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["assoc"]) {
-            // line 170
+            // line 171
             echo "    <div class=\"data-assoc\" data-association=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "name", [], "any", false, false, false, 170), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "name", [], "any", false, false, false, 171), "html", null, true);
             echo "\" data-id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "id", [], "any", false, false, false, 170), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["assoc"], "id", [], "any", false, false, false, 171), "html", null, true);
             echo "\" style=\"display: none;\"></div>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['assoc'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 172
+        // line 173
         echo "
 ";
-        // line 174
+        // line 175
         echo "
 ";
         
@@ -310,7 +311,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
     }
 
-    // line 177
+    // line 178
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -320,18 +321,18 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 178
+        // line 179
         echo "    <script src=\"dist/notiflix-aio-3.2.5.min.js\"></script>
     <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/toastify-js\"></script>
     <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\" integrity=\"sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>
 
     ";
-        // line 183
+        // line 184
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("recap");
         echo "
     ";
-        // line 184
+        // line 185
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("sort");
         echo "
 
@@ -357,7 +358,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
     public function getDebugInfo()
     {
-        return array (  335 => 184,  331 => 183,  324 => 178,  314 => 177,  303 => 174,  300 => 172,  289 => 170,  285 => 169,  282 => 167,  246 => 132,  244 => 131,  219 => 109,  202 => 95,  193 => 89,  189 => 87,  184 => 85,  181 => 84,  174 => 79,  172 => 78,  124 => 32,  103 => 12,  101 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  336 => 185,  332 => 184,  325 => 179,  315 => 178,  304 => 175,  301 => 173,  290 => 171,  286 => 170,  283 => 168,  246 => 132,  244 => 131,  219 => 109,  202 => 95,  193 => 89,  189 => 87,  184 => 85,  181 => 84,  174 => 79,  172 => 78,  124 => 32,  103 => 12,  101 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -497,6 +498,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
     </table>
     <div class=\"pdf-totaux\">
         <p class=\"pdf-benevolat\"></p>
+
         <p class=\"pdf-don\"></p>
         <p class=\"pdf-remboursement\"></p>
         <p class=\"pdf-valorisee\"></p>
@@ -514,7 +516,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
             <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
         </div>
         <div class=\"p-container start\">
-            <p style=\"text-align: start;\">Faît le : </p>
+            <p style=\"text-align: start;\">Fait-le : </p>
         </div>
     </div>
     <div class=\"sign-container\"> 
@@ -549,6 +551,6 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
 
 {% endblock %}
-", "recapitulatif/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
+", "recapitulatif/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
     }
 }

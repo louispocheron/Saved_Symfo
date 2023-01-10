@@ -226,7 +226,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                 <div class=\"input-container\">
                     <div class=\"date-assoc\">
                         <div class='rowSaisie' id=\"km\">
-                            <label>Kilomètrage</label>
+                            <label class=\"label\">Kilomètrage</label>
                             ";
                 // line 96
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 96, $this->source); })()), "km", [], "any", false, false, false, 96), 'widget', ["attr" => ["class" => "kmInput"]]);
@@ -235,7 +235,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                         ";
                 // line 102
                 echo "                           <div class='rowSaisie'>
-                            <label>Barème km</label>
+                            <label class=\"label\">Barème km</label>
                             ";
                 // line 104
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), "bareme", [], "any", false, false, false, 104), 'widget', ["attr" => ["class" => "bareme bottom-input"]]);
@@ -244,7 +244,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                     </div>
                     <div class=\"date-assoc\">
                         <div class='rowSaisie'>
-                            <label>Autres frais</label>
+                            <label class=\"label\">Autres frais</label>
                             ";
                 // line 110
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 110, $this->source); })()), "frais", [], "any", false, false, false, 110), 'widget', ["attr" => ["class" => "coutInput"]]);
@@ -253,7 +253,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
 
                         
                         <div class='rowSaisie'>
-                            <label>Frais kilométriques</label>
+                            <label class=\"label\">Frais kilométriques</label>
                             ";
                 // line 116
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 116, $this->source); })()), "fraisKilometrique", [], "any", false, false, false, 116), 'widget', ["attr" => ["class" => "fraisInput bottom-input disabled"]]);
@@ -489,7 +489,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                 <div class=\"input-container\">
                     <div class=\"date-assoc\">
                         <div class='rowSaisie' id=\"km\">
-                            <label>Kilomètrage</label>
+                            <label class=\"label\">Kilomètrage</label>
                             {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
                         </div>
                         {# <div class='rowSaisie'>
@@ -497,19 +497,19 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                             <input class=\"bareme bottom-input\" type=\"text\" name=\"barème\">
                         </div> #}
                            <div class='rowSaisie'>
-                            <label>Barème km</label>
+                            <label class=\"label\">Barème km</label>
                             {{form_widget(form.bareme, {'attr': {'class': 'bareme bottom-input'}}) }}
                         </div>
                     </div>
                     <div class=\"date-assoc\">
                         <div class='rowSaisie'>
-                            <label>Autres frais</label>
+                            <label class=\"label\">Autres frais</label>
                             {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
                         </div>
 
                         
                         <div class='rowSaisie'>
-                            <label>Frais kilométriques</label>
+                            <label class=\"label\">Frais kilométriques</label>
                             {{form_widget(form.fraisKilometrique, {'attr': {'class': 'fraisInput bottom-input disabled'}}) }}
                         </div>
                     </div>

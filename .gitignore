@@ -6,9 +6,9 @@
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
-# /var/
-/var/cache/*
-# /vendor/
+/var/
+# /var/cache/*
+/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###

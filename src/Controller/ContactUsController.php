@@ -12,6 +12,8 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use App\Form\ContactType;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 
 class ContactUsController extends AbstractController
 {
@@ -34,11 +36,13 @@ class ContactUsController extends AbstractController
             //     // ...
             $email = (new Email())
                 ->from($userEmail)
-                ->to("crib.cotedor@franceolympique.com")
+                ->to("pocheron.louis@gmail.com")
                 ->subject($subject)
                 ->text($message);
 
             $mailer->send($email);
+            return new JsonResponse(array('status' => 'success'));
+           
         }
 
 

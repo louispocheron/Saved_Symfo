@@ -9,7 +9,7 @@ const btnYesQuit = document.querySelector('.btn-yes-quit');
 const btnNoQuit = document.querySelector('.btn-no-quit');
 const btnQuit = document.querySelector('.btn-quitter');
 const background = document.querySelector('.flex-me');
-console.log(background);
+
 
 
 
@@ -86,7 +86,7 @@ btnYes.addEventListener('click', (event) => {
                 stopOnFocus: true, // Prevents dismissing of toast on hover
                 style: {
                      // red as default
-                    background: "linear-gradient(315deg, #3f0d12 0%, #a71d31 74%)",
+                    background: "",
                 },
                 onClick: function(){} // Callback after click
             }).showToast();

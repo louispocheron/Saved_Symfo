@@ -9,7 +9,7 @@
  <div class="form-register-container">
     <h1>CONTACTEZ NOUS</h1>
     <div class="form-container">
-        {{ form_start(form) }}
+        {{ form_start(form, { 'attr': {'class': 'form-contact'} }) }}
         <div class="form-row-two">
             <label>Sujet</label>
             {{ form_widget(form.Sujet) }}
@@ -27,5 +27,7 @@
 {% endblock %}
 {% block javascripts %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    {{ encore_entry_script_tags('false') }}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('contactUs') }}
+    
 {% endblock %}

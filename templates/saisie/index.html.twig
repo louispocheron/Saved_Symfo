@@ -92,7 +92,7 @@
                 <div class="input-container">
                     <div class="date-assoc">
                         <div class='rowSaisie' id="km">
-                            <label>Kilomètrage</label>
+                            <label class="label">Kilomètrage</label>
                             {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
                         </div>
                         {# <div class='rowSaisie'>
@@ -100,19 +100,19 @@
                             <input class="bareme bottom-input" type="text" name="barème">
                         </div> #}
                            <div class='rowSaisie'>
-                            <label>Barème km</label>
+                            <label class="label">Barème km</label>
                             {{form_widget(form.bareme, {'attr': {'class': 'bareme bottom-input'}}) }}
                         </div>
                     </div>
                     <div class="date-assoc">
                         <div class='rowSaisie'>
-                            <label>Autres frais</label>
+                            <label class="label">Autres frais</label>
                             {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
                         </div>
 
                         
                         <div class='rowSaisie'>
-                            <label>Frais kilométriques</label>
+                            <label class="label">Frais kilométriques</label>
                             {{form_widget(form.fraisKilometrique, {'attr': {'class': 'fraisInput bottom-input disabled'}}) }}
                         </div>
                     </div>
