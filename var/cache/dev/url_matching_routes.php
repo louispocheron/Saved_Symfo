@@ -22,6 +22,7 @@ return [
             [['_route' => 'base', '_controller' => 'App\\Controller\\HomeController::isAdmin'], null, null, null, false, false, null],
         ],
         '/ajax_endpoint' => [[['_route' => 'data_user', '_controller' => 'App\\Controller\\HomeController::getDataFromUser'], null, null, null, false, false, null]],
+        '/info-saisies' => [[['_route' => 'app_info_saisies', '_controller' => 'App\\Controller\\InfoSaisiesController::index'], null, null, null, false, false, null]],
         '/mailer' => [[['_route' => 'app_mailer', '_controller' => 'App\\Controller\\MailerController::index'], null, null, null, false, false, null]],
         '/moncompte' => [[['_route' => 'mon_compte', '_controller' => 'App\\Controller\\MonCompteController::index'], null, null, null, false, false, null]],
         '/conditions-utilisation' => [[['_route' => 'utilisation', '_controller' => 'App\\Controller\\RGPDController::index'], null, null, null, false, false, null]],

@@ -1,0 +1,14 @@
+.Groupes{
+    font-size: large;
+    color: #152149;
+    font-weight: 600;
+}
+.first{
+   align-items: flex-start !important; 
+   text-align: left !important;
+}
+.valo{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}

@@ -172,18 +172,24 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                     <div class=\"input-container firstC\">
                         <div class=\"date-assoc first\">
                             <div class='rowSaisie hours'>
-                                <label class=\"label\">Heure de départ</label>
+                                <div class=\"label-container\">
+                                    <label class=\"label\">Heure de départ</label>
+                                    <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                </div>
                                 ";
-                // line 60
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 60, $this->source); })()), "heureDepart", [], "any", false, false, false, 60), 'widget', ["attr" => ["class" => "heure"]]);
+                // line 63
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 63, $this->source); })()), "heureDepart", [], "any", false, false, false, 63), 'widget', ["attr" => ["class" => "heure"]]);
                 echo "
                             </div>
 
                             <div class='rowSaisie hours secondary'>
-                                <label class=\"label\">Heure d'arrivée</label>
+                                <div class=\"label-container\">
+                                    <label class=\"label\">Heure d'arrivée</label>
+                                    <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                </div>
                                 ";
-                // line 65
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 65, $this->source); })()), "heureArrivee", [], "any", false, false, false, 65), 'widget', ["attr" => ["class" => "heure"]]);
+                // line 71
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 71, $this->source); })()), "heureArrivee", [], "any", false, false, false, 71), 'widget', ["attr" => ["class" => "heure"]]);
                 echo "
                             </div>
                         </div>
@@ -191,16 +197,19 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                             <div class='rowSaisie'>
                                 <label class=\"label\">Durée</label>
                                 ";
-                // line 71
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 71, $this->source); })()), "duree", [], "any", false, false, false, 71), 'widget', ["attr" => ["class" => "dureeInput disabled"]]);
+                // line 77
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 77, $this->source); })()), "duree", [], "any", false, false, false, 77), 'widget', ["attr" => ["class" => "dureeInput disabled"]]);
                 echo "
                             </div>
                             <div class='rowSaisie row'>
                                 <div class=\"groupe-container\">
-                                    <label class=\"label\">Groupe</label>
+                                    <div class=\"label-container\">
+                                        <label class=\"label\">Groupe</label>
+                                        <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                    </div>
                                     ";
-                // line 76
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 76, $this->source); })()), "groupe", [], "any", false, false, false, 76), 'widget', ["attr" => ["class" => "heure groupe groupeSelect"]]);
+                // line 85
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 85, $this->source); })()), "groupe", [], "any", false, false, false, 85), 'widget', ["attr" => ["class" => "heure groupe groupeSelect"]]);
                 echo "
                                 </div>
                                 <div class=\"groupe-container\">
@@ -209,13 +218,13 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                                 </div>
                             </div>
                             <div class='rowSaisie' id=\"chargeInputId\" data-charges='";
-                // line 83
-                echo twig_escape_filter($this->env, (isset($context["charges"]) || array_key_exists("charges", $context) ? $context["charges"] : (function () { throw new RuntimeError('Variable "charges" does not exist.', 83, $this->source); })()), "html", null, true);
+                // line 92
+                echo twig_escape_filter($this->env, (isset($context["charges"]) || array_key_exists("charges", $context) ? $context["charges"] : (function () { throw new RuntimeError('Variable "charges" does not exist.', 92, $this->source); })()), "html", null, true);
                 echo "'>
                                 <label class=\"label\">Charges</label>
                                 ";
-                // line 85
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 85, $this->source); })()), "charges", [], "any", false, false, false, 85), 'widget', ["attr" => ["class" => "heure bottom-input disabled"]]);
+                // line 94
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 94, $this->source); })()), "charges", [], "any", false, false, false, 94), 'widget', ["attr" => ["class" => "heure bottom-input disabled"]]);
                 echo "
                             </div>
                         </div>
@@ -226,28 +235,34 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                 <div class=\"input-container\">
                     <div class=\"date-assoc\">
                         <div class='rowSaisie' id=\"km\">
-                            <label class=\"label\">Kilomètrage</label>
+                            <div class=\"label-container\">
+                                <label class=\"label\">Kilomètrage</label>
+                                <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                            </div>
                             ";
-                // line 96
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 96, $this->source); })()), "km", [], "any", false, false, false, 96), 'widget', ["attr" => ["class" => "kmInput"]]);
+                // line 108
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 108, $this->source); })()), "km", [], "any", false, false, false, 108), 'widget', ["attr" => ["class" => "kmInput"]]);
                 echo "
                         </div>
                         ";
-                // line 102
+                // line 114
                 echo "                           <div class='rowSaisie'>
                             <label class=\"label\">Barème km</label>
                             ";
-                // line 104
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), "bareme", [], "any", false, false, false, 104), 'widget', ["attr" => ["class" => "bareme bottom-input"]]);
+                // line 116
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 116, $this->source); })()), "bareme", [], "any", false, false, false, 116), 'widget', ["attr" => ["class" => "bareme bottom-input"]]);
                 echo "
                         </div>
                     </div>
                     <div class=\"date-assoc\">
                         <div class='rowSaisie'>
-                            <label class=\"label\">Autres frais</label>
+                            <div class=\"label-container\">
+                                <label class=\"label\">Autres frais</label>
+                                <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                            </div>
                             ";
-                // line 110
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 110, $this->source); })()), "frais", [], "any", false, false, false, 110), 'widget', ["attr" => ["class" => "coutInput"]]);
+                // line 125
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 125, $this->source); })()), "frais", [], "any", false, false, false, 125), 'widget', ["attr" => ["class" => "coutInput"]]);
                 echo "
                         </div>
 
@@ -255,8 +270,8 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                         <div class='rowSaisie'>
                             <label class=\"label\">Frais kilométriques</label>
                             ";
-                // line 116
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 116, $this->source); })()), "fraisKilometrique", [], "any", false, false, false, 116), 'widget', ["attr" => ["class" => "fraisInput bottom-input disabled"]]);
+                // line 131
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 131, $this->source); })()), "fraisKilometrique", [], "any", false, false, false, 131), 'widget', ["attr" => ["class" => "fraisInput bottom-input disabled"]]);
                 echo "
                         </div>
                     </div>
@@ -274,8 +289,8 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                         <div class='rowSaisie'>
                             <label>Dons</label>
                             ";
-                // line 132
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 132, $this->source); })()), "dons", [], "any", false, false, false, 132), 'widget', ["attr" => ["class" => "donsInput bottom-input disabled"]]);
+                // line 147
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 147, $this->source); })()), "dons", [], "any", false, false, false, 147), 'widget', ["attr" => ["class" => "donsInput bottom-input disabled"]]);
                 echo "
                         </div>
                     </div>
@@ -283,16 +298,16 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                         <div class='rowSaisie'>
                             <label>Remboursement</label>
                             ";
-                // line 138
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 138, $this->source); })()), "aPayer", [], "any", false, false, false, 138), 'widget', ["attr" => ["class" => "apayerInput"]]);
+                // line 153
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 153, $this->source); })()), "aPayer", [], "any", false, false, false, 153), 'widget', ["attr" => ["class" => "apayerInput"]]);
                 echo "
                         </div>
 
                         <div class='rowSaisie'>
                             <label>Heures valorisées</label>
                             ";
-                // line 143
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 143, $this->source); })()), "heuresValorisees", [], "any", false, false, false, 143), 'widget', ["attr" => ["class" => "heureValoriseesInput bottom-input"]]);
+                // line 158
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 158, $this->source); })()), "heuresValorisees", [], "any", false, false, false, 158), 'widget', ["attr" => ["class" => "heureValoriseesInput bottom-input"]]);
                 echo "
                         </div>
                     </div>
@@ -300,20 +315,20 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
             </div>
                     <div class='rowSaisie btn-container'>
                             ";
-                // line 149
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 149, $this->source); })()), "enregistrer", [], "any", false, false, false, 149), 'widget', ["attr" => ["class" => "btn-basic fonted"]]);
+                // line 164
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 164, $this->source); })()), "enregistrer", [], "any", false, false, false, 164), 'widget', ["attr" => ["class" => "btn-basic fonted"]]);
                 echo "
                     </div>
                 </div>
             </div>
         ";
-                // line 153
-                echo                 $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 153, $this->source); })()), 'form_end');
+                // line 168
+                echo                 $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 168, $this->source); })()), 'form_end');
                 echo "
 
 
         ";
-                // line 157
+                // line 172
                 echo "        <div class=\"modal-saisie\">
             <h1 class=\"modalP dangerP\">Vous êtes sur le point de modifier le taux de remboursement des frais kilométriques !</h1>
             <i class=\"fa-solid fa-circle-exclamation logo-modal\"></i>
@@ -325,14 +340,14 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
 
     ";
             } else {
-                // line 167
+                // line 182
                 echo "        <h1>devez etre connectez pour faire une saisie</h1>
     ";
             }
-            // line 169
+            // line 184
             echo "    ";
         }
-        // line 170
+        // line 185
         echo "
 
     ";
@@ -344,7 +359,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
 
     }
 
-    // line 174
+    // line 189
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -354,17 +369,17 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 175
+        // line 190
         echo "
         <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/toastify-js\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>
 
         ";
-        // line 179
+        // line 194
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("saisie");
         echo "
         ";
-        // line 180
+        // line 195
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("sort");
         echo "
 
@@ -390,7 +405,7 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
 
     public function getDebugInfo()
     {
-        return array (  368 => 180,  364 => 179,  358 => 175,  348 => 174,  336 => 170,  333 => 169,  329 => 167,  317 => 157,  311 => 153,  304 => 149,  295 => 143,  287 => 138,  278 => 132,  259 => 116,  250 => 110,  241 => 104,  237 => 102,  232 => 96,  218 => 85,  213 => 83,  203 => 76,  195 => 71,  186 => 65,  178 => 60,  169 => 53,  162 => 48,  155 => 44,  147 => 39,  138 => 33,  129 => 27,  117 => 19,  114 => 18,  108 => 15,  103 => 13,  98 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  383 => 195,  379 => 194,  373 => 190,  363 => 189,  351 => 185,  348 => 184,  344 => 182,  332 => 172,  326 => 168,  319 => 164,  310 => 158,  302 => 153,  293 => 147,  274 => 131,  265 => 125,  253 => 116,  249 => 114,  244 => 108,  227 => 94,  222 => 92,  212 => 85,  201 => 77,  192 => 71,  181 => 63,  169 => 53,  162 => 48,  155 => 44,  147 => 39,  138 => 33,  129 => 27,  117 => 19,  114 => 18,  108 => 15,  103 => 13,  98 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -453,12 +468,18 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                     <div class=\"input-container firstC\">
                         <div class=\"date-assoc first\">
                             <div class='rowSaisie hours'>
-                                <label class=\"label\">Heure de départ</label>
+                                <div class=\"label-container\">
+                                    <label class=\"label\">Heure de départ</label>
+                                    <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                </div>
                                 {{form_widget(form.heureDepart , {'attr': {'class': 'heure'}}) }}
                             </div>
 
                             <div class='rowSaisie hours secondary'>
-                                <label class=\"label\">Heure d'arrivée</label>
+                                <div class=\"label-container\">
+                                    <label class=\"label\">Heure d'arrivée</label>
+                                    <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                </div>
                                 {{form_widget(form.heureArrivee, {'attr': {'class': 'heure'}}) }}
                             </div>
                         </div>
@@ -469,7 +490,10 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                             </div>
                             <div class='rowSaisie row'>
                                 <div class=\"groupe-container\">
-                                    <label class=\"label\">Groupe</label>
+                                    <div class=\"label-container\">
+                                        <label class=\"label\">Groupe</label>
+                                        <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                                    </div>
                                     {{form_widget(form.groupe, {'attr': {'class': 'heure groupe groupeSelect'}}) }}
                                 </div>
                                 <div class=\"groupe-container\">
@@ -489,7 +513,10 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                 <div class=\"input-container\">
                     <div class=\"date-assoc\">
                         <div class='rowSaisie' id=\"km\">
-                            <label class=\"label\">Kilomètrage</label>
+                            <div class=\"label-container\">
+                                <label class=\"label\">Kilomètrage</label>
+                                <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                            </div>
                             {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
                         </div>
                         {# <div class='rowSaisie'>
@@ -503,7 +530,10 @@ class __TwigTemplate_2dd2a9d4f9e95e8bd9a6fe86d377b05a extends Template
                     </div>
                     <div class=\"date-assoc\">
                         <div class='rowSaisie'>
-                            <label class=\"label\">Autres frais</label>
+                            <div class=\"label-container\">
+                                <label class=\"label\">Autres frais</label>
+                                <a class=\"href-info\" href=\"/info-saisies\" target=\"_blank\"><i class=\"fa-solid fa-circle-question\"></i></a>
+                            </div>
                             {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
                         </div>
 

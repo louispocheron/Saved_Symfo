@@ -35,6 +35,7 @@ return [
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
     'data_user' => [[], ['_controller' => 'App\\Controller\\HomeController::getDataFromUser'], [], [['text', '/ajax_endpoint']], [], [], []],
     'base' => [[], ['_controller' => 'App\\Controller\\HomeController::isAdmin'], [], [['text', '/']], [], [], []],
+    'app_info_saisies' => [[], ['_controller' => 'App\\Controller\\InfoSaisiesController::index'], [], [['text', '/info-saisies']], [], [], []],
     'app_mailer' => [[], ['_controller' => 'App\\Controller\\MailerController::index'], [], [['text', '/mailer']], [], [], []],
     'mon_compte' => [[], ['_controller' => 'App\\Controller\\MonCompteController::index'], [], [['text', '/moncompte']], [], [], []],
     'utilisation' => [[], ['_controller' => 'App\\Controller\\RGPDController::index'], [], [['text', '/conditions-utilisation']], [], [], []],

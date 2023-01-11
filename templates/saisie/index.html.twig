@@ -56,12 +56,18 @@
                     <div class="input-container firstC">
                         <div class="date-assoc first">
                             <div class='rowSaisie hours'>
-                                <label class="label">Heure de départ</label>
+                                <div class="label-container">
+                                    <label class="label">Heure de départ</label>
+                                    <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                </div>
                                 {{form_widget(form.heureDepart , {'attr': {'class': 'heure'}}) }}
                             </div>
 
                             <div class='rowSaisie hours secondary'>
-                                <label class="label">Heure d'arrivée</label>
+                                <div class="label-container">
+                                    <label class="label">Heure d'arrivée</label>
+                                    <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                </div>
                                 {{form_widget(form.heureArrivee, {'attr': {'class': 'heure'}}) }}
                             </div>
                         </div>
@@ -72,7 +78,10 @@
                             </div>
                             <div class='rowSaisie row'>
                                 <div class="groupe-container">
-                                    <label class="label">Groupe</label>
+                                    <div class="label-container">
+                                        <label class="label">Groupe</label>
+                                        <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                    </div>
                                     {{form_widget(form.groupe, {'attr': {'class': 'heure groupe groupeSelect'}}) }}
                                 </div>
                                 <div class="groupe-container">
@@ -92,7 +101,10 @@
                 <div class="input-container">
                     <div class="date-assoc">
                         <div class='rowSaisie' id="km">
-                            <label class="label">Kilomètrage</label>
+                            <div class="label-container">
+                                <label class="label">Kilomètrage</label>
+                                <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                            </div>
                             {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
                         </div>
                         {# <div class='rowSaisie'>
@@ -106,7 +118,10 @@
                     </div>
                     <div class="date-assoc">
                         <div class='rowSaisie'>
-                            <label class="label">Autres frais</label>
+                            <div class="label-container">
+                                <label class="label">Autres frais</label>
+                                <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                            </div>
                             {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
                         </div>
 

@@ -36,7 +36,7 @@ class ContactUsController extends AbstractController
             //     // ...
             $email = (new Email())
                 ->from($userEmail)
-                ->to("pocheron.louis@gmail.com")
+                ->to("crib.cotedor@franceolympique.com")
                 ->subject($subject)
                 ->text($message);
 

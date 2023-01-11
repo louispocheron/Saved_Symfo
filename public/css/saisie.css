@@ -117,6 +117,10 @@ height: 100%;
 }
 
 
+.label-container label{
+    margin-right: 0;
+}
+
   .modal-saisie[data-active=true]{
     display: flex;
   }
@@ -273,8 +277,20 @@ height: 100%;
 .groupe-container input{
     width: 70%;
 }
-.groupe-container label{
-    margin-right: 10px;
+.fa-circle-question{
+    height: 15px;
+    width: 15px;
+}
+.fa-circle-question:hover{
+    fill: red;
+}
+.href-info{
+    width: 20px;
+    text-decoration: none;
+    color: black;
+}
+.href-info:hover .fa-circle-question{
+    color: #152149;
 }
 /* .firstC{
     height: 100%;

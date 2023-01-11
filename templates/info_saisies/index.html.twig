@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='{{ asset("assets/favicon.png")}}' rel='shortcut icon' type='image/x-icon'/> 
+    <link href="{{ asset('css/rgpd.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/infoSaisie.css') }}" rel="stylesheet">
+
+    <title>INFORMATIONS SAISIES</title>
+</head>
+<body>
+
+</body> 
+<div class="container">
+    <h1 class="main-title">Informations saisies SAVED</h1>
+    <img src="{{ asset('assets/LOGO_COLORFUL.svg') }}" alt="logo" class="logo-saved">
+
+         <div class="question-container first">
+            <h3 class="valo">Valorisation des heures</h3>  
+            <ul>
+                <li>Heure de départ : Trajet de l'aller inclus</li>
+                <li>Heure de fin : Trajet du retour inclus</li>
+            </ul>
+        </div>
+        <div class="question-container">
+            <h3>Groupes de classification</h3>  
+
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 1 : employé</li>
+                <ul>
+                    <li><span> Définition </span>: Exécution de tâches prescrites pouvant nécessiter une durée d'adaptation à l'emploi
+                        n'excédant pas 2 jours.</li>
+                    <li>Autonomie : Les tâches sont effectuées sous le contrôle direct d&#39;un responsable.</li>
+                    <li>Technicité : Tâches simples et détaillées fixant la nature du travail et les modes du travail à appliquer.</li>
+                    <li>Exemple : Agent administratif, agent d&#39;entretien, gardien, agent d&#39;accueil, placier, stadier, guichetier,
+                        aide de cuisine,...</li>
+                </ul>
+            </ul>
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 2 : employé</li>
+                <ul>
+                    <li>Définition : Exécution de tâches prescrites exigeant une formation préalable et une adaptation à
+                        l'emploi.</li>
+                    <li>Autonomie : Sous le contrôle d&#39;un responsable, le salarié est capable d&#39;exécuter des tâches sans que
+                        lui soit indiqué nécessairement le mode opératoire. Le contrôle des tâches s&#39;effectue en continu.</li>
+                        <li>Responsabilité : Ne peut pas comporter la responsabilité d&#39;autres salariés. Sa responsabilité
+                            pécuniaire ne peut dépasser la gestion d&#39;une régie d &#39;avance.</li>
+                            <li>Technicité : Ne peut comporter la programmation des tâches d&#39;autres salariés.</li>
+                            <li>Exemples : Aide comptable, agent administratif, secrétaire, opérateur de saisie, magasinier, agent
+                                d&#39;intendance, chauffeur, ouvrier d&#39;entretien, agent de maintenance, jardinier, hôtesse d&#39;accueil,
+                                surveillant d&#39;activité, surveillant de centre de formation, commis de cuisine,...</li>
+                </ul>
+            </ul>
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 3 : Technicien</li>
+                <ul>
+                    <li>Définition : Exécution d&#39;un ensemble de tâches ou d&#39;une fonction comportant une responsabilité
+                        technique, ou un savoir- faire technique spécialisé.</li>
+                    <li>Autonomie : Sous le contrôle d&#39;un responsable, le salarié effectue des tâches complexes avec
+                        l&#39;initiative des conditions d&#39;exécution. Le contrôle du travail s&#39;opère par un responsable au terme
+                        d&#39;un délai prescrit.</li>
+                        <li>Responsabilité : Le salarié n&#39;exerce pas d&#39;encadrement hiérarchique. Le salarié peut exercer un rôle
+                            de conseil et/ou de coordination d&#39;autres salariés mais ne peut en aucun cas en assurer le contrôle.</li>
+                            <li>Technicité : Le salarié peut être chargé d&#39;exécuter un programme défini et/ou un budget prescrit
+                                dans le cadre d&#39;une opération.</li>
+                            <li>Exemples : Assistant généraliste, comptable, assistant communication et marketing, statisticien,
+                                infographiste, technicien de maintenance, cuisinier,...</li>
+                </ul>
+            </ul>
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 4 : Technicien</li>
+                <ul>
+                    <li>Définition : Prise en charge d&#39;une mission, d&#39;un ensemble de tâches ou d&#39;une fonction par délégation
+                        requérant une conception des moyens.</li>
+                    <li>Autonomie : Il doit rendre compte périodiquement de l&#39;exécution de ses missions.</li>
+                    <li>Responsabilité : Le salarié peut planifier l&#39;activité d&#39;une équipe de travail (salariée ou non) et
+                            contrôler l&#39;exécution d&#39;un programme d&#39;activité. Il a une responsabilité limitée à l&#39;exécution d&#39;un
+                            budget prescrit et d&#39;un programme défini.</li>
+                    <li>Technicité : Sa maîtrise technique lui permet de concevoir les moyens et les modalités de leur mise
+                                en œuvre.</li>
+                    <li>Exemples : Assistant spécialisé, secrétaire principale comptable, économe, attaché de presse,
+                                assistant communication et marketing, documentaliste, chargé de billetterie, animateur, chef de
+                                cuisine,...</li>
+                </ul>
+            </ul>
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 5 : Technicien</li>
+                <ul>
+                    <li>Définition : Prise en charge d&#39;une mission, d&#39;un ensemble de tâches ou d&#39;une fonction par délégation
+                        requérant une conception des moyens.</li>
+                    <li>Autonomie : Il doit rendre compte périodiquement de l&#39;exécution de ses missions.</li>
+                    <li>Responsabilité : L&#39;emploi peut impliquer la responsabilité d&#39;un service ou d&#39;une mission ou la gestion
+                        d&#39;un équipement. Il peut avoir en responsabilité la gestion du budget global d&#39;un service ou d&#39;un
+                        équipement. Il peut bénéficier d&#39;une délégation limitée de responsabilité pour l&#39;embauche de
+                        personnels.</li>
+                    <li>Technicité : Sa maîtrise technique lui permet de concevoir des projets et d&#39;évaluer les résultats de sa
+                        mission à partir d&#39;outils existants.</li>
+                    <li>Exemples : Assistant de direction, responsable de service, chef comptable, attaché de presse, chargé
+                        de la gestion des stocks, informaticien, responsable d&#39;équipement, responsable de la sécurité,...</li>
+                </ul>
+            </ul>
+            <ul class="ul-container">
+                <li class="Groupes">Groupe 6 : Cadre</li>
+                <ul>
+                    <li>Définition : Personnels disposant d&#39;une délégation permanente de responsabilités émanant d&#39;un
+                        cadre d&#39;un niveau supérieur ou des instances statutaires. Ils participent à la définition des objectifs, à
+                        l&#39;établissement du programme de travail et à sa conduite ainsi qu&#39;à son évaluation y compris dans ses
+                        aspects financiers.</li>
+                    <li>Autonomie : Le contrôle s&#39;appuie sur une évaluation des écarts entre les objectifs et les résultats.</li>
+                    <li>Responsabilité : Les personnels de ce groupe assument leurs responsabilités dans les prévisions
+                        budgétaires qu&#39;ils élaborent dans l&#39;exercice de leur mission. Ils peuvent avoir une délégation partielle
+                        dans le cadre de la politique du personnel et de représentation auprès de partenaires extérieurs.</li>
+                    <li>Exemples : Directeur - général des services/adjoint/administratif &amp; financier/communication &amp;
+                        marketing, Responsable - informatique/comptable, Contrôleur de gestion,…</li>
+                </ul>
+            </ul>
+            
+        </div>
+        <div class="question-container first">
+            <h3 class="valo">FRAIS DE DÉPLACEMENT</h3>  
+            <ul>
+                <li>Kilométrage : Aller-Retour</li>
+                <li>Autres frais : pièce(s) justificative(s) à produire – remboursements pouvant être plafonnés et soumis
+                    à validation</li>
+            </ul>
+        </div>
+</div>
+
