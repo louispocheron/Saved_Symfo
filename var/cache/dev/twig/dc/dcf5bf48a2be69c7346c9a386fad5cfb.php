@@ -123,18 +123,9 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                             <span>Recapitulatif</span>
                         </a>
                     </li>
-                    <li class=\"nav-item\">
+                     <li class=\"nav-item\">
                         <a href=\"";
         // line 47
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact_us");
-        echo "\" class=\"nav-links\">
-                            <i class=\"fa-solid fa-paper-plane nav-svg\"></i>
-                            <span>Nous contacter</span>
-                        </a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a href=\"";
-        // line 53
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("association");
         echo "\" class=\"nav-links\">
                             <i class=\"fa-solid fa-book nav-svg\"></i>
@@ -143,26 +134,36 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"nav-item\">
                         <a href=\"";
-        // line 59
+        // line 53
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register_association");
         echo "\" class=\"nav-links\">
                             <i class=\"fa-solid fa-circle-plus nav-svg\"></i>
                             <span>Enregistrer une association</span>
                         </a>
                     </li>
+                    
                     <li class=\"nav-item\">
                         <a href=\"";
-        // line 65
+        // line 60
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_faq");
         echo "\" class=\"nav-links\">
                             <i class=\"fa-solid fa-circle-question nav-svg\"></i>
-                            <span>Infos pratiques</span>
+                            <span>Mentions légales</span>
+                        </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a href=\"";
+        // line 66
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact_us");
+        echo "\" class=\"nav-links\">
+                            <i class=\"fa-solid fa-paper-plane nav-svg\"></i>
+                            <span>Assistance</span>
                         </a>
                     </li>
                 <li class=\"nav-item\">
                     <div>
                         <a href=\"";
-        // line 72
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mon_compte");
         echo "\" class=\"nav-links\">
                             <i class=\"fas fa-user nav-svg\"></i>
@@ -171,7 +172,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </div>
                     <div>
                         <a href=\"";
-        // line 78
+        // line 79
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" class=\"nav-links down\">
                             <i class=\"fas fa-sign-out-alt nav-svg\"></i>
@@ -182,98 +183,98 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
             </ul>
         </div>
         ";
-        // line 87
+        // line 88
         echo "        <div class=\"header-desktop\">
         ";
-        // line 89
+        // line 90
         echo "
             <div class=\"main-assoc\">
                 ";
-        // line 91
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 91, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 91, $this->source); })()), "user", [], "any", false, false, false, 91)], "method", false, false, false, 91) != false)) {
-            // line 92
+        // line 92
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 92, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92)], "method", false, false, false, 92) != false)) {
+            // line 93
             echo "                    <h1 class=\"h1-assoc\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 92, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92)], "method", false, false, false, 92), "name", [], "any", false, false, false, 92), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 93, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "user", [], "any", false, false, false, 93)], "method", false, false, false, 93), "name", [], "any", false, false, false, 93), "html", null, true);
             echo "</h1>
                     ";
-            // line 93
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 93, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "user", [], "any", false, false, false, 93)], "method", false, false, false, 93), "logo", [], "any", false, false, false, 93) != null)) {
-                // line 94
+            // line 94
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 94, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 94, $this->source); })()), "user", [], "any", false, false, false, 94)], "method", false, false, false, 94), "logo", [], "any", false, false, false, 94) != null)) {
+                // line 95
                 echo "                        <img src=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/build/logo_directory/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 94, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 94, $this->source); })()), "user", [], "any", false, false, false, 94)], "method", false, false, false, 94), "logo", [], "any", false, false, false, 94))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/build/logo_directory/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 95, $this->source); })()), "lastAssoc", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 95, $this->source); })()), "user", [], "any", false, false, false, 95)], "method", false, false, false, 95), "logo", [], "any", false, false, false, 95))), "html", null, true);
                 echo "\" alt=\"\" class=\"logo-main-assoc\" />
                     ";
             } else {
-                // line 96
+                // line 97
                 echo "                        <img src=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/assets/default.PNG"), "html", null, true);
                 echo "\" class=\"logo-main-assoc\" />
                     ";
             }
-            // line 98
+            // line 99
             echo "                ";
         } else {
-            // line 99
+            // line 100
             echo "                    <h1 class=\"h1-assoc\">Vous n'avez pas encore d'association</h1>
                 ";
         }
-        // line 101
+        // line 102
         echo "            </div>
                 <div class=\"user-info\">
                     <div class=\"container-img-header\">
                         ";
-        // line 104
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 104, $this->source); })()), "user", [], "any", false, false, false, 104), "profilPicture", [], "any", false, false, false, 104) != null)) {
-            // line 105
+        // line 105
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 105, $this->source); })()), "user", [], "any", false, false, false, 105), "profilPicture", [], "any", false, false, false, 105) != null)) {
+            // line 106
             echo "                            <img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/build/profil_picture/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 105, $this->source); })()), "user", [], "any", false, false, false, 105), "profilPicture", [], "any", false, false, false, 105))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/build/profil_picture/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 106, $this->source); })()), "user", [], "any", false, false, false, 106), "profilPicture", [], "any", false, false, false, 106))), "html", null, true);
             echo "\" alt=\"\" class=\"user-avatar\" />
                         ";
         } else {
-            // line 107
+            // line 108
             echo "                            <img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/build/profil_picture/default_profil.png"), "html", null, true);
             echo "\" alt=\"\" class=\"user-avatar default\" />
                         ";
         }
-        // line 109
+        // line 110
         echo "                    </div>
                     <div class=\"user-name\">
                         <h2 class=\"user-username\"> ";
-        // line 111
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 111, $this->source); })()), "user", [], "any", false, false, false, 111), "username", [], "any", false, false, false, 111), "html", null, true);
+        // line 112
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", [], "any", false, false, false, 112), "username", [], "any", false, false, false, 112), "html", null, true);
         echo " </h2> 
                         <h3 class=\"user-email\"> ";
-        // line 112
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", [], "any", false, false, false, 112), "email", [], "any", false, false, false, 112), "html", null, true);
+        // line 113
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 113, $this->source); })()), "user", [], "any", false, false, false, 113), "email", [], "any", false, false, false, 113), "html", null, true);
         echo "</h3>
                         ";
-        // line 113
+        // line 114
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 114
+            // line 115
             echo "                            <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("super_admin");
             echo "\" class=\"user-email admin\">Super administration</a>
                         ";
         }
-        // line 116
+        // line 117
         echo "                        ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 116, $this->source); })()), "isAdminGlobal", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 116, $this->source); })()), "user", [], "any", false, false, false, 116)], "method", false, false, false, 116) == true)) {
-            // line 117
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["Assoc"]) || array_key_exists("Assoc", $context) ? $context["Assoc"] : (function () { throw new RuntimeError('Variable "Assoc" does not exist.', 117, $this->source); })()), "isAdminGlobal", [0 => twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 117, $this->source); })()), "user", [], "any", false, false, false, 117)], "method", false, false, false, 117) == true)) {
+            // line 118
             echo "                            <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_choose");
             echo "\" class=\"user-email admin\">Administration</a>
                         ";
         }
-        // line 119
+        // line 120
         echo "                    </div>
                 </div>
         </div>
         ";
-        // line 123
+        // line 124
         echo "        <div class=\"header\">
             <a href=\"";
-        // line 124
+        // line 125
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/logo_saved_letter.png"), "html", null, true);
@@ -287,7 +288,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                 <ul class=\"ul-items\">
                    <li class=\"ham-items\">
                         <a href=\"";
-        // line 133
+        // line 134
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" class=\"ham-links\">
                             <i class=\"fas fa-home ham-svg\"></i>
@@ -296,7 +297,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 139
+        // line 140
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("saisie");
         echo "\" class=\"ham-links\">
                             <i class=\"fas fa-pencil ham-svg\"></i>
@@ -305,7 +306,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 145
+        // line 146
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recapitulatif");
         echo "\" class=\"ham-links\">
                             <i class=\"fas fa-list ham-svg\"></i>
@@ -314,16 +315,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 151
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_faq");
-        echo "\" class=\"ham-links\">
-                            <i class=\"fa-solid fa-circle-question nav-svg\"></i>
-                            <span>Infos pratiques</span>
-                        </a>
-                    </li>
-                    <li class=\"ham-items\">
-                        <a href=\"";
-        // line 157
+        // line 152
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("association");
         echo "\" class=\"ham-links\">
                             <i class=\"fa-solid fa-book ham-svg\"></i>
@@ -332,7 +324,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 163
+        // line 158
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register_association");
         echo "\" class=\"ham-links\">
                             <i class=\"fa-solid fa-circle-plus ham-svg\"></i>
@@ -341,7 +333,16 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 169
+        // line 164
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_faq");
+        echo "\" class=\"ham-links\">
+                            <i class=\"fa-solid fa-circle-question nav-svg\"></i>
+                            <span>Mentions legales</span>
+                        </a>
+                    </li>
+                    <li class=\"ham-items\">
+                        <a href=\"";
+        // line 170
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mon_compte");
         echo "\" class=\"ham-links\">
                             <i class=\"fas fa-user ham-svg\"></i>
@@ -350,7 +351,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                     </li>
                     <li class=\"ham-items\">
                         <a href=\"";
-        // line 175
+        // line 176
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" class=\"ham-links\">
                             <i class=\"fas fa-sign-out-alt ham-svg\"></i>
@@ -362,34 +363,34 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
         </div>
     
         ";
-        // line 185
+        // line 186
         echo "        <main>
             ";
-        // line 186
+        // line 187
         $this->displayBlock('body', $context, $blocks);
-        // line 188
+        // line 189
         echo "        </main>
 
     </body>
 
     ";
-        // line 192
+        // line 193
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
     ";
-        // line 193
+        // line 194
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("main");
         echo "
     ";
-        // line 194
+        // line 195
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("sideBar");
         echo "
 
 
     ";
-        // line 197
+        // line 198
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 200
+        // line 201
         echo "
 </html>
 ";
@@ -440,7 +441,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
 
     }
 
-    // line 186
+    // line 187
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -450,7 +451,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 187
+        // line 188
         echo "            ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -460,7 +461,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
 
     }
 
-    // line 197
+    // line 198
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -470,7 +471,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 198
+        // line 199
         echo "        <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/toastify-js\"></script>
     ";
         
@@ -493,7 +494,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  474 => 198,  464 => 197,  454 => 187,  444 => 186,  434 => 18,  424 => 17,  405 => 6,  393 => 200,  391 => 197,  385 => 194,  381 => 193,  377 => 192,  371 => 188,  369 => 186,  366 => 185,  354 => 175,  345 => 169,  336 => 163,  327 => 157,  318 => 151,  309 => 145,  300 => 139,  291 => 133,  277 => 124,  274 => 123,  269 => 119,  263 => 117,  260 => 116,  254 => 114,  252 => 113,  248 => 112,  244 => 111,  240 => 109,  234 => 107,  228 => 105,  226 => 104,  221 => 101,  217 => 99,  214 => 98,  208 => 96,  202 => 94,  200 => 93,  195 => 92,  193 => 91,  189 => 89,  186 => 87,  175 => 78,  166 => 72,  156 => 65,  147 => 59,  138 => 53,  129 => 47,  120 => 41,  111 => 35,  102 => 29,  94 => 26,  88 => 25,  85 => 24,  79 => 19,  77 => 17,  72 => 15,  67 => 13,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  475 => 199,  465 => 198,  455 => 188,  445 => 187,  435 => 18,  425 => 17,  406 => 6,  394 => 201,  392 => 198,  386 => 195,  382 => 194,  378 => 193,  372 => 189,  370 => 187,  367 => 186,  355 => 176,  346 => 170,  337 => 164,  328 => 158,  319 => 152,  310 => 146,  301 => 140,  292 => 134,  278 => 125,  275 => 124,  270 => 120,  264 => 118,  261 => 117,  255 => 115,  253 => 114,  249 => 113,  245 => 112,  241 => 110,  235 => 108,  229 => 106,  227 => 105,  222 => 102,  218 => 100,  215 => 99,  209 => 97,  203 => 95,  201 => 94,  196 => 93,  194 => 92,  190 => 90,  187 => 88,  176 => 79,  167 => 73,  157 => 66,  148 => 60,  138 => 53,  129 => 47,  120 => 41,  111 => 35,  102 => 29,  94 => 26,  88 => 25,  85 => 24,  79 => 19,  77 => 17,  72 => 15,  67 => 13,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -543,13 +544,7 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                             <span>Recapitulatif</span>
                         </a>
                     </li>
-                    <li class=\"nav-item\">
-                        <a href=\"{{ path('app_contact_us') }}\" class=\"nav-links\">
-                            <i class=\"fa-solid fa-paper-plane nav-svg\"></i>
-                            <span>Nous contacter</span>
-                        </a>
-                    </li>
-                    <li class=\"nav-item\">
+                     <li class=\"nav-item\">
                         <a href=\"{{ path('association') }}\" class=\"nav-links\">
                             <i class=\"fa-solid fa-book nav-svg\"></i>
                             <span>Liste des associations</span>
@@ -561,10 +556,17 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                             <span>Enregistrer une association</span>
                         </a>
                     </li>
+                    
                     <li class=\"nav-item\">
                         <a href=\"{{ path('app_faq') }}\" class=\"nav-links\">
                             <i class=\"fa-solid fa-circle-question nav-svg\"></i>
-                            <span>Infos pratiques</span>
+                            <span>Mentions légales</span>
+                        </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a href=\"{{ path('app_contact_us') }}\" class=\"nav-links\">
+                            <i class=\"fa-solid fa-paper-plane nav-svg\"></i>
+                            <span>Assistance</span>
                         </a>
                     </li>
                 <li class=\"nav-item\">
@@ -648,12 +650,6 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                         </a>
                     </li>
                     <li class=\"ham-items\">
-                        <a href=\"{{ path('app_faq') }}\" class=\"ham-links\">
-                            <i class=\"fa-solid fa-circle-question nav-svg\"></i>
-                            <span>Infos pratiques</span>
-                        </a>
-                    </li>
-                    <li class=\"ham-items\">
                         <a href=\"{{ path('association') }}\" class=\"ham-links\">
                             <i class=\"fa-solid fa-book ham-svg\"></i>
                             <span>Liste des associations</span>
@@ -663,6 +659,12 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
                         <a href=\"{{ path('register_association') }}\" class=\"ham-links\">
                             <i class=\"fa-solid fa-circle-plus ham-svg\"></i>
                             <span>Enregistrer une association</span>
+                        </a>
+                    </li>
+                    <li class=\"ham-items\">
+                        <a href=\"{{ path('app_faq') }}\" class=\"ham-links\">
+                            <i class=\"fa-solid fa-circle-question nav-svg\"></i>
+                            <span>Mentions legales</span>
                         </a>
                     </li>
                     <li class=\"ham-items\">
@@ -699,6 +701,6 @@ class __TwigTemplate_5c94acc27a845b3424451876b350d3b0 extends Template
     {% endblock %}
 
 </html>
-", "base.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/base.html.twig");
+", "base.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/base.html.twig");
     }
 }

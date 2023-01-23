@@ -642,6 +642,6 @@ class __TwigTemplate_4869dfc4fc21d302ad948827d4ebddd0 extends Template
         }());
     </script>
 {% endblock %}
-", "@WebProfiler/Profiler/layout.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/layout.html.twig");
+", "@WebProfiler/Profiler/layout.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/layout.html.twig");
     }
 }

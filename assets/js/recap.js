@@ -150,7 +150,10 @@ export function Ajaxyear(){
             });
 
             alertMessage.style.display = "block";
-            alertMessage.innerHTML = '<p style="color:red; text-align: center;">aucune donnée trouvée pour cette recherche</p>';
+            alertMessage.innerHTML = '<p style="color:red; text-align: center;">aucune donnée trouvée pour cette recherche</p>';    
+            btnPdfAll.style.display = "none";
+            btnPdf.style.display = "none";
+
             
             // TIMEOUT POUR SUPPR LE MESSAGE D ERREUR
             setTimeout(()=>{
@@ -160,6 +163,7 @@ export function Ajaxyear(){
         // CAS OU ON RECOIS DES DONNEES
         } else {
             btnPdf.style.display = "block"
+
             let year = selectYear.options[selectYear.selectedIndex].value;
 
             // trContainer.innerHTML = dataUser;
@@ -182,8 +186,6 @@ export function Ajaxyear(){
             color:#097969;
             font-weight: bold;
             "> ${aPayerSumAjax}€</span>`;
-
-
 
             // CALCUL DES DONS 
             const donTdAjax = document.querySelectorAll('.donTd');
@@ -410,8 +412,12 @@ btnPdfAll.addEventListener('click', () => {
 })
 
 
-
-console.log("fait ? 11 ");
+table.addEventListener('click', (event) => {
+    if(event.target.matches(".pdf_icone")){
+        let idPdf = event.target.dataset.id;
+        window.location.href = `/recapitulatif/pdf/${idPdf}`
+    }
+})
 
 
 

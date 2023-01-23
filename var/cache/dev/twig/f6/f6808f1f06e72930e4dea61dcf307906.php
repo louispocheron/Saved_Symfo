@@ -265,7 +265,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
             <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
         </div>
         <div class=\"p-container start\">
-            <p style=\"text-align: start;\">Fait-le : </p>
+            <p style=\"text-align: start;\">Fait le : </p>
         </div>
     </div>
     <div class=\"sign-container\"> 
@@ -516,7 +516,7 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
             <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
         </div>
         <div class=\"p-container start\">
-            <p style=\"text-align: start;\">Fait-le : </p>
+            <p style=\"text-align: start;\">Fait le : </p>
         </div>
     </div>
     <div class=\"sign-container\"> 
@@ -551,6 +551,6 @@ class __TwigTemplate_0492bf07e5f06bea99d89db35d985056 extends Template
 
 
 {% endblock %}
-", "recapitulatif/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
+", "recapitulatif/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/index.html.twig");
     }
 }

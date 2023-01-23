@@ -24,9 +24,13 @@ export function sumEuros(data){
         
         // On enleve les valeurs NaN
         cents = cents.filter(el => !isNaN(el));
-
         cents = cents.map(el => parseInt(el));
-        let totalCents = cents.reduce((a, b) => a + b);
+        let totalCents
+        if(cents.length > 1){
+            totalCents = cents.reduce((a, b) => a + b);
+        }else{
+            totalCents = 0
+        }
 
         // on ajoute les centimes au total des euros
     while(totalCents > 99){

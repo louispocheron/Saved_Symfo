@@ -91,37 +91,54 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
             echo "\">";
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "Apayer", [], "any", false, false, false, 12), 2), "html", null, true);
             echo "€</td>
-        <td data-label=\"Durée\" class=\"duree\" data-duree=\"";
+        ";
             // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 13), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 13), "html", null, true);
-            echo "</td>
-        <td data-label=\"Frais\">";
-            // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "groupe", [], "any", false, false, false, 14), "html", null, true);
+            if ((twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 13) == "0")) {
+                // line 14
+                echo "            <td data-label=\"Durée\" class=\"duree\" data-duree=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 14), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 14), "html", null, true);
+                echo "0h00</td>
+        ";
+            } else {
+                // line 16
+                echo "            <td data-label=\"Durée\" class=\"duree\" data-duree=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 16), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "duree", [], "any", false, false, false, 16), "html", null, true);
+                echo "</td>
+        ";
+            }
+            // line 18
+            echo "        <td data-label=\"Frais\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "groupe", [], "any", false, false, false, 18), "html", null, true);
             echo "</td>
         <td data-label=\"Heures valorisées\" class=\"lastchild valoriseesTd\" data-valorisees=\"";
-            // line 15
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "heuresValorisees", [], "any", false, false, false, 15), 2), "html", null, true);
+            // line 19
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "heuresValorisees", [], "any", false, false, false, 19), 2), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "heuresValorisees", [], "any", false, false, false, 15), 2), "html", null, true);
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "heuresValorisees", [], "any", false, false, false, 19), 2), "html", null, true);
             echo "</td>
         <td class=\"last-td-poubelle modal-open-delete\" data-id=\"";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 16), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/trash-solid.png"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/trash-01.png"), "html", null, true);
             echo "\" class=\"trash-png\"  data-id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 16), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "\"/></td>  
         ";
-            // line 18
+            // line 22
             echo "        <td class=\"last-td-poubelle pdfIcone\" data-id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 18), "html", null, true);
-            echo "\"><i class=\"fa-solid fa-file-pdf\"></i></a></td>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 22), "html", null, true);
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/pdf_icone.png"), "html", null, true);
+            echo "\" class=\"pdf_icone\"  data-id=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["action"], "id", [], "any", false, false, false, 22), "html", null, true);
+            echo "\"/></td>
         ";
-            // line 20
+            // line 24
             echo "    </tr>
 ";
         }
@@ -148,7 +165,7 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  125 => 20,  120 => 18,  112 => 16,  106 => 15,  102 => 14,  96 => 13,  90 => 12,  84 => 11,  80 => 10,  76 => 9,  72 => 8,  68 => 7,  64 => 6,  60 => 5,  56 => 4,  52 => 3,  47 => 2,  43 => 1,);
+        return array (  142 => 24,  133 => 22,  125 => 20,  119 => 19,  114 => 18,  106 => 16,  98 => 14,  96 => 13,  90 => 12,  84 => 11,  80 => 10,  76 => 9,  72 => 8,  68 => 7,  64 => 6,  60 => 5,  56 => 4,  52 => 3,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -165,14 +182,18 @@ class __TwigTemplate_c8c709e5cd9c310326e4d0656e1ceee6 extends Template
         <td data-label=\"Frais\">{{ action.frais }}€</td>
         <td data-label=\"Don\" class=\"donTd\" data-don=\"{{ action.dons|number_format(2) }}\">{{ action.dons|number_format(2) }}€</td>
         <td data-label=\"A payer\" class=\"payerTd\" data-payer=\"{{ action.Apayer }}\">{{ action.Apayer|number_format(2) }}€</td>
-        <td data-label=\"Durée\" class=\"duree\" data-duree=\"{{ action.duree }}\">{{ action.duree }}</td>
+        {% if action.duree == \"0\" %}
+            <td data-label=\"Durée\" class=\"duree\" data-duree=\"{{ action.duree }}\">{{ action.duree }}0h00</td>
+        {% else %}
+            <td data-label=\"Durée\" class=\"duree\" data-duree=\"{{ action.duree }}\">{{ action.duree }}</td>
+        {% endif %}
         <td data-label=\"Frais\">{{ action.groupe }}</td>
         <td data-label=\"Heures valorisées\" class=\"lastchild valoriseesTd\" data-valorisees=\"{{ action.heuresValorisees|number_format(2) }}\">{{ action.heuresValorisees|number_format(2)}}</td>
-        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><img src=\"{{ asset('assets/trash-solid.png') }}\" class=\"trash-png\"  data-id=\"{{action.id}}\"/></td>  
+        <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><img src=\"{{ asset('assets/trash-01.png') }}\" class=\"trash-png\"  data-id=\"{{action.id}}\"/></td>  
         {# <td class=\"last-td-poubelle modal-open-delete\" data-id=\"{{action.id}}\"><button class=\"btn-suppr\" data-id=\"{{action.id}}\"><i class=\"fa-solid fa-trash poubelle\"></i></button></td> #}
-        <td class=\"last-td-poubelle pdfIcone\" data-id=\"{{ action.id }}\"><i class=\"fa-solid fa-file-pdf\"></i></a></td>
+        <td class=\"last-td-poubelle pdfIcone\" data-id=\"{{ action.id }}\"><img src=\"{{ asset('assets/pdf_icone.png') }}\" class=\"pdf_icone\"  data-id=\"{{action.id}}\"/></td>
         {# <a href=\"{{path('recapitulatif_more', { 'id' : action.id } )}}\">click moi</a> #}
     </tr>
-{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
+{% endfor %}", "recapitulatif/action_recap.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/recapitulatif/action_recap.html.twig");
     }
 }

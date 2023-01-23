@@ -82,12 +82,18 @@ main{
   .uniqueAssoc:hover{
     box-shadow: #152149 0px 20px 30px -10px;
   }
+  .arrow-left{
+    align-self: flex-start;
+    margin-left: 4rem;
+    margin-bottom: 5px;
+  }
   .flex-me{
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
     }
   .unique-assoc-container{
       width: 80%;
@@ -99,8 +105,9 @@ main{
        border-radius: 5px;
       flex-direction: row;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        padding: 5rem;
+        padding: 3rem;
   }
+  
   .assoc-description{
     width: 50%;
       text-align: center;
@@ -134,7 +141,8 @@ main{
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;  
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 5px;
     width: 15rem;
     height: 2.7rem;
     text-decoration: none;
@@ -187,9 +195,7 @@ main{
     object-fit: contain;
     aspect-ratio: 3/2;
   }
-  .arrow-left{
-    display: none;
-  }
+
   .input-pagination{
     width: 100%;
     height: auto;
@@ -233,9 +239,8 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
     border-radius: 20px;
-    height: 30%;
+    height: auto;
     width: 30%;
     position: absolute;
     top: 50%;
@@ -318,6 +323,10 @@ main{
     font-weight: 600;
     cursor: pointer;
   }
+  .fa-arrow-left{
+    font-size: 1.8em;
+    color: #152149;
+  }
 
   @media only screen and (max-width: 963px){
     .unique-assoc-container{
@@ -347,6 +356,7 @@ main{
       height: 10%;
       width: 100%;
       display: flex;
+      margin: 0;
       justify-content: flex-end;
       align-items: center;
     }
@@ -361,7 +371,7 @@ main{
     }
     .trait{
       width: 80%;
-      height: 3px;
+      height: 1px;
       background-color: #152149;
       margin: 1.5rem;
     }

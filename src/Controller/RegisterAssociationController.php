@@ -91,7 +91,7 @@ class RegisterAssociationController extends AbstractController
                             ->add('departement', TextType::class, [
                                 'label'=>'Numero département',
                                 'attr' => [
-                                    'placeholder' => "ex: 39"
+                                    'placeholder' => "Ex: 39"
                                 ]
                             ])
                      ->add('enregister', SubmitType::class, ['label' => 'Enregistrer'])

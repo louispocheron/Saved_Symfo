@@ -10,6 +10,9 @@ main{
 .trash-png{
   width: 13px;
 }
+.pdf_icone{
+  width: 16px;
+}
 .wrapper-pdf{
   width: 100%;
   display: flex;

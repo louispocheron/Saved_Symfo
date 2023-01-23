@@ -93,7 +93,7 @@ class __TwigTemplate_c4a198af83cfc28fcc967094ee92580a extends Template
         // line 9
         if (((isset($context["latest"]) || array_key_exists("latest", $context) ? $context["latest"] : (function () { throw new RuntimeError('Variable "latest" does not exist.', 9, $this->source); })()) == [])) {
             // line 10
-            echo "        <h1 class=\"h1false\"> vous n'avez pas encore fait de saisie </h1>
+            echo "        <h1 class=\"h1false\"> Vous n'avez pas encore fait de saisie </h1>
         <div class=\"homeCard-container\">
                 <div class=\"homeCard\" data-aos=\"fade-right\">
                     <img src=\"";
@@ -241,7 +241,7 @@ class __TwigTemplate_c4a198af83cfc28fcc967094ee92580a extends Template
 <div class=\"home-container\">
     <h1 class=\"h1-home\"> Bienvenue sur <span>SAVED</span></h1>
     {% if latest == [] %}
-        <h1 class=\"h1false\"> vous n'avez pas encore fait de saisie </h1>
+        <h1 class=\"h1false\"> Vous n'avez pas encore fait de saisie </h1>
         <div class=\"homeCard-container\">
                 <div class=\"homeCard\" data-aos=\"fade-right\">
                     <img src=\"{{asset('assets/DONSPNG.png') }}\" class='svg-home'>
@@ -301,6 +301,6 @@ class __TwigTemplate_c4a198af83cfc28fcc967094ee92580a extends Template
     <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>
     {{ encore_entry_script_tags('home') }}
 {% endblock %}
-", "home/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/home/index.html.twig");
+", "home/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/home/index.html.twig");
     }
 }

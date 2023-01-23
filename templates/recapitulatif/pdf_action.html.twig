@@ -10,7 +10,11 @@
         <td data-label="Frais">{{ action.frais }}€</td>
         <td data-label="Don" class="donTdPdf" data-donPdf="{{ action.dons|number_format(2) }}">{{ action.dons|number_format(2) }}€</td>
         <td data-label="A payer" class="payerTdPdf" data-payerPdf="{{ action.Apayer }}">{{ action.Apayer|number_format(2) }}€</td>
-        <td data-label="Durée" class="dureePdf" data-dureePdf="{{ action.duree }}">{{ action.duree }}</td>
+        {% if action.duree == "0"%}
+            <td data-label="Durée" class="dureePdf" data-dureePdf="{{ action.duree }}">{{ action.duree }}0h00</td>
+        {% else %}
+            <td data-label="Durée" class="dureePdf" data-dureePdf="{{ action.duree }}">{{ action.duree }}</td>
+        {% endif %}
         <td data-label="Frais">{{ action.groupe }}</td>
         <td data-label="Heures valorisées" class="lastchild valoriseesTdPdf" data-valoriseesPdf="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
     </tr>

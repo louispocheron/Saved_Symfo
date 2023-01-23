@@ -92,18 +92,6 @@ class __TwigTemplate_37ae38bf1773073d7666472407ec3e1c extends Template
     <div class=\"container\">
         <h1 style=\"color: #505050\">INFOS PRATIQUES</h1>
         <div class=\"question-container\">
-            <h3>Protection des données / RGPD</h3>  
-            <p>En soumettant ce formulaire, vous acceptez que les informations personnelles saisies
-soient recueillies par le CDOS 21, gestionnaire de la plateforme, à titre illimité temps que
-vous n’en faites pas la demande de suppression. Ces données sont récoltées dans un but
-de bon fonctionnement du site, fonctionnement nécessitant le recueil de l’ensemble ces
-informations, elles sont par conséquent obligatoires à l’inscription. Le responsable délégué à
-la protection des données est Mario Jobard, salarié du CDOS, que vous pouvez contacter
-pour toute question relative à ce sujet à l’adresse-mail suivante :
-<a href=\"https://cdos21.org/\">crib.cotedor@franceolympique.com</a>. Pour de plus amples détails, merci de vous référer
-aux mentions légales du site, dans la partie « 6. Gestion des données personnelles</p> 
-        </div>
-        <div class=\"question-container\">
             <h3>Mentions légales</h3>  
             <p>SAVED, autrement dit, Simplification Administrative Valorisation et Déplacements, est un outil permettant d’effectuer, pour un bénévole, son relevé de déplacements bénévoles et de valoriser son apport bénévole. Concrètement, principalement, il permet pour un bénévole : de réaliser ses relevés de déplacements & d’avoir un suivi de ses frais de bénévoles, de demander le remboursement de ses frais ou y renoncer sous forme de don, d’obtenir des réductions d’impôts en fonction des dons et sous certaines conditions, de valoriser financièrement son bénévolat & rendre compte de son utilité sociale, d’avoir un suivi horaire de son bénévolat & d’acquérir des droits de formation sur son Compte Engagement Citoyen.
             <br> 
@@ -163,7 +151,26 @@ aux mentions légales du site, dans la partie « 6. Gestion des données person
             Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Le CDOS de Côte d'Or se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, le CDOS de Côte d'Or se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).
             </p> 
         </div>
+        <div class=\"question-container\">
+    <h3>Protection des données / RGPD</h3>  
+    <p>Le Comité Départemental Olympique et Sportif de Côte-d’Or s&#39;engage à ce que la collecte et
+le traitement de vos données, effectués à partir de SAVED, soient conformes au règlement
+général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
+Aucune information personnelle n&#39;est collectée à l’insu de l’utilisateur ou cédée à des tiers.
+L’utilisateur dispose au sein de SAVED des outils nécessaires lui permettant de prendre
+connaissance des informations administratives de son association. Les informations à
+caractère personnel ne sont visibles que par le ou les administrateurs des associations
+auxquelles vous avez adhéré et le Super Administrateur géré par le CDOS de Côte-d’Or.
+Les données personnelles recueillies dans le cadre des services proposés sur SAVED sont
+traitées selon des protocoles sécurisés et permettent à la direction de gérer les demandes
+reçues dans ses applications informatiques.
+
+Pour toute information ou exercice de vos droits Informatique et Libertés sur les traitements
+de données personnelles gérés par la CNIL, vous pouvez contacter son délégué à la
+protection des données (DPO) par courrier électronique : crib.cotedor@franceolympique.com</p> 
+</div>
     </div>
+    
 
 ";
         
@@ -201,18 +208,6 @@ aux mentions légales du site, dans la partie « 6. Gestion des données person
     <div class=\"container\">
         <h1 style=\"color: #505050\">INFOS PRATIQUES</h1>
         <div class=\"question-container\">
-            <h3>Protection des données / RGPD</h3>  
-            <p>En soumettant ce formulaire, vous acceptez que les informations personnelles saisies
-soient recueillies par le CDOS 21, gestionnaire de la plateforme, à titre illimité temps que
-vous n’en faites pas la demande de suppression. Ces données sont récoltées dans un but
-de bon fonctionnement du site, fonctionnement nécessitant le recueil de l’ensemble ces
-informations, elles sont par conséquent obligatoires à l’inscription. Le responsable délégué à
-la protection des données est Mario Jobard, salarié du CDOS, que vous pouvez contacter
-pour toute question relative à ce sujet à l’adresse-mail suivante :
-<a href=\"https://cdos21.org/\">crib.cotedor@franceolympique.com</a>. Pour de plus amples détails, merci de vous référer
-aux mentions légales du site, dans la partie « 6. Gestion des données personnelles</p> 
-        </div>
-        <div class=\"question-container\">
             <h3>Mentions légales</h3>  
             <p>SAVED, autrement dit, Simplification Administrative Valorisation et Déplacements, est un outil permettant d’effectuer, pour un bénévole, son relevé de déplacements bénévoles et de valoriser son apport bénévole. Concrètement, principalement, il permet pour un bénévole : de réaliser ses relevés de déplacements & d’avoir un suivi de ses frais de bénévoles, de demander le remboursement de ses frais ou y renoncer sous forme de don, d’obtenir des réductions d’impôts en fonction des dons et sous certaines conditions, de valoriser financièrement son bénévolat & rendre compte de son utilité sociale, d’avoir un suivi horaire de son bénévolat & d’acquérir des droits de formation sur son Compte Engagement Citoyen.
             <br> 
@@ -272,9 +267,28 @@ aux mentions légales du site, dans la partie « 6. Gestion des données person
             Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Le CDOS de Côte d'Or se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, le CDOS de Côte d'Or se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).
             </p> 
         </div>
+        <div class=\"question-container\">
+    <h3>Protection des données / RGPD</h3>  
+    <p>Le Comité Départemental Olympique et Sportif de Côte-d’Or s&#39;engage à ce que la collecte et
+le traitement de vos données, effectués à partir de SAVED, soient conformes au règlement
+général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
+Aucune information personnelle n&#39;est collectée à l’insu de l’utilisateur ou cédée à des tiers.
+L’utilisateur dispose au sein de SAVED des outils nécessaires lui permettant de prendre
+connaissance des informations administratives de son association. Les informations à
+caractère personnel ne sont visibles que par le ou les administrateurs des associations
+auxquelles vous avez adhéré et le Super Administrateur géré par le CDOS de Côte-d’Or.
+Les données personnelles recueillies dans le cadre des services proposés sur SAVED sont
+traitées selon des protocoles sécurisés et permettent à la direction de gérer les demandes
+reçues dans ses applications informatiques.
+
+Pour toute information ou exercice de vos droits Informatique et Libertés sur les traitements
+de données personnelles gérés par la CNIL, vous pouvez contacter son délégué à la
+protection des données (DPO) par courrier électronique : crib.cotedor@franceolympique.com</p> 
+</div>
     </div>
+    
 
 {% endblock %}
-", "faq/index.html.twig", "/mnt/c/Users/pocheron/Desktop/Saved_Symfo/templates/faq/index.html.twig");
+", "faq/index.html.twig", "/mnt/c/Users/CDOS 21/Desktop/Saved_Symfo/templates/faq/index.html.twig");
     }
 }

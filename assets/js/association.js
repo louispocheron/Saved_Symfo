@@ -55,7 +55,7 @@ btnYes.addEventListener('click', (event) => {
         else{
             closeModal()
             Toastify({
-                text: "vous êtes deja adhérent de l'association",
+                text: "vous êtes déjà adhérent de l'association",
                 duration: 3000,
                 newWindow: true,
                 close: true,
@@ -72,7 +72,7 @@ btnYes.addEventListener('click', (event) => {
     })
     .catch((err) => {
         if(err.response.status === 403){
-            window.alert('vous devez etre connectez pour adhérer a une association');
+            window.alert('Vous devez etre connectez pour adhérer a une association');
         }
         else{
             closeModal();
@@ -124,7 +124,7 @@ btnYesQuit.addEventListener("click", (event) => {
         if(adherant){
             closeModalUnfollow();
             Toastify({
-                text: "vous avez bien quitté l'association",
+                text: "Vous avez bien quitté l'association",
                 duration: 3000,
                 newWindow: true,
                 close: true,
